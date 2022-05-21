@@ -8,7 +8,7 @@ Based on https://www.otterhockey.co.uk
 
 I have been given full permission to use all my static files from the Managing Director Kyle Maroo.
 
-An online E-Commerce site for hockey fans to purchase our products.
+An online E-Commerce store for hockey fans to purchase our products.
 From top of the range sticks to a pair a shin pads, we pride ourselves on build quality and use the best materials!
 
 ## Links
@@ -22,8 +22,7 @@ From top of the range sticks to a pair a shin pads, we pride ourselves on build 
 # Table of Contents
 
 1.  [Planning & Requirements](#agile-methodology---planning--requirements)
-    -   [Site Visitor Goals](#site-visitor-goals)
-    -   [Admin User/Owner Goals](#admin-userowner-goals)
+    -   [User Stories](#user-stories)
     -   [Wireframes](#wireframes)
     -   [Flowchart](#flowchart)
 2.  [Design](#agile-methodology---design)
@@ -134,14 +133,13 @@ As a administrator/owner ...
 
 1.  I want to be able to *delete products* so that I can **remove any product that is no longer available.**
 
-
 ### Wireframes
 
 -   Figma Desktop Wireframe - [View](https://www.figma.com/file/IwRdh2KX15cfopZj2ycBZx/Otter-Hockey---Desktop?node-id=0%3A1)
 
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/desktop-wireframes-1.PNG)
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/desktop-wireframes-2.PNG)
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/desktop-wireframes-3.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/desktop-wireframes-1.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/desktop-wireframes-2.PNG)
+
 
 -   Figma Mobile Wireframe - [View](https://www.figma.com/file/tF92jalVcQwe1qMrQD85GQ/otter-hockey---Mobile?node-id=0%3A1)
 
@@ -151,7 +149,7 @@ As a administrator/owner ...
 
 -   Lucidchart - [View](https://lucid.app/lucidchart/0891e26c-cd6e-4247-ad81-8fbdf35eb7cb/edit?invitationId=inv_4362915e-3638-41ed-b418-d385edae4cff)
 
-![Lucid Flowchart](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/lucid-flowchart.PNG)
+![Lucid Flowchart](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/lucid-flowchart.PNG)
 
 ## Agile Methodology - Design
 
@@ -175,12 +173,24 @@ As a administrator/owner ...
 
 ### Typography
 
-Orbitron (regular & bold) - Logo and product names
-Bebas Neue - Nav items & page titles e.g. "YOUR BASKET"
-Montserrat (light & bold) - All other text such as product details and action buttons
+-   Orbitron
 
--   All titles use the bold striking typeface of Bebas Neue all with various letter spacing differences between headings and subheadings to make them more legible.
--   The body typeface of Montserrat produces a sharp contrast from the titles. This is a very popular font for web design because of its readability.
+    -   I have chosen to use the same typeface as used on https://www.otterhockey.co.uk for the logo and product names on the product detail pages. This is a conscious choice to increase the continuity on the site with regards to the product images.
+    -   The logo uses the bold style, but also carrys a subtle dropshadow to make it stand out.
+    -   The product name uses the regular style.
+    -   As a couple of products contain the letter O and a zero this typeface provides a completely different look making it easier for the user to understand the product name.
+
+-   Montserrat (light, medium & bold) 
+    -   A large majority of text on the site uses Montserrat.
+    -   This is a very popular font for web design because of its readability.
+    -   The uses of light, medium and bold varies and highlights certain details. For example the order confirmation uses the light style for the field names, the medium for the field values and the bold for the sub-headings.
+    -   This make it more appealing to the user and easier to read or quickly check.
+
+
+-   Bebas Neue
+    -   This typeface is used sparcely but provides a strong contrast between Orbitron and Montserrat
+    -   It is used for the navigation items and the basket total.
+    -   Increased letter spacing makes the font more legible for the users.
 
 ### Imagery
 -   All imagery has been taken from Otter Hockey's site with permission from Kyle as [previously mentioned above](#otter-hockey)
