@@ -63,7 +63,7 @@ From top of the range sticks to a pair a shin pads, we pride ourselves on build 
 
 ### User Stories
 [View](https://docs.google.com/spreadsheets/d/19LTRR3Om2SZQ7QQXUBhVAfR0ZMenbPFSQmbzZz1gWek/edit?usp=sharing)
-![Google Sheets - User Stories](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/user-stories.PNG)
+![Google Sheets - User Stories](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/user-stories.PNG)
 
 As a customer/site user ...
 
@@ -137,19 +137,19 @@ As a administrator/owner ...
 
 -   Figma Desktop Wireframe - [View](https://www.figma.com/file/IwRdh2KX15cfopZj2ycBZx/Otter-Hockey---Desktop?node-id=0%3A1)
 
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/desktop-wireframes-1.PNG)
-![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/desktop-wireframes-2.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-1.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-2.PNG)
 
 
--   Figma Mobile Wireframe - [View](https://www.figma.com/file/tF92jalVcQwe1qMrQD85GQ/otter-hockey---Mobile?node-id=0%3A1)
+-   Figma Mobile Wireframe - [View](https://www.figma.com/file/KOF9ARsG0VHTkh4iwZ0QbF/Otter-Hockey---Mobile?node-id=0%3A1)
 
-![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/mobile-wireframe.PNG)
+![Figma Mobile Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-wireframes-1.PNG)
 
 ### Flowchart
 
 -   Lucidchart - [View](https://lucid.app/lucidchart/0891e26c-cd6e-4247-ad81-8fbdf35eb7cb/edit?invitationId=inv_4362915e-3638-41ed-b418-d385edae4cff)
 
-![Lucid Flowchart](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/readme-images/lucid-flowchart.PNG)
+![Lucid Flowchart](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lucid-flowchart.PNG)
 
 ## Agile Methodology - Design
 
