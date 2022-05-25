@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-As a customer/site user I want to be able to
+As a customer/site user
