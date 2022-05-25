@@ -64,6 +64,13 @@ I have been given full permission to use all my static files and product informa
 
 ## Agile Methodology - Planning & Requirements
 
+-   GitHub Issues - [View](https://github.com/liamsmith3194/otter-hockey/issues)
+![GitHub Issues](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/github-issues-1.PNG)
+![GitHub Issues](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/github-issues-2.PNG)
+
+-   Project Planning Board - [View](https://github.com/liamsmith3194/otter-hockey/projects/1)
+![GitHub Project Planning Board](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/github-project-planning-board.PNG)
+
 ### User Stories
 [View](https://docs.google.com/spreadsheets/d/19LTRR3Om2SZQ7QQXUBhVAfR0ZMenbPFSQmbzZz1gWek/edit?usp=sharing)
 ![Google Sheets - User Stories](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/user-stories-google-sheets.PNG)
