@@ -9,9 +9,9 @@ Based on https://www.otterhockey.co.uk
 An online E-Commerce store for hockey fans to purchase our products.
 From top of the range sticks to a pair a shin pads.
 
-## Our Story - Direct Quote
+## Our Story
 
-    "Whilst at University our founder, Kyle, broke his hockey stick and had not budgeted to purchase another. The idea of making hockey sticks premium but affordable then formed. Upon our start in 2018, we originally planned to make one range of sticks, but in April 2019 the community wanted more, we gave you more. Fast forward two years later and our sticks were at the Tokyo 2020 Olympics, used by Melanie Garcia of Spain. Showcasing to the world how Hockey can be Premium, but Affordable. Keep an eye out, we've got more to come."
+> "Whilst at University our founder, Kyle, broke his hockey stick and had not budgeted to purchase another. The idea of making hockey sticks premium but affordable then formed. Upon our start in 2018, we originally planned to make one range of sticks, but in April 2019 the community wanted more, we gave you more. Fast forward two years later and our sticks were at the Tokyo 2020 Olympics, used by Melanie Garcia of Spain. Showcasing to the world how Hockey can be Premium, but Affordable. Keep an eye out, we've got more to come."
 
 ## Permission
 
@@ -182,6 +182,8 @@ As an administrator/owner ...
 ![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-2.PNG)
 ![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-3.PNG)
 ![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-4.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-5.PNG)
+![Figma Desktop Wireframe](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-wireframes-6.PNG)
 
 
 -   Figma Mobile Wireframe - [View](https://www.figma.com/file/KOF9ARsG0VHTkh4iwZ0QbF/Otter-Hockey---Mobile?node-id=0%3A1)
