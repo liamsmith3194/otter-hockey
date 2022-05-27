@@ -7,7 +7,11 @@ Welcome to Otter Hockey!
 Based on https://www.otterhockey.co.uk
 
 An online E-Commerce store for hockey fans to purchase our products.
-From top of the range sticks to a pair a shin pads, we pride ourselves on build quality and use the best materials!
+From top of the range sticks to a pair a shin pads.
+
+## Our Story - Direct Quote
+
+    "Whilst at University our founder, Kyle, broke his hockey stick and had not budgeted to purchase another. The idea of making hockey sticks premium but affordable then formed. Upon our start in 2018, we originally planned to make one range of sticks, but in April 2019 the community wanted more, we gave you more. Fast forward two years later and our sticks were at the Tokyo 2020 Olympics, used by Melanie Garcia of Spain. Showcasing to the world how Hockey can be Premium, but Affordable. Keep an eye out, we've got more to come."
 
 ## Permission
 
@@ -28,6 +32,7 @@ I have been given full permission to use all my static files and product informa
     -   [User Stories](#user-stories)
     -   [Wireframes](#wireframes)
     -   [Flowchart](#flowchart)
+    -   [Databases](#databases)
 2.  [Design](#agile-methodology---design)
     -   [Colour Scheme](#colour-scheme)
     -   [Typography](#typography)
@@ -186,12 +191,34 @@ As an administrator/owner ...
 
 ### Flowchart
 
--   Lucidchart - [View](https://lucid.app/lucidchart/0891e26c-cd6e-4247-ad81-8fbdf35eb7cb/edit?invitationId=inv_4362915e-3638-41ed-b418-d385edae4cff)
+-   Lucidchart Flowchart - [View](https://lucid.app/lucidchart/0891e26c-cd6e-4247-ad81-8fbdf35eb7cb/edit?invitationId=inv_4362915e-3638-41ed-b418-d385edae4cff)
 
 ![Lucid Flowchart](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lucid-flowchart.PNG)
 
-### Database
+### Databases
 
+-   Lucidchart Database Models - [View](https://lucid.app/lucidchart/d2cd8bee-d86e-490a-9f4b-8ca0156f4ffe/edit?viewport_loc=-474%2C38%2C3136%2C1334%2C0_0&invitationId=inv_b6c90e1f-5889-4a79-82c4-13073bf97b4f#)
+
+![Lucid Database Models](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lucid-database-models.PNG)
+
+The site is connected to Heroku's Postgres Database.
+
+The Entity-Relationship Diagram below shows how the database models and how they relate to each other.
+
+#### Products
+The Products model is used to add products to the site. Only the site owner/admin can add, edit, and delete products. All other users are able to view the products on the site.
+
+#### Category
+The Category model is used so that the site owner/admin can assign products to a Category. This ensures the products are in the correct location for users to find. The product category links to the Category name.
+
+#### Order
+The Order model is used for the order details (when an order is placed by a user). The user profile of the order model is linked to the User Profile model providing the user is registered.
+
+#### Order Line Items
+Used for the checkout details. This is linked to the Order Line Items model which contains the products (and products model) ordered by the user.
+
+#### User Profile
+The User Profile stores the default delivery details again, assuming the user is registered and chose to save their delivery details.
 
 ## Agile Methodology - Design
 
