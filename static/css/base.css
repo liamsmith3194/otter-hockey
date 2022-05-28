@@ -11,6 +11,14 @@ body {
     height: calc(100vh - 164px);
     color: #6D6D6D;
     font-family: 'Montserrat', sans-serif;
+    font-size: 0.65;
+}
+
+/* changes the buttons on the right */
+p {
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
 }
 
 /* from Bulma */
@@ -24,15 +32,30 @@ body {
 
 .font-logo {
     font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: 900;
     letter-spacing: 10px;
     text-transform: uppercase;
     color: #6D6D6D;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.welcome-message {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.welcome-container{
+    background-color: #6D6D6D80;
+}
+
 .main-logo-link {
     width: fit-content;
+}
+
+.banner-offer {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .shop-now-button {
@@ -57,20 +80,48 @@ body {
 }
 
 .text-black {
-    color: #6D6D6D !important;
+    color: #000 !important;
+}
+
+.text-white {
+    color: #fff !important;
 }
 
 .border-grey {
     border: 2px solid #6D6D6D !important;
 }
 
+.bg-grey {
+    background: #6D6D6D !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.nav-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2.5px;
+}
+
+.nav-item {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2.5px;
+}
+
+.dropdown-item{
+    font-size: 0.85rem;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
