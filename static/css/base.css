@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+body {
+    /* background: url('/media/209475470_129587399214744_6805516309758510307_n.jpg') no-repeat center center fixed; */
+    background: url('/media/188985462_372364654218214_6879001854730362899_n.jpg') no-repeat center center fixed;
+    /* background: url('/media/277363439_4716761511779976_3292372955646677478_n.jpg') no-repeat center center fixed; */
+    /* background: url('/media/120195944_808408039907468_3570453029845818689_n_crop.jpg') no-repeat bottom center fixed; */
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #6D6D6D;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.font-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #6D6D6D;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-grey {
+    background: #6D6D6D;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-grey:hover,
+.btn-grey:active,
+.btn-grey:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #6D6D6D !important;
+}
+
+.border-grey {
+    border: 2px solid #6D6D6D !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
