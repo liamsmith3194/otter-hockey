@@ -80,11 +80,11 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="text-grey nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="header-buttons my-0">My Account</p>
+                                <p class="header-buttons text-grey my-0">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -101,11 +101,11 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-grey{% endif %} nav-link"
                             href="">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-                                <p class="header-buttons my-0">
+                                <p class="header-buttons text-grey my-0">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -118,7 +118,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-grey">
+        <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,41 +145,58 @@
     {% block content %}
     {% endblock %}
 
-    <div class="footer-container py-2 bg-grey text-center">
+    <!-- Footer -->
+    <footer class="footer bg-grey py-2">
         <div class="row w-100">
-            <div class="col-sm">
-                <h4 class="nav-item text-white text-center">
-                    More Information
-                </h4>
-                <ul class="footer-item text-white">
-                    <li>About us</li>
-                    <li>FAQ'S</li>
-                    <li>Privacy Policy</li>
-                </ul>
+            <div class="col-md-4 text-center">
+                <div class="footer-header">
+                    <!-- Help Section -->
+                    <h4 class="nav-item text-white">
+                        More Information
+                    </h4>
+                    <ul class="footer-item text-white">
+                        <li>About us</li>
+                        <li>FAQ'S</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-sm">
+            <div class="col-md-4 text-center footer-header">
+                <!-- Subscribe Section -->
                 <h4 class="nav-item text-white">
                     Subscribe
                 </h4>
-                <ul class="footer-item text-white">
-                    <li>About us</li>
-                    <li>FAQ'S</li>
-                    <li>Privacy Policy</li>
-                </ul>
+                <p class="footer-item">Get exclusive offers and discount codes by subscribing to our monthly
+                    newsletter</p>
+                <!-- Mailchimp signup form here -->
             </div>
-            <div class="col-sm">
-                <h4 class="nav-item text-white">
-                    Contact Us
-                </h4>
-                <ul class="footer-item text-white">
-                    <li>Send us a message</li>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                </ul>
+            <div class="col-md-4 text-center">
+                <div class="footer-header">
+                    <h4 class="nav-item text-white">
+                        Contact Us
+                    </h4>
+                    <ul class="footer-item text-white">
+                        <li>Send us a message</li>
+                    </ul>
+                    <div>
+                        <a href="https://facebook.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in new tab)"><i
+                                class="social-media-icons fab fa-facebook"></i></a></li>
+                        <a href="https://twitter.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Twitter page (opens in new tab)"><i
+                                class="social-media-icons fab fa-twitter"></i></a></li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in new tab)"><i
+                                class="social-media-icons fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Copyright
+                    <div class="text-white">
+                        <i class="fa-regular fa-copyright text-white">Otter Hockey, 2022</i>
+                    </div> -->
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}
