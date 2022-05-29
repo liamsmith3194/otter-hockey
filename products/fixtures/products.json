@@ -1,0 +1,226 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000001",
+         "name":"O100",
+         "description":"The upgraded O100. The perfect stick if you are looking to improve your 3D skills, dragflicking and general play. This stick is tailored for the modern game. This stick has a dragflicking groove.",
+         "price":167.99,
+         "category":1,
+         "rating":9,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_bea2a3a9bf514c73b155bd0b566bdf53~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_bea2a3a9bf514c73b155bd0b566bdf53~mv2.jpg",
+         "image":"otter-hockey-o100-stick.jpg"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000002",
+         "name":"O90",
+         "description":"The upgraded O90. The perfect stick if you are looking to improve your 3D skills, dragflicking and general play. This stick is tailored for the modern game. This stick has a dragflicking groove.",
+         "price":139.99,
+         "category":1,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_8a3688148fd445009875bbc34cc56ff1~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_8a3688148fd445009875bbc34cc56ff1~mv2.jpg",
+         "image":"otter-hockey-o90-stick.jpg"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000003",
+         "name":"O70",
+         "description":"The O70 is ideal for those who prefer flair and control over power. The perfect stick if you are looking to improve your 3D skills, dragflicking and general play. This stick is tailored for the modern game.",
+         "price":127.49,
+         "category":1,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_d8e9e88b8dbe4caf8146b935a8172dd8~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_d8e9e88b8dbe4caf8146b935a8172dd8~mv2.jpg",
+         "image":"otter-hockey-o70-stick.jpg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000004",
+         "name":"LB100",
+         "description":"The brand new LB100. The perfect stick if you are looking to improve your 3D skills, aerials, lifted hitting & general play. This stick does not have a dragflicking groove.",
+         "price":143.99,
+         "category":1,
+         "rating":9,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_5c525ac88ab04db99fdea8d75bd7df0b~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_5c525ac88ab04db99fdea8d75bd7df0b~mv2.jpg",
+         "image":"otter-hockey-lb100-stick.jpg"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000005",
+         "name":"LB90",
+         "description":"The brand new LB90. The perfect stick if you are looking to improve your 3D skills, aerials, lifted hitting & general play. This stick does not have a dragflicking groove.",
+         "price":139.99,
+         "category":1,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_c6285c80eff14dc5b4dfcef7ad93103e~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_c6285c80eff14dc5b4dfcef7ad93103e~mv2.jpg",
+         "image":"otter-hockey-lb90-stick.jpg"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000006",
+         "name":"LB70",
+         "description":"The LB70 is ideal for those who prefer flair and control over power. The perfect stick if you are looking to improve your 3D skills, aerials, lifted hitting & general play. This stick does not have a dragflicking groove.",
+         "price":127.49,
+         "category":1,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_a20aa6baf1054f2b81b23b5edf63fe51~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_a20aa6baf1054f2b81b23b5edf63fe51~mv2.jpg",
+         "image":"otter-hockey-lb70-stick.jpg"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000007",
+         "name":"PB90",
+         "description":"The Pro Bow is the bridge between our Low and the Mid Bow Sticks. It has been made to ensure that you have an edge with your 3D skills, without compromising on crucial consistent basic skills. Such as flat hitting and slapping.",
+         "price":139.99,
+         "category":1,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_72a9ebc3d9e34e258a992650c10d2198~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_72a9ebc3d9e34e258a992650c10d2198~mv2.jpg",
+         "image":"otter-hockey-pb90-stick.jpg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000008",
+         "name":"PB70",
+         "description":"The PB70 is ideal for those who prefer flair and control over power. The Pro Bow is the bridge between our Low and the Mid Bow Sticks. It has been made to ensure that you have an edge with your 3D skills, without compromising on crucial consistent basic skills. Such as flat hitting and slapping.",
+         "price":127.49,
+         "category":1,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_2cc30096fd6349ed9878370a97fac420~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_2cc30096fd6349ed9878370a97fac420~mv2.jpg",
+         "image":"otter-hockey-pb70-stick.jpg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000009",
+         "name":"MB90",
+         "description":"The Mid Bow (MB90) has been crafted to provide ultimate consistency and control with all skills, whatever your game situation is. It has an almost straight bow, which allows for unrivalled flat pushing, hitting and slapping.",
+         "price":139.99,
+         "category":1,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_7ce400127e844df9a7d2c16ed0694db9~mv2.jpg/v1/fill/w_777,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_7ce400127e844df9a7d2c16ed0694db9~mv2.jpg",
+         "image":"otter-hockey-mb90-stick.jpg"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000010",
+         "name":"Duffle Bag",
+         "description":"The Otter Duffle bag is our original fan favourite bag. It is performs excellently in almost all weather conditions. It has multiple side holders to carry your sticks with, and a protective cloth layer over the tarp at the bottom so it doesn’t scratch. This extends the life of the bag. The shoe and shinpad compartment allows you to store your smelly shoes separately from your clean clothes and the discreet valuables pocket on the other side of the bag makes it even more useful. The bag also has backpack straps to make it easy to carry. But most importantly, it has a 70L capacity, so it can be used as a matchday kit holder and is perfect to use luggage for a week away!",
+         "price":55.99,
+         "category":2,
+         "rating":9,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_30fb77ea18b14ccfb081ab2a54f85795~mv2.jpg/v1/fill/w_1166,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_30fb77ea18b14ccfb081ab2a54f85795~mv2.jpg",
+         "image":"otter-hockey-duffle-bag.jpg"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000011",
+         "name":"Otter Adventurer",
+         "description":"After the fantastic feedback from our duffle bag we've made a traditional style backpack that can withstand almost all the elements; but also, be fit for matchday and a long weekend away. Made with the same heavy-duty tarpaulin as the duffle bag, it performs great in harsh weather conditions and has a large 35-litre capacity. It can hold a stick in place using Velcro strapping on the side of the bag. This bag combines three key features from our Duffle Bag, Performance Pack and Urban Explorer. Tarpaulin material, heavy-duty looks and a buckle style system for extra security. ",
+         "price":51.99,
+         "category":2,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_7cd95b01839343218fa1f4a0eee99fc8~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_7cd95b01839343218fa1f4a0eee99fc8~mv2.jpg",
+         "image":"otter-hockey-adventurer-bag.jpg"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000012",
+         "name":"Matchday Bag",
+         "description":"The Matchday Bag is inspired by our Duffle Bag, it uses the same materials, and it has more space than you could need. It has four large compartments, one padded pocket, one padded phone pocket and a Cool Zone to keep your drink of choice at the same temperature. We have included two carry handles, backpack-style carry straps and a side strap. The stick compartment can keep up to 6 sticks. The middle and top compartment are great for packing your kit in for match day. The bottom compartment can easily hold your smelly shinpads and shoes. This revolutionary new bag is simply amazing.",
+         "price":63.99,
+         "category":2,
+         "rating":9,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_f9b151176c6c4411814eb7a118a9dbe4~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_f9b151176c6c4411814eb7a118a9dbe4~mv2.jpg",
+         "image":"otter-hockey-matchday-bag.jpg"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000013",
+         "name":"Duffle Bag Lite",
+         "description":"This brand-new lite version of the duffle bag is great for training and the gym. It holds enough kit so that you don’t have items rattling around in your bag and has a 35-litre capacity It has multiple side holders to carry your sticks with, and a protective cloth layer over the tarp at the bottom so it doesn’t scratch. This extends the life of the bag. The shoe and shinpad compartment allows you to store your smelly shoes separately from your clean clothes and the discreet valuables pocket on the other side of the bag makes it even more useful.",
+         "price":18.99,
+         "category":2,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_0e0cb0ed02dc40e3a6ffc80bd5d3dd0b~mv2.jpg/v1/fill/w_1166,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_0e0cb0ed02dc40e3a6ffc80bd5d3dd0b~mv2.jpg",
+         "image":"otter-hockey-duffle-bag-lite.jpg"
+      }
+   },
+   {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000014",
+         "name":"Matchday Bag Lite",
+         "description":"The brand-new Stick Bag Lite is inspired by our Matchday Bag, it uses the same materials, and it has a plethora of fantastic compartments. The stick compartment can keep up to 3 sticks. The middle and top compartment are great for packing your kit in for match day!",
+         "price":54.99,
+         "category":2,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_986b9991d9c54faea4830573f9a84ef0~mv2.jpg/v1/fill/w_1036,h_1554,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_986b9991d9c54faea4830573f9a84ef0~mv2.jpg",
+         "image":"otter-hockey-matchday-bag-lite.jpg"
+      }
+   },
+   {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000015",
+         "name":"Bench Coat",
+         "description":"Introduced for coaches & players that need some extra warmth in the winter. Velvet-lined pockets keep your hands nice and toasty. Triple lined, elastic insulating cuffs, & adjustable hood toggles for extra warmth. This is a water-resistant jacket.",
+         "price":37.50,
+         "category":3,
+         "rating":9,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_b5f9af0581e7435eaf298c55b009cfde~mv2.png/v1/fill/w_518,h_777,al_c,usm_0.66_1.00_0.01/8e7d53_b5f9af0581e7435eaf298c55b009cfde~mv2.png",
+         "image":"otter-hockey-bench-coat.jpg"
+      }
+   },
+   {
+      "pk":16,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000016",
+         "name":"Puffer Jacket",
+         "description":"Warm, lightweight, winter sports jacket. Ideal for the pitchside & warmups. Includes four velvet-lined pockets to keep your hands warm & provide extra storage.",
+         "price":35.00,
+         "category":3,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_c336759747844ce3a5f437ceda674013~mv2.png/v1/fill/w_518,h_777,al_c,usm_0.66_1.00_0.01/8e7d53_c336759747844ce3a5f437ceda674013~mv2.png",
+         "image":"otter-hockey-puffer-jacket.jpg"
+      }
+   },
+]
