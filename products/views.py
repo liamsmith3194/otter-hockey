@@ -46,3 +46,14 @@ def accessories_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+def all_products(request):
+    """ A view to show stick products, including sorting and search queries """
+
+    products = Product.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/products.html', context)
