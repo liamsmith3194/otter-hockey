@@ -10,12 +10,7 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ['category', 'name']
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = (
-        'friendly_name',
-    )
-
-
-
+    list_display = ('friendly_name',)
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
