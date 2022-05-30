@@ -206,7 +206,7 @@
          "category":3,
          "rating":9,
          "image_url":"https://static.wixstatic.com/media/8e7d53_b5f9af0581e7435eaf298c55b009cfde~mv2.png/v1/fill/w_518,h_777,al_c,usm_0.66_1.00_0.01/8e7d53_b5f9af0581e7435eaf298c55b009cfde~mv2.png",
-         "image":"otter-hockey-bench-coat.jpg"
+         "image":"otter-hockey-bench-coat.png"
       }
    },
    {
@@ -220,7 +220,119 @@
          "category":3,
          "rating":8,
          "image_url":"https://static.wixstatic.com/media/8e7d53_c336759747844ce3a5f437ceda674013~mv2.png/v1/fill/w_518,h_777,al_c,usm_0.66_1.00_0.01/8e7d53_c336759747844ce3a5f437ceda674013~mv2.png",
-         "image":"otter-hockey-puffer-jacket.jpg"
+         "image":"otter-hockey-puffer-jacket.png"
       }
    },
+   {
+      "pk":17,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000017",
+         "name":"White Hoodie",
+         "description":"Back by popular demand. This hoodie is great for cold winter training sessions & the clubhouse after a game.",
+         "price":25.99,
+         "category":3,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_7c6449eececd4e22a3fb911b024764d2~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_7c6449eececd4e22a3fb911b024764d2~mv2.jpg",
+         "image":"otter-hockey-white-hoodie.jpg"
+      }
+   },
+   {
+      "pk":18,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000018",
+         "name":"Black Hoodie",
+         "description":"Back by popular demand. This hoodie is great for cold winter training sessions & the clubhouse after a game.",
+         "price":25.99,
+         "category":3,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_40ce76b0cb314e03bb77e14f2ed49300~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_40ce76b0cb314e03bb77e14f2ed49300~mv2.jpg",
+         "image":"otter-hockey-black-hoodie.jpg"
+      }
+   },
+   {
+      "pk":19,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000019",
+         "name":"Training Top",
+         "description":"Made with Otter's new Dry-Fit material, found to dry up to 30% faster than our previous training tops. This makes for a better wicking fabric to draw more moisture away from the body.",
+         "price":19.99,
+         "category":3,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_d6ca7d6bc8214add9d1f134ed08fd25e~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_d6ca7d6bc8214add9d1f134ed08fd25e~mv2.jpg",
+         "image":"otter-hockey-training-top.jpg"
+      }
+   },
+   {
+      "pk":20,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000020",
+         "name":"Tracksuit Trousers",
+         "description":"Skinny fit 50% cotton, 50% polyester tracksuit trousers for the ultimate comfort fit.",
+         "price":20.99,
+         "category":3,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_0c2d0967327f4d5b8b2eaeadd92c1450~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_0c2d0967327f4d5b8b2eaeadd92c1450~mv2.jpg",
+         "image":"otter-hockey-tracksuit-trousers.jpg"
+      }
+   },
+   {
+      "pk":21,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000021",
+         "name":"MK9 Glove (Left Hand)",
+         "description":"This glove has been specifically made by us to provide you with unparalleled, lightweight left-handed glove protection; with the ultimate comfort fit. Why MK9? That's how many versions we had to make to get the balance of protection to comfort absolutely perfect.",
+         "price":24.99,
+         "category":4,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_6be5ec56b987479d9b7a473fd34530ce~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_6be5ec56b987479d9b7a473fd34530ce~mv2.jpg",
+         "image":"otter-hockey-glove-left-hand.jpg"
+      }
+   },
+   {
+      "pk":22,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000022",
+         "name":"Toray Shinpads",
+         "description":"These shinpads offer the gold standard of protection and are used by our International Athletes. Toray Otter Shinpads made with premium carbon and polymer padding. The carbon keeps them light and strong, and the polymer padding adds an extra absorbing layer for added protection and enhanced shock dissipation.",
+         "price":38.24,
+         "category":4,
+         "rating":8,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_055f25a9237345338a6554ff3c487a71~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_055f25a9237345338a6554ff3c487a71~mv2.jpg",
+         "image":"otter-hockey-shinpads.jpg"
+      }
+   },
+   {
+      "pk":23,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000023",
+         "name":"MK9 Glove (Right Hand)",
+         "description":"This glove has been specifically made by us to provide you with unparalleled, lightweight left-handed glove protection; with the ultimate comfort fit. Why MK9? That's how many versions we had to make to get the balance of protection to comfort absolutely perfect.",
+         "price":24.99,
+         "category":4,
+         "rating":7,
+         "image_url":"https://static.wixstatic.com/media/8e7d53_2fc4100c32fb42c29953942026ddb2aa~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/8e7d53_2fc4100c32fb42c29953942026ddb2aa~mv2.jpg",
+         "image":"otter-hockey-glove-right-hand.jpg"
+      }
+   },
+   {
+      "pk":24,
+      "model":"products.product",
+      "fields":{
+         "sku":"oh0000000024",
+         "name":"Gribbid Chamois ProGrip",
+         "description":"Fresh from our collaboration with Gribbid, the number one grip used by internationals. 'The Gribbid ProGrip feels nice and gives an extremely good grip on your hockey stick, even when you have wet hands or when it rains. The chamois grip must be placed over the existing grip and is therefore also called an overgrip, (Gribbid, 2021).' 'Features: – Highest quality – Original progrip® quality from The Netherlands – Soft and comfortable – Shock-absorbing function – High moisture absorption capacity – Anti-slip under all circumstances – Suitable for all sizes of hockey sticks – Easy to apply and replace – Patented gribbid progrip® quality, (Gribbid, 2021)'.",
+         "price":9.99,
+         "category":4,
+         "rating":9,
+         "image_url":"https://static.wixstatic.com/media/030766_0e03750d8b2247d9ae3e07ea388a4368~mv2.jpg/v1/fill/w_518,h_777,al_c,q_85,usm_0.66_1.00_0.01/030766_0e03750d8b2247d9ae3e07ea388a4368~mv2.jpg",
+         "image":"otter-hockey-chamois-grip.jpg"
+      }
+   }
 ]
