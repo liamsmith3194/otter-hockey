@@ -11,7 +11,7 @@ body {
     height: calc(100vh - 164px);
     color: #6D6D6D;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.65;
+    font-size: 0.75rem;
 }
 
 /* changes the buttons on the right */
@@ -103,6 +103,16 @@ body {
     color: #fff !important;
 }
 
+.product-name {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+.subheading {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2.5px;
+}
+
 .border-grey {
     border: 2px solid #6D6D6D !important;
 }
@@ -123,7 +133,7 @@ body {
 
 .nav-item {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 2.5px;
 }
 
@@ -137,7 +147,7 @@ body {
 
 .footer {
     display: flex;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
 }
@@ -172,7 +182,7 @@ a .social-media-icons {
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 
