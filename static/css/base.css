@@ -11,7 +11,7 @@ body {
     height: calc(100vh - 164px);
     color: #6D6D6D;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
 }
 
 /* changes the buttons on the right */
@@ -198,5 +198,16 @@ a .social-media-icons {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
