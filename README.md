@@ -721,7 +721,11 @@ TO BE CONFIRMED
 
 CODE REFERENCES
 
--   Extending and customizing Django-Allauth [GeeksforGeeks](https://www.geeksforgeeks.org/python-extending-and-customizing-django-allauth/)
+- Boutique Ado:
+header
+body height calculation - height: calc(100vh - 164px);
+overlay
+
 
 ## Conclusion
 

@@ -2,56 +2,31 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <!-- <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 col-md-4 my-auto welcome-container">
-                <h2 class="welcome-message text-black text-center py-3">
-                    Welcome to Otter Hockey
-                </h2>
-                <h3 class="text-black font-weight-bold text-center">
-                    New clothing to check out!
-                </h3>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="d-flex justify-content-center shop-now-button banner-offer btn rounded-0 py-3">View all clothes</a>
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto welcome-container">
-                <h2 class="welcome-message text-black text-center py-3">
-                    Welcome to Otter Hockey
-                </h2>
-                <h3 class="display-5 logo-font font-weight-bold text-black text-center">
-                    New clothing to check out!
-                </h3>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button banner-offer btn btn-lg rounded-0 py-3">Shop Now</a>
-                    </h4>
-                </div>
+<div class="container welcome-container h-100">
+    <div class="row h-100">
+        <div class="col-lg-6 my-auto welcome-message">
+            <h1 class="display-4 welcome-heading">
+                Welcome to Otter Hockey
+            </h1>
+            <h4 class="welcome-tag text-uppercase">
+                Premium affordable hockey sticks
+            </h4>
+            <div class="my-5 index-button">
+                <h4>
+                    <a href="{% url 'sticks' %}" class="btn-black btn rounded-5 py-3"><strong>
+                        View all Sticks
+                    </strong></a>
+                </h4>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
+</div>
 {% endblock %}

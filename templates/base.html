@@ -58,10 +58,11 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="font-logo">Otter Hockey</h2>
+                <a href="{% url 'home' %}" class="nav-link">
+                    <h2 class="logo">Otter Hockey</h2>
                 </a>
             </div>
+            <!-- Search form -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">
@@ -70,13 +71,14 @@
                         <div class="input-group-append">
                             <button class="form-control btn btn-grey border border-grey rounded-0" type="submit">
                                 <span class="icon">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search text-white"></i>
                                 </span>
                             </button>
                         </div>
                     </div>
                 </form>
             </div>
+            <!-- Top right buttons -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -84,7 +86,7 @@
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="header-buttons text-grey my-0">My Account</p>
+                                <p class="text-grey nav-link p-0 my-0">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -93,10 +95,10 @@
                             <a href="" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            <a href="account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -105,7 +107,7 @@
                             href="">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-                                <p class="header-buttons text-grey my-0">
+                                <p class="text-grey nav-link p-0 my-0">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -118,6 +120,7 @@
                 </ul>
             </div>
         </div>
+        <!-- navigation bar and mobile nav -->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
@@ -135,6 +138,7 @@
         </div>
     </header>
 
+    <!-- Messages -->
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
@@ -146,53 +150,60 @@
     {% endblock %}
 
     <!-- Footer -->
-    <footer class="footer w-100 bg-grey py-2">
-        <div class="row w-100">
-            <div class="col-md-4 text-center">
-                <div class="footer-header">
-                    <!-- Help Section -->
-                    <h4 class="nav-item text-white">
-                        More Information
-                    </h4>
-                    <ul class="footer-item text-white">
-                        <li>About us</li>
-                        <li>FAQ'S</li>
-                        <li>Privacy Policy</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4 text-center footer-header">
-                <!-- Subscribe Section -->
-                <h4 class="nav-item text-white">
-                    Subscribe
-                </h4>
-                <p class="footer-item">Get exclusive offers and discount codes by subscribing to our monthly
-                    newsletter</p>
-                <!-- Mailchimp signup form here -->
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="footer-header">
-                    <h4 class="nav-item text-white">
-                        Contact Us
-                    </h4>
-                    <ul class="footer-item text-white">
-                        <li>Send us a message</li>
-                    </ul>
-                    <div>
-                        <a href="https://facebook.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Facebook page (opens in new tab)"><i
-                                class="social-media-icons fab fa-facebook"></i></a></li>
-                        <a href="https://twitter.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Twitter page (opens in new tab)"><i
-                                class="social-media-icons fab fa-twitter"></i></a></li>
-                        <a href="https://instagram.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Instagram page (opens in new tab)"><i
-                                class="social-media-icons fab fa-instagram"></i></a>
+    <footer class="footer">
+        <div class="footer-div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-column text-center">
+                        <!-- Help Section -->
+                        <h4 class="nav-item text-white">
+                            More Information
+                        </h4>
+                        <div>
+                            <a href="" class="footer-item text-white">About us</a>
+                        </div>
+                        <div>
+                            <a href="" class="footer-item text-white">FAQ'S</a>
+                        </div>
+                        <div>
+                            <a href="" class="footer-item text-white">Privacy Policy</a>
+                        </div>
                     </div>
-                    <!-- Copyright
-                    <div class="text-white">
-                        <i class="fa-regular fa-copyright text-white">Otter Hockey, 2022</i>
-                    </div> -->
+
+                    <div class="col-md-4 footer-column text-center">
+                        <!-- Subscribe Section -->
+                        <h4 class="nav-item text-white">
+                            Subscribe
+                        </h4>
+                        <p class="footer-item text-white">Get exclusive offers and discount codes by subscribing to our
+                            monthly
+                            newsletter</p>
+                        <!-- Mailchimp signup form here -->
+                    </div>
+
+                    <div class="col-md-4 footer-column text-center">
+                        <h4 class="nav-item text-white">
+                            Contact Us
+                        </h4>
+                        <div>
+                            <a href="" class="footer-item text-white">Send us a message</a>
+                        </div>
+                        <div>
+                            <!-- social media -->
+                            <a href="https://facebook.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Facebook page (opens in new tab)"><i
+                                    class="social-media-icons fab fa-facebook"></i></a></li>
+                            <a href="https://twitter.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Twitter page (opens in new tab)"><i
+                                    class="social-media-icons fab fa-twitter"></i></a></li>
+                            <a href="https://instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Instagram page (opens in new tab)"><i
+                                    class="social-media-icons fab fa-instagram"></i></a>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="footer-item text-white">© Otter Hockey, 2022
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
