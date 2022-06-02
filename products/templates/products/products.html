@@ -37,7 +37,7 @@
                 </div>
                 <div class="py-3 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                     <div class="card-body pt-0 pb-0">
-                        <p class=" h2 product-name mb-3">{{ product.name }}</p>
+                        <a href="{% url 'product_detail' product.id %}" class=" h2 product-name mb-3">{{ product.name }}</a>
                     </div>
                     <div class="card-footer bg-white pt-0 border-0 text-left">
                         <div class="row">

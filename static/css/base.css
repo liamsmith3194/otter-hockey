@@ -39,8 +39,13 @@ body {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-a .logo {
-    color: #6D6D6D;
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #4D4D4D;
+    text-decoration: none;
 }
 
 /* search bar */
@@ -209,6 +214,18 @@ a .social-media-icons {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2.5px;
 }
+
+/* .product-image-container {
+    width: 100%;
+    height: 250px;
+    border: 5px dashed #f7a239;
+    background-color: darkslategrey;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+} */
 
 /* -------------------------------- Media Queries */
 
