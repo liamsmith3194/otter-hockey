@@ -43,10 +43,23 @@
                     <div class="card-footer bg-white pt-0 border-0 text-left">
                         <div class="row">
                             <div class="col">
-                                <p class="mb-0 text-black text-left">{{ product.description }}</p>
+                                <p class="mb-3 text-black text-left">{{ product.description }}</p>
+
+                                {{ product.category }}
+
+                                {% if product.price >= 100 %}
+                                <div class="progress mb-3" style="height: 25px;">
+                                    <div class="progress-bar bg-grey" role="progressbar" style="width: 80%;"
+                                        aria-valuenow="8" aria-valuemin="0" aria-valuemax="10">Power</div>
+                                </div>
+                                <div class="progress mb-3" style="height: 25px;">
+                                    <div class="progress-bar bg-grey" role="progressbar" style="width: 60%;"
+                                        aria-valuenow="8" aria-valuemin="0" aria-valuemax="10">Control</div>
+                                </div>
+                                {% endif %}
                                 {% if product.rating %}
-                                <br>
-                                <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
+                                <p class="text-left text-black"><i
+                                        class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
                                     10</p>
                                 {% else %}
                                 <p class="text-left">No Rating</p>
