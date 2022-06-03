@@ -723,7 +723,6 @@ CODE REFERENCES
 
 - Boutique Ado:
 header
-body height calculation - height: calc(100vh - 164px);
 overlay
 
 

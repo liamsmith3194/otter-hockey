@@ -3,6 +3,18 @@ from .models import Product
 
 # Create your views here.
 
+def all_products(request):
+    """ A view to show stick products, including sorting and search queries """
+
+    products = Product.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/products.html', context)
+
+
 def stick_products(request):
     """ A view to show stick products, including sorting and search queries """
 
@@ -13,6 +25,7 @@ def stick_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
 
 def bag_products(request):
     """ A view to show bag products, including sorting and search queries """
@@ -25,6 +38,7 @@ def bag_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def clothes_products(request):
     """ A view to show clothes products, including sorting and search queries """
 
@@ -36,21 +50,11 @@ def clothes_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def accessories_products(request):
     """ A view to show accessories products, including sorting and search queries """
 
     products = Product.objects.filter(category = 4)
-
-    context = {
-        'products': products,
-    }
-
-    return render(request, 'products/products.html', context)
-
-def all_products(request):
-    """ A view to show stick products, including sorting and search queries """
-
-    products = Product.objects.all()
 
     context = {
         'products': products,
