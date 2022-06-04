@@ -55,159 +55,164 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link">
-                    <h2 class="logo">Otter Hockey</h2>
-                </a>
-            </div>
-            <!-- Search form -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-grey rounded-0" type="text" name="q"
-                            placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-grey border border-grey rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search text-white"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- Top right buttons -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-grey nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="text-grey nav-link p-0 my-0">My Account</p>
+    <article>
+        <header class="container-fluid fixed-top">
+            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <h2 class="logo">Otter Hockey</h2>
+                    </a>
+                </div>
+                <!-- Search form -->
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-grey rounded-0" type="text" name="q"
+                                placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-grey border border-grey rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search text-white"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-grey{% endif %} nav-link"
-                            href="">
-                            <div class="text-center">
-                                <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-                                <p class="text-grey nav-link p-0 my-0">
-                                    {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                                </p>
+                    </form>
+                </div>
+                <!-- Top right buttons -->
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-grey nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="text-grey nav-link p-0 my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-grey{% endif %} nav-link"
+                                href="">
+                                <div class="text-center">
+                                    <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+                                    <p class="text-grey nav-link p-0 my-0">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <!-- navigation bar and mobile nav -->
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h5 class="banner-offer my-1">FREE DELIVERY ON ORDERS OVER £{{ free_shipping_threshold }}!</h5>
+            <!-- navigation bar and mobile nav -->
+            <div class="row bg-white">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
-        </div>
-    </header>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-black text-white">
+                    <h5 class="banner-offer my-1">FREE DELIVERY ON ORDERS OVER £{{ free_shipping_threshold }}!</h5>
+                </div>
+            </div>
+        </header>
+        <main>
 
-    <!-- Messages -->
-    {% if messages %}
-    <div class="message-container"></div>
-    {% endif %}
+            <!-- Messages -->
+            {% if messages %}
+            <div class="message-container"></div>
+            {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+            {% block page_header %}
+            {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-div">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 footer-column text-center">
-                        <!-- Help Section -->
-                        <h4 class="nav-item text-white">
-                            More Information
-                        </h4>
-                        <div>
-                            <a href="" class="footer-item text-white">About us</a>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-div">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 footer-column text-center">
+                            <!-- Help Section -->
+                            <h4 class="nav-item text-white">
+                                More Information
+                            </h4>
+                            <div>
+                                <a href="" class="footer-item text-white">About us</a>
+                            </div>
+                            <div>
+                                <a href="" class="footer-item text-white">FAQ'S</a>
+                            </div>
+                            <div>
+                                <a href="" class="footer-item text-white">Privacy Policy</a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="" class="footer-item text-white">FAQ'S</a>
-                        </div>
-                        <div>
-                            <a href="" class="footer-item text-white">Privacy Policy</a>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4 footer-column text-center">
-                        <!-- Subscribe Section -->
-                        <h4 class="nav-item text-white">
-                            Subscribe
-                        </h4>
-                        <p class="footer-item text-white">Get exclusive offers and discount codes by subscribing to our
-                            monthly
-                            newsletter</p>
-                        <!-- Mailchimp signup form here -->
-                    </div>
+                        <div class="col-md-4 footer-column text-center">
+                            <!-- Subscribe Section -->
+                            <h4 class="nav-item text-white">
+                                Subscribe
+                            </h4>
+                            <p class="footer-item text-white">Get exclusive offers and discount codes by subscribing to
+                                our
+                                monthly
+                                newsletter</p>
+                            <!-- Mailchimp signup form here -->
+                        </div>
 
-                    <div class="col-md-4 footer-column text-center">
-                        <h4 class="nav-item text-white">
-                            Contact Us
-                        </h4>
-                        <div>
-                            <a href="" class="footer-item text-white">Send us a message</a>
-                        </div>
-                        <div>
-                            <!-- social media -->
-                            <a href="https://facebook.com" target="_blank" rel="noopener"
-                                aria-label="Visit our Facebook page (opens in new tab)"><i
-                                    class="social-media-icons fab fa-facebook"></i></a></li>
-                            <a href="https://twitter.com" target="_blank" rel="noopener"
-                                aria-label="Visit our Twitter page (opens in new tab)"><i
-                                    class="social-media-icons fab fa-twitter"></i></a></li>
-                            <a href="https://instagram.com" target="_blank" rel="noopener"
-                                aria-label="Visit our Instagram page (opens in new tab)"><i
-                                    class="social-media-icons fab fa-instagram"></i></a>
-                        </div>
-                        <!-- Copyright -->
-                        <div class="footer-item text-white">© Otter Hockey, 2022
+                        <div class="col-md-4 footer-column text-center">
+                            <h4 class="nav-item text-white">
+                                Contact Us
+                            </h4>
+                            <div>
+                                <a href="" class="footer-item text-white">Send us a message</a>
+                            </div>
+                            <div>
+                                <!-- social media -->
+                                <a href="https://facebook.com" target="_blank" rel="noopener"
+                                    aria-label="Visit our Facebook page (opens in new tab)"><i
+                                        class="social-media-icons fab fa-facebook"></i></a></li>
+                                <a href="https://twitter.com" target="_blank" rel="noopener"
+                                    aria-label="Visit our Twitter page (opens in new tab)"><i
+                                        class="social-media-icons fab fa-twitter"></i></a></li>
+                                <a href="https://instagram.com" target="_blank" rel="noopener"
+                                    aria-label="Visit our Instagram page (opens in new tab)"><i
+                                        class="social-media-icons fab fa-instagram"></i></a>
+                            </div>
+                            <!-- Copyright -->
+                            <div class="footer-item text-white">© Otter Hockey, 2022
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </article>
 
     {% block postloadjs %}
     {% endblock %}
