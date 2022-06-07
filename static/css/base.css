@@ -180,6 +180,12 @@ a .social-media-icons {
     color: white;
 }
 
+.btn-white {
+    background: #fff;
+    color: #000;
+    border: #000 2px solid;
+}
+
 /* Pseudo Buttons */
 
 .btn-black:hover,
@@ -307,11 +313,10 @@ a .social-media-icons {
 
 @media screen and (max-width: 640px) {
 
-    /* Homepage Styling */
-
     .welcome-container {
         width: 80%;
     }
+ 
 }
 
 @media screen and (max-width: 460px) {
