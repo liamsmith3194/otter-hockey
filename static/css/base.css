@@ -73,7 +73,7 @@ a:hover {
 
 /* search bar */
 .border-grey {
-    border: 2px solid #6D6D6D !important;
+    border: 3px solid #6D6D6D !important;
 }
 
 ::placeholder{
@@ -180,10 +180,53 @@ a .social-media-icons {
     color: white;
 }
 
-.btn-white {
+.btn-grey-add {
+    background: #6D6D6D;
+    border: #6D6D6D 3px solid;
+    color: white;
+    float: right;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.btn-grey-add:hover {
+    background: #4D4D4D;
+    border: #4D4D4D 3px solid;
+}
+
+.btn-white-add {
     background: #fff;
     color: #000;
-    border: #000 2px solid;
+    border: #000 3px solid;
+    float: right;
+    text-align: center;
+}
+
+.btn-white-add:hover {
+    background: #000;
+    color: #FFF;
+
+}
+
+.btn-select-size {
+    background: #fff;
+    color: #000;
+    border: #000 3px solid;
+    text-align: center;
+    height: 45px;
+
+}
+
+.btn-grey-bag {
+    width: 100%;
+}
+
+.btn-white-bag {
+    width: 100%;
+}
+
+input {
+    border: none;
 }
 
 /* Pseudo Buttons */
@@ -261,6 +304,10 @@ a .social-media-icons {
 
 .btt-link {
     cursor: pointer;
+}
+
+.border-black {
+    border: 3px solid #000 !important;
 }
 
 /* .product-image-container {

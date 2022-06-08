@@ -32,11 +32,11 @@
                     <div class="col-8">
                         <p class=" display-4 product-name mb-2">{{ product.name }}</p>
                     </div>
-                    
+
                     <div class="col-4">
                         <p class="product-price mb-0 font-weight-bold">£{{ product.price }}</p>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="card-footer bg-white pt-0 border-0 text-left">
                 <div class="row">
@@ -48,19 +48,61 @@
                         <p class="text-left">No Rating</p>
                         {% endif %}
                         <p class="mb-3 text-black text-left">{{ product.description }}</p>
-                        
 
                         {% if product.price >= 100 %}
-                        <div class="progress mb-3" style="height: 25px;">
-                            <div class="progress-bar bg-grey" role="progressbar" style="width: 80%;"
-                                aria-valuenow="8" aria-valuemin="0" aria-valuemax="10">Power</div>
+                        <div class="progress mb-3" style="height: 30px;">
+                            <div class="progress-bar bg-grey" role="progressbar" style="width: 80%;" aria-valuenow="8"
+                                aria-valuemin="0" aria-valuemax="10">Power</div>
                         </div>
-                        <div class="progress mb-3" style="height: 25px;">
-                            <div class="progress-bar bg-grey" role="progressbar" style="width: 60%;"
-                                aria-valuenow="8" aria-valuemin="0" aria-valuemax="10">Control</div>
+                        <div class="progress mb-3" style="height: 30px;">
+                            <div class="progress-bar bg-grey" role="progressbar" style="width: 60%;" aria-valuenow="8"
+                                aria-valuemin="0" aria-valuemax="10">Control</div>
                         </div>
-                        {% endif %}
                     </div>
+                </div>
+
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="mb-3 btn-select-size font-weight-bold py-2 px-4">Select Size:</div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <form class="form" action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group w-100">
+                                <div class="input-group border-black">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-grey rounded-0"
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input text-black text-center" type="number"
+                                        placeholder="Quantity" name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-grey rounded-0"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="submit" class="btn-grey-add font-weight-bold py-2 px-4" value="Add to Basket">
+                        <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4">
+                            Keep Shopping
+                        </a>
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
             </div>
         </div>
