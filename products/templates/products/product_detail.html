@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-6">
-                        <form class="form" action="" method="POST">
+                        <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
                             <div class="form-group w-100">
                                 <div class="input-group border-black">
@@ -82,8 +82,8 @@
                                         </button>
                                     </div>
                                     <input class="form-control qty_input text-black text-center" type="number"
-                                        placeholder="Quantity" name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                        name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                        id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-grey rounded-0"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
@@ -94,15 +94,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="col-12 mt-3">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                        <div class="col-12 mt-3">
                         <input type="submit" class="btn-grey-add font-weight-bold py-2 px-4" value="Add to Basket">
                         <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4">
                             Keep Shopping
                         </a>
+                        </div>
+                        </form>
                     </div>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
             </div>
         </div>

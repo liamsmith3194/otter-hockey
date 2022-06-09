@@ -391,4 +391,13 @@ input {
     .nav-link {
         font-size: 0.8rem;
     }
+
+    .btn-grey-add {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .btn-white-add {
+        width: 100%;
+    }
 }
