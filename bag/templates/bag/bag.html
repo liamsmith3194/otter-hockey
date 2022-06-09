@@ -20,49 +20,11 @@
     <div class="row">
         <div class="product-container col-12">
             <div class="row mt-1 mb-2">
-                {% for product in products %}
-                <div class="py-3 col-sm-6 col-md-6 col-lg-2 col-xl-2">
-                    <div class="card h-100 border-0">
-                        {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
-                    </div>
+                {% if bag_items %}
+                <div>
+                    {{ bag_items }}
                 </div>
-                <div class="py-3 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="card-body pt-0 pb-2">
-                        <a href="{% url 'product_detail' product.id %}"
-                            class=" h2 product-name mb-3">{{ product.name }}</a>
-                    </div>
-                    <div class="card-footer bg-white pt-0 border-0 text-left">
-                        <div class="row">
-                            <div class="col">
-
-                                <p class="mb-3 text-black text-left">{{ product.sku }}</p>
-
-                                {% if product.rating %}
-                                <p class="text-left text-black"><i
-                                        class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
-                                    10</p>
-                                {% else %}
-                                <p class="text-left">No Rating</p>
-                                {% endif %}
-                                <p class="text-left">Quantity</p>
-
-                                <p class="text-left">Subtotal</p>
-
-                                <p class="lead mb-0 text-left text-black font-weight-bold">£{{ product.price }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+                
                 <span>
                 <h3>Basket Total</h3>
                 <br>
@@ -82,6 +44,7 @@
                             Checkout
                         </strong></a>
                 </h4>
+                {% endif %}
             </div>
         </div>
     </div>
