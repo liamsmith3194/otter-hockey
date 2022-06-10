@@ -22,60 +22,122 @@
             <div class="row mt-1 mb-2">
                 {% if bag_items %}
                 {% for item in bag_items %}
-                <div class="py-3 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="card h-100 border-0">
-                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
-                    </div>
+
+                <!-- Desktop Layout -->
+                <div class="table-responsive rounded" id="bag">
+                    <table class="table table-sm table-borderless">
+                        <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for item in bag_items %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                        <tr>
+                            <td colspan="5" class="pt-5 text-right">
+                                <h5 class=font-weight-bold">Basket Total: £{{ total|floatformat:2 }}</h5>
+                                {% if delivery == 0 %}
+                                <p><i class="fa-solid fa-circle-check"></i> Free Delivery Offer</p>
+                                {% else %}
+                                <p><i class="fa-solid fa-circle-xmark"></i> Free Delivery Offer</p>
+                                {% endif %}
+                                <p>Delivery Total: £{{ delivery|floatformat:2 }}</p>
+                                <h3 class="subheading">Grand Total: £{{ grand_total|floatformat:2 }}</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <div class="col-12">
+                                    <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
+                                        <span class="text-white">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                    <a href="{% url 'products' %}"
+                                        class="btn-white-add font-weight-bold mb-3 py-2 px-4">
+                                        Keep Shopping
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="py-3 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                    <div class="card-body pt-0 pb-0">
-                        <div class="row">
-                            <div class="col">
-                                <p class=" display-4 product-name mb-2">{{ item.product.name }}</p>
-                                <p class="text-left"><i
-                                        class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }} /
-                                    10</p>
-                            </div>
+
+                <!-- Mobile layout -->
+                <div id="mobile-bag">
+                    <div class="py-3 col-sm-10 offset-1 col-md-2 col-lg-2 col-xl-2">
+                        <div class="card h-100 border-0">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                         </div>
+                    </div>
+                    <div class="py-3 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+                        <div class="card-body pt-0 pb-0">
+                            <div class="row">
+                                <div class="col">
+                                    <p class=" display-4 product-name mb-2">{{ item.product.name }}</p>
+                                    <p class="text-left"><i
+                                            class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }} /
+                                        10</p>
+                                </div>
+                            </div>
+                            <p class="mb-0 text-left">Size: {{ item.product.sku|upper }}</p>
+                            <p class="mb-3 text-left">SKU: {{ item.product.sku|upper }}</p>
+                            <p class="my-0 font-weight-bold">Price £{{ item.product.price }}</p>
+                            <p class="my-0 text-center weight-bold">Quantity {{ item.quantity }}</p>
+                            <p class="my-0 text-center font-weight-bold">Subtotal £{{ item.product.price }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
 
-                        <p class="mb-3 text-left">Size: {{ item.product.sku|upper }}</p>
-                        <p class="mb-3 text-left">SKU: {{ item.product.sku|upper }}</p>
-                        <p class="my-0">£{{ item.product.price }}</p>
-                        <p class="my-0">Quantity {{ item.quantity }}</p>
-                        <p class="my-0">Subtotal £{{ item.product.price }}</p>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <h5 class="text-center font-weight-bold">Basket Total: £{{ total|floatformat:2 }}</h5>
+                            {% if delivery == 0 %}
+                            <p class="text-center"><i class="fa-solid fa-circle-check"></i> Free Delivery Offer</p>
+                            {% else %}
+                            <p class="text-center"><i class="fa-solid fa-circle-xmark"></i> Free Delivery Offer</p>
+                            {% endif %}
+                            <p class="text-center">Delivery Total: £{{ delivery|floatformat:2 }}</p>
+                            <h3 class="subheading text-center">Grand Total: £{{ grand_total|floatformat:2 }}</h3>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a href="{% url 'products' %}" class="btn-white-add font-weight-bold mb-3 py-2 px-4">
+                            Keep Shopping
+                        </a>
+                        <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
+                            <span class="text-white">Secure Checkout</span>
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                        </a>
                     </div>
                 </div>
-                {% endfor %}
+                {% endif %}
             </div>
-                
-            <div class="row mt-5">
-                <div class="col">
-
-                    <h5 class="text-center font-weight-bold">Basket Total: £{{ total|floatformat:2 }}</h5>
-                    <h6 class="text-center"><i class="fa-solid fa-circle-check"></i> Free Delivery Offer</h6>
-                    <h6 class="text-center"><i class="fa-solid fa-circle-xmark"></i> Free Delivery Offer</h6>
-                    <h6 class="text-center">Delivery Total: £{{ delivery|floatformat:2 }}</h6>
-                    <h2 class="h3 subheading text-center">Grand Total: £{{ grand_total|floatformat:2 }}</h2>
-                    <h4 class="mt-4"></h4>
-                    <!-- {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just £{{ free_delivery_delta }} more!
-                                    </p>
-                                {% endif %} -->
-                </div>
-            </div>
-            <div class="col-12">
-                <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4">
-                    Keep Shopping
-                </a>
-                <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
-                    <span class="text-white">Secure Checkout</span>
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </a>
-            </div>
-            {% endif %}
         </div>
     </div>
 </div>
