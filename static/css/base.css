@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+.container {
+    max-width: 90%;
+}
+
 body {
     /* background: url('/media/209475470_129587399214744_6805516309758510307_n.jpg') no-repeat center center fixed; */
     background: url('/media/188985462_372364654218214_6879001854730362899_n.jpg') no-repeat center center fixed;
@@ -379,6 +383,14 @@ input {
         display: block;
     }
 
+    .btn-grey-add {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .btn-white-add {
+        width: 100%;
+    }
 }
 
 
@@ -392,22 +404,7 @@ input {
         margin-bottom: 2rem;
     }
 
-    #bag {
-        display: none;
-    }
-
-    #mobile-bag{
-        display: block;
-    }
-
-    .btn-grey-add {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .btn-white-add {
-        width: 100%;
-    }
+    
  
 }
 
@@ -424,7 +421,6 @@ input {
     .welcome-container {
         margin: 20px auto 30px;
     }
-
 
     .display-4 {
         font-size: 2rem
