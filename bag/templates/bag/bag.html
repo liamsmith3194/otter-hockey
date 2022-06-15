@@ -37,6 +37,9 @@
 
                     {% for item in bag_items %}
                     <tr>
+                        {{ bag_items }}
+                        <br>
+                        {{ request.session.bag }}
                         <td class="p-3 w-25">
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                         </td>
@@ -44,8 +47,14 @@
                             <h3 class="product-name mb-2">{{ item.product.name }}</h3>
                             <p class="text-left"><i class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }} /
                                 10</p>
-                            <p class="mb-0 text-left">Size: {{ item.size|upper }}</p>
-                            <p class="mb-0 text-left">SKU: {{ item.product.sku|upper }}</p>
+                                
+                                <p class="my-0"><strong>Size: </strong>
+                                    {% if item.product.has_clothes_size %}{{ item.size|upper }}
+                                    {% elif item.product.has_stick_size %}{{ item.size|upper }}
+                                    {% else %}N/A
+                                    {% endif %}</p>
+
+                                <p class="mb-0 text-muted text-left">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">£{{ item.product.price }}</p>
@@ -97,7 +106,7 @@
                         <div class="card-body pt-0 pb-0">
                             <div class="row">
                                 <div class="col">
-                                    <p class=" display-4 product-name mb-2">{{ item.product.name }}</p>
+                                    <h3 class="product-name mb-2">{{ item.product.name }}</h3>
                                     <p class="text-left"><i
                                             class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }}
                                         /
