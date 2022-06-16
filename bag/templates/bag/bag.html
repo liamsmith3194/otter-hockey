@@ -37,9 +37,6 @@
 
                     {% for item in bag_items %}
                     <tr>
-                        {{ bag_items }}
-                        <br>
-                        {{ request.session.bag }}
                         <td class="p-3 w-25">
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                         </td>
@@ -49,8 +46,8 @@
                                 10</p>
                                 
                                 <p class="my-0"><strong>Size: </strong>
-                                    {% if item.product.has_clothes_size %}{{ item.size|upper }}
-                                    {% elif item.product.has_stick_size %}{{ item.size|upper }}
+                                    {% if item.product.has_clothes_size %}{{ item.clothes_size|upper }}
+                                    {% elif item.product.has_stick_size %}{{ item.stick_size }}
                                     {% else %}N/A
                                     {% endif %}</p>
 
@@ -113,8 +110,13 @@
                                         10</p>
                                 </div>
                             </div>
-                            <p class="mb-0 text-left">Size: {{ item.product.sku|upper }}</p>
-                            <p class="mb-3 text-left">SKU: {{ item.product.sku|upper }}</p>
+                            <p class="my-0"><strong>Size: </strong>
+                                {% if item.product.has_clothes_size %}{{ item.product_size|upper }}
+                                {% elif item.product.has_stick_size %}{{ item.stick_size }}
+                                {% else %}N/A
+                                {% endif %}</p>
+
+                            <p class="mb-0 text-muted text-left">SKU: {{ item.product.sku|upper }}</p>
                             <h6 class="my-2 text-center font-weight-bold">Price £{{ item.product.price }}</h6>
                             <h6 class="my-2 text-center weight-bold">Quantity {{ item.quantity }}</h6>
                             <h6 class="my-2 text-center font-weight-bold">Subtotal: £{{ item.product.price }}</h6>
