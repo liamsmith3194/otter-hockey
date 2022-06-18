@@ -47,6 +47,7 @@
                                 10</p>
 
                             <p class="my-0"><strong>Size: </strong>
+                                {{ item.size|upper }}
                                 {% if item.product.has_clothes_size %}{{ item.clothes_size|upper }}
                                 {% elif item.product.has_stick_size %}{{ item.stick_size }}
                                 {% else %}N/A

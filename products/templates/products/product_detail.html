@@ -70,8 +70,9 @@
                                 {% with product.has_clothes_size as cs %}
                                 {% if cs %}
                                 <div class="col-6">
-                                    <select class="w-100 mb-3 btn-select-size py-2 px-4" name="clothes_size" id='id_clothes_size'>
-                                        <option value="placeholder" disabled selected>Select Size:</option>
+                                    <select class="w-100 mb-3 btn-select-size py-2 px-4" name="clothes_size"
+                                        id="id_clothes_size" required>
+                                        <option value="" disabled selected>Select Size:</option>
                                         <option value="xs">XS</option>
                                         <option value="s">S</option>
                                         <option value="m">M</option>
@@ -86,12 +87,12 @@
                                 {% if ss %}
                                 <div class="col-6">
                                     <select class="w-100 mb-3 btn-select-size py-2 px-4" name="stick_size"
-                                        id="id_stick_size">
-                                        <option value="placeholder" disabled selected>Select Size:</option>
-                                        <option value="35.5">35.5"</option>
-                                        <option value="36.5">36.5"</option>
-                                        <option value="37.5">37.5"</option>
-                                        <option value="38.5">38.5"</option>
+                                        id="id_stick_size" required>
+                                        <option value="" disabled selected>Select Size:</option>
+                                        <option value='35.5"''>35.5"</option>
+                                        <option value='36.5"'>36.5"</option>
+                                        <option value='37.5"''>37.5"</option>
+                                        <option value='38.5"''>38.5"</option>
                                     </select>
                                 </div>
                                 {% endif %}
@@ -123,10 +124,11 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             <div class="col-12 mt-3">
-                                <input type="submit" class="btn-grey-add font-weight-bold py-2 px-4" value="Add to Basket">
-                                <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4">Keep Shopping
+                                <input type="submit" class="btn-grey-add font-weight-bold py-2 px-4"
+                                    value="Add to Basket">
+                                <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4">Keep
+                                    Shopping
                                 </a>
-                                
                             </div>
                         </form>
                     </div>
