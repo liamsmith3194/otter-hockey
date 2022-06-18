@@ -306,7 +306,7 @@ input {
     background-color: #fff;
 }
 
-.btt-link {
+.btt-link, .update-link, .remove-item {
     cursor: pointer;
 }
 
