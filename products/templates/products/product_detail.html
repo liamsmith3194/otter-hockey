@@ -48,14 +48,14 @@
                         <p class="text-left">No Rating</p>
                         {% endif %}
                         <p class="mb-3 text-black text-left">{{ product.description }}</p>
-
+                        
                         {% if product.price >= 100 %}
                         <div class="progress mb-3" style="height: 30px;">
-                            <div class="progress-bar bg-grey" role="progressbar" style="width: 90%;" aria-valuenow="9"
+                            <div class="progress-bar bg-grey" role="progressbar" style="width: {{ product.power_score }}%;" aria-valuenow={{ product.power_score }}
                                 aria-valuemin="0" aria-valuemax="10">Power</div>
                         </div>
                         <div class="progress mb-3" style="height: 30px;">
-                            <div class="progress-bar bg-grey" role="progressbar" style="width: 60%;" aria-valuenow="8"
+                            <div class="progress-bar bg-grey" role="progressbar" style="width: {{ product.control_score }}%;" aria-valuenow={{ product.control_score }}
                                 aria-valuemin="0" aria-valuemax="10">Control</div>
                             {% endif %}
                         </div>
