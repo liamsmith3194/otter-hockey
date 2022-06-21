@@ -97,9 +97,9 @@
 
                         <td class="py-3 text-center">
                             <a class="nav-link remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
-                        <div><i class="fa-solid text-grey fa-lg fa-trash"></i>
-                        </div>
-                        </a>
+                                <div><i class="fa-solid text-grey fa-lg fa-trash"></i>
+                                </div>
+                            </a>
                         </td>
 
                     </tr>
@@ -202,7 +202,6 @@
                     <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4 mb-2">
                         <span class="icon"><i class="fa-solid fa-circle-arrow-left"></i></span>
                         <span>Keep Shopping</span>
-
                     </a>
                     <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
                         <span class="text-white">Secure Checkout</span>
@@ -210,6 +209,13 @@
                     </a>
                 </div>
             </div>
+            {% else %}
+            <h5 class="py-4">Your basket is empty.</h5>
+            <a href="{% url 'products' %}"
+                class="btn rounded-0 btn-white-add float-left font-weight-bold py-2 px-4 mb-2">
+                <span class="icon"><i class="fa-solid fa-circle-arrow-left"></i></span>
+                <span>Keep Shopping</span>
+            </a>
             {% endif %}
         </div>
     </div>
@@ -226,7 +232,6 @@
         var form = $(this).prev('.update-form');
         form.submit();
     })
-
 </script>
 
 {% endblock %}
