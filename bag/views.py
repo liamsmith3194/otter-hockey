@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
 
+from products.models import Product
 # Create your views here.
 
 
@@ -11,7 +13,8 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
-
+    
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     clothes_size = None
@@ -33,6 +36,7 @@ def add_to_bag(request, item_id):
             bag[item_id] += quantity
         else:
             bag[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -63,16 +67,16 @@ def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
-    size = None
+    clothes_size = None
     if 'clothes_size' in request.POST:
-        size = request.POST['clothes_size']
+        clothes_size = request.POST['clothes_size']
     bag = request.session.get('bag', {})
 
-    if size:
+    if clothes_size:
         if quantity > 0:
-            bag[item_id]['items_by_size'][size] = quantity
+            bag[item_id]['items_by_size'][clothes_size] = quantity
         else:
-            del bag[item_id]['items_by_size'][size]
+            del bag[item_id]['items_by_size'][clothes_size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
     else:
@@ -89,13 +93,13 @@ def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
 
     try:
-        size = None
+        clothes_size = None
         if 'clothes_size' in request.POST:
-            size = request.POST['clothes_size']
+            clothes_size = request.POST['clothes_size']
         bag = request.session.get('bag', {})
 
-        if size:
-            del bag[item_id]['items_by_size'][size]
+        if clothes_size:
+            del bag[item_id]['items_by_size'][clothes_size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
         else:
