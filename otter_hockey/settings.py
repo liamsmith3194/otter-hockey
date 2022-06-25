@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+    
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +60,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'otter_hockey.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

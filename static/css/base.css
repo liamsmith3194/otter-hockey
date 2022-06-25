@@ -198,6 +198,13 @@ a .social-media-icons {
     border: #4D4D4D 3px solid;
 }
 
+.btn-white {
+    background: #fff;
+    color: #000;
+    border: #000 3px solid;
+    text-align: center;
+}
+
 .btn-white-add {
     background: #fff;
     color: #000;
@@ -229,9 +236,9 @@ a .social-media-icons {
     width: 100%;
 }
 
-input {
+/* input {
     border: none;
-}
+} */
 
 /* Pseudo Buttons */
 
@@ -335,6 +342,8 @@ input {
     display: none;
 }
 
+
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -352,6 +361,34 @@ input {
     height: 2px;
 }
 
+
+/* ------------------------------- allauth */
+
+.signup input {
+width: 100%;
+}
+
+label {
+    display: none;
+}
+
+.allauth-buttons{
+    background-color: #6D6D6D;
+    color: #fff;
+    border: none;
+    padding: 8px 50px;
+    float: right;
+}
+
+.allauth-buttons:hover{
+    background-color: #4D4D4D;
+
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
 
 /* -------------------------------- Media Queries */
 

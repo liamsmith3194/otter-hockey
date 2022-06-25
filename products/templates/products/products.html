@@ -16,9 +16,9 @@
         <div class="col text-center mt-4">
             {% for category in current_categories %}
             {% if request.get_full_path == "/products/" %}
-            <h2 class="h3 subheading text-left">Complete Range of all products</h2>
+            <h2 class="subheading text-left">Complete Range of all products</h2>
             {% else %}
-            <h2 class="h3 subheading text-left">Complete Range of {{ category.name }}</h2>
+            <h2 class="subheading text-left">Complete Range of {{ category.name }}</h2>
             {% endif %}
             {% endfor %}
         </div>
