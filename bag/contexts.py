@@ -10,6 +10,7 @@ def bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
+    clothes_size = None
     stick_size = None
 
     for item_id, item_data in bag.items():
