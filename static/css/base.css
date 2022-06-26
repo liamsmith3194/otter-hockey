@@ -88,7 +88,7 @@ a:hover {
 .nav-link, .nav-item {
     font-family: 'Bebas Neue', sans-serif;
     color: #6D6D6D;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 2.5px;
 }
 
@@ -368,7 +368,7 @@ a .social-media-icons {
     text-decoration: underline #000
 }
 
-.signup input, .login input {
+.signup input, .login input, .password_reset input {
 width: 100%;
 }
 

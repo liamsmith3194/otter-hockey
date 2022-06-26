@@ -8,6 +8,8 @@ def bag_contents(request):
 
     bag_items = []
     total = 0
+    delivery = 0
+    grand_total = 0
     product_count = 0
     bag = request.session.get('bag', {})
     clothes_size = None
@@ -35,14 +37,19 @@ def bag_contents(request):
                     'clothes_size': clothes_size,
                     'stick_size': stick_size,
                 })
-
-    if total < settings.FREE_DELIVERY_THRESHOLD:
+        
+    if product_count == 0:
+        delivery = 0
+        free_delivery_delta = 0
+        
+    elif total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = Decimal(4.99)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    
     else:
         delivery = 0
         free_delivery_delta = 0
-
+        
     grand_total = delivery + total
 
     context = {
