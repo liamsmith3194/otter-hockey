@@ -364,11 +364,19 @@ a .social-media-icons {
 
 /* ------------------------------- allauth */
 
-.signup input {
+.underline-link, .underline-link:hover {
+    text-decoration: underline #000
+}
+
+.signup input, .login input {
 width: 100%;
 }
 
-label {
+input[type=checkbox] {
+    width: auto;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
 
