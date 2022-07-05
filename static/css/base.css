@@ -321,6 +321,8 @@ a .social-media-icons {
     border: 3px solid #000 !important;
 }
 
+
+
 /* .product-image-container {
     width: 100%;
     height: 250px;
@@ -332,6 +334,10 @@ a .social-media-icons {
     width: 100%;
     height: 100%;
 } */
+
+.qty_input {
+    border: none;
+}
 
 
 #bag {
@@ -394,8 +400,15 @@ input[type=checkbox] {
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
+    padding: 0.375rem 0.75rem;
 }
 
+.form-control, textarea {
+    border-width: 2px;
+    border-color: #000;
+    border-radius: 0;
+
+}
 
   --#{$prefix}accordion-color: #{color-contrast($accordion-bg)};
   --#{$prefix}accordion-bg: #{$accordion-bg};
@@ -437,6 +450,25 @@ input[type=checkbox] {
       height: auto;
       @include transition($transition-collapse-width);
     }
+  }
+
+  .iframe-container {
+    overflow: hidden;
+    /* 4:3 aspect ratio */
+    padding-top: 75%;
+    position: relative;
+  }
+
+  .iframe-container iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+ }
+
+  iframe {
+    width: 100%;
+    height: 100%;
   }
 
 /* -------------------------------- Media Queries */

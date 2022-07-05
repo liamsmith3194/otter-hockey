@@ -19,3 +19,9 @@ def privacy(request):
     """ A view to return the privacy policy page"""
 
     return render(request, 'privacy/privacy.html')
+
+
+def contact(request):
+    """ A view to return the contact page"""
+
+    return render(request, 'contact/contact.html')
