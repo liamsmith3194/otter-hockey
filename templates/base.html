@@ -25,8 +25,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
-
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet"
+        type="text/css">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -62,14 +62,14 @@
                         <h2 class="logo">Otter Hockey</h2>
                     </a>
                 </div>
-                <!-- Search form -->
+
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-grey rounded-0" type="text" name="q"
                                 placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="form-control btn btn-grey border border-grey rounded-0" type="submit">
+                                <button class="form-control btn-grey border border-grey rounded-0" type="submit">
                                     <span class="icon">
                                         <i class="fas fa-search text-white"></i>
                                     </span>
@@ -78,7 +78,7 @@
                         </div>
                     </form>
                 </div>
-                <!-- Top right buttons -->
+
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
@@ -103,8 +103,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-grey nav-link"
-                                href="{% url 'view_bag'%}">
+                            <a class="text-grey nav-link" href="{% url 'view_bag'%}">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
                                     <p class="text-grey nav-link p-0 my-0">
@@ -120,7 +119,7 @@
                     </ul>
                 </div>
             </div>
-            <!-- navigation bar and mobile nav -->
+
             <div class="row bg-white">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
@@ -177,7 +176,6 @@
                         </div>
 
                         <div class="col-md-4 footer-column text-center">
-                            <!-- Subscribe Section -->
                             <h4 class="nav-item text-white">
                                 Subscribe
                             </h4>
@@ -185,7 +183,36 @@
                                 our
                                 monthly
                                 newsletter</p>
-                            <!-- Mailchimp signup form here -->
+
+                            <div id="mc_embed_signup" class="mailchimp-form">
+                                <form
+                                    action="https://github.us14.list-manage.com/subscribe/post?u=731631d0774a276b4921995cb&amp;id=76f3fd5fb5"
+                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                    class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll">
+                                        <div class="mc-field-group">
+                                            <input type="email" value="" name="EMAIL" class="required email" placeholder="Email address"
+                                                id="mce-EMAIL">
+                                        </div>
+                                        <div id="mce-responses" class="clear foot">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
+                                                type="text" name="b_731631d0774a276b4921995cb_76f3fd5fb5" tabindex="-1"
+                                                value=""></div>
+                                        <div class="optionalParent">
+                                            <div>
+                                                <input type="submit" value="Subscribe" name="subscribe"
+                                                    id="mc-embedded-subscribe" class="button-white-add font-weight-bold py-2 px-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <!--End mc_embed_signup-->
                         </div>
 
                         <div class="col-md-4 footer-column text-center">
@@ -200,10 +227,10 @@
                                 <a href="https://facebook.com" target="_blank" rel="noopener"
                                     aria-label="Visit our Facebook page (opens in new tab)"><i
                                         class="social-media-icons fab fa-facebook"></i></a></li>
-                                <a href="https://twitter.com" target="_blank" rel="noopener"
+                                <a href="https://twitter.com/otterhockey1" target="_blank" rel="noopener"
                                     aria-label="Visit our Twitter page (opens in new tab)"><i
                                         class="social-media-icons fab fa-twitter"></i></a></li>
-                                <a href="https://instagram.com" target="_blank" rel="noopener"
+                                <a href="https://www.instagram.com/otterhockey/" target="_blank" rel="noopener"
                                     aria-label="Visit our Instagram page (opens in new tab)"><i
                                         class="social-media-icons fab fa-instagram"></i></a>
                             </div>
@@ -221,6 +248,27 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+    <script type='text/javascript'
+    src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+    (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+        fnames[3] = 'ADDRESS';
+        ftypes[3] = 'address';
+        fnames[4] = 'PHONE';
+        ftypes[4] = 'phone';
+        fnames[5] = 'BIRTHDAY';
+        ftypes[5] = 'birthday';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+</script>
     {% endblock %}
 
 </body>
