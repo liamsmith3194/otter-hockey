@@ -213,7 +213,7 @@ a .social-media-icons {
     text-align: center;
 }
 
-.btn-white-add:hover {
+.btn-white:hover, .btn-white-add:hover {
     background: #000;
     color: #FFF;
 
@@ -235,6 +235,40 @@ a .social-media-icons {
 .btn-white-bag {
     width: 100%;
 }
+
+#mc_embed_signup .btn-white {
+    border: #000 3px solid;
+}
+
+#mc_embed_signup .btn-white:hover {
+    background: #000;
+    color: #FFF;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: #fff;
+}
+
+#mc_embed_signup div#mce-responses {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#mc_embed_signup div.response {
+    width: 100%;
+    margin: 0;
+    padding: 0.25rem 0 0.25rem 0;
+}
+
+#mc_embed_signup form {
+    padding: 0;
+}
+
+#mc_embed_signup .mc-field-group {
+    width: 100%;
+}
+
 
 /* input {
     border: none;
@@ -465,11 +499,6 @@ iframe {
     border: 3px solid #000;
 }
 
-
-
-.mailchimp-form {
-    width: 100%;
-}
 
 /* -------------------------------- Media Queries */
 
