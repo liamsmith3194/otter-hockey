@@ -20,7 +20,7 @@
 
             <p class="font-weight-bold">General Equiries</p>
 
-            <form class="allauth-form-inner-content" method="POST">
+            <form class="allauth-form-inner-content" method="POST" onSubmit="alert('Thank you for your contacting us')">
                 <!-- Contact Form -->
                 {% csrf_token %}
                 <div class="form-group">
@@ -42,6 +42,10 @@
                 <div class="submit-button text-right mb-2">
                     <button class="allauth-buttons font-weight-bold" type="submit">Send Message</button>
                 </div>
+                <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
             </form>
         </div>
         <div class="col-12 col-md-6 mt-4">
@@ -56,4 +60,9 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+<script type='text/javascript'>
+</script>
 {% endblock %}
