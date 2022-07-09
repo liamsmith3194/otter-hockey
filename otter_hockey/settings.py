@@ -1,4 +1,3 @@
-import os
 """
 Django settings for otter_hockey project.
 
@@ -10,6 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import os
+import dj_database_url
 
 from pathlib import Path
 
@@ -112,12 +113,16 @@ WSGI_APPLICATION = 'otter_hockey.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default': dj_database_url.parse('postgres://tqfsumfwuymnsm:844f7d26e4d644859e3f66d4352d0078f4c7f05e28908d40b01a7029dc5d96b2@ec2-34-247-72-29.eu-west-1.compute.amazonaws.com:5432/d6fgn52h6c51sk')
     }
-}
 
 
 # Password validation
