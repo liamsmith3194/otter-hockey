@@ -1,1 +1,1 @@
-web: gunicorn otter-hockey.wsgi:application
+web: gunicorn otter_hockey.wsgi:application
