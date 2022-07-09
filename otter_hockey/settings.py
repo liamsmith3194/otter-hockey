@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-xf4d5n#el^q)*ti#12w2n8f^x5@-j_!v+z*2pj&#%dt3zmkiu+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['otter-hockey.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -113,16 +113,21 @@ WSGI_APPLICATION = 'otter_hockey.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES = {
-    'default': dj_database_url.parse('postgres://tqfsumfwuymnsm:844f7d26e4d644859e3f66d4352d0078f4c7f05e28908d40b01a7029dc5d96b2@ec2-34-247-72-29.eu-west-1.compute.amazonaws.com:5432/d6fgn52h6c51sk')
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://tqfsumfwuymnsm:844f7d26e4d644859e3f66d4352d0078f4c7f05e28908d40b01a7029dc5d96b2@ec2-34-247-72-29.eu-west-1.compute.amazonaws.com:5432/d6fgn52h6c51sk')
+#     }
 
 
 # Password validation
