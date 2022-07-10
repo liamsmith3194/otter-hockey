@@ -379,16 +379,6 @@ font-size: inherit;
     border: none;
 }
 
-
-/* #bag {
-    display: none;
-}
-
-#mobile-bag {
-    display: none;
-} */
-
-
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -507,8 +497,16 @@ iframe {
     display: block;
   }
 
+  .checkout-table {
+    display: table;
+  }
+  
   .checkout-info {
     text-align: right;
+  }
+
+  .mobile-label {
+    display: none;
   }
 
 
@@ -551,18 +549,8 @@ iframe {
     }
 }
 
-@media screen and (min-width: 768px) {
-    #bag{
-        display: block;
-    }
-
-}
-
 @media screen and (max-width: 767px) {
-    /* #mobile-bag{
-        display: block;
-    } */
-
+   
     .btn-grey-add {
         width: 100%;
         margin-bottom: 1rem;
@@ -572,8 +560,25 @@ iframe {
         width: 100%;
     }
 
+    .checkout-table {
+        display: none;
+      }
+
     .checkout-info {
         text-align: center;
+    }
+
+    .desktop-headings {
+        display: none;
+    }
+
+    .mobile-label {
+        display: inline-block;
+    }
+
+    .totals {
+        font-weight: bold;
+        font-size: 1rem;
     }
 }
 
