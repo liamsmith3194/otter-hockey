@@ -23,6 +23,7 @@
     </div>
     <div class="row">
         <div class="product-container col-12">
+            {% if bag_items %}
             <div class="desktop-headings row mb-3">
                 <div class="font-weight-bold col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     Product Info
@@ -40,7 +41,6 @@
                     Remove
                 </div>
             </div>
-            {% if bag_items %}
             {% for item in bag_items %}
 
             <div class="row">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                    <p class="totals my-2 text-center"><label class="mobile-label">Price</label>
+                    <p class="totals my-2 text-center"><label class="mobile-label">Price:</label>
                         £{{ item.product.price }}</p>
                 </div>
                 <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
@@ -127,7 +127,7 @@
                 <h3 class="subheading">Grand Total: £{{ grand_total|floatformat:2 }}</h3>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="checkout-buttons row mt-3">
             <div class="col-12">
                 <a href="{% url 'products' %}?category=sticks" class="btn-white-add font-weight-bold py-2 px-4 mb-2">
                     <span class="icon"><i class="fa-solid fa-circle-arrow-left"></i></span>
@@ -135,7 +135,7 @@
                 </a>
                 <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
                     <span class="text-white">Secure Checkout</span>
-                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <span class="text-white icon"><i class="fas fa-lock"></i></span>
                 </a>
             </div>
         </div>

@@ -20,23 +20,23 @@
 
             <p class="font-weight-bold">General Equiries</p>
 
-            <form class="allauth-form-inner-content" method="POST" onSubmit="alert('Thank you for your contacting us')">
+            <form class="" method="POST" onSubmit="alert('Thank you for your contacting us')">
                 <!-- Contact Form -->
                 {% csrf_token %}
                 <div class="form-group">
-                    <input id="nameInput" type="text" name="name" class="form-control"
+                    <input id="nameInput" type="text" name="name" class="contact-form"
                         Placeholder="Full name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" id="exampleFormControlEmail"
+                    <input type="email" name="email" class="contact-form" id="exampleFormControlEmail"
                         placeholder="Email address" required>
                 </div>
                 <div class="form-group">
-                    <input id="subjectInput" type="text" name="subject" class="form-control"
+                    <input id="subjectInput" type="text" name="subject" class="contact-form"
                         Placeholder="Subject" required>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="6"
+                    <textarea class="contact-form" name="message" id="exampleFormControlTextarea1" rows="6"
                         placeholder="Message content" required></textarea>
                 </div>
                 <div class="submit-button text-right mb-2">
