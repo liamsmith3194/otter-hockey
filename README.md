@@ -271,11 +271,76 @@ The User Profile stores the default delivery details again, assuming the user is
 ## Features
 Below is a brief overview showing the main features of the site.
 
-### Layout
--   Using the grid set up from Bootstrap, 12 columns split into 3 for the navigation and 9 for the content.
--   The hero image covers the "content" side of the screen and lays behind the transparent window.
--   All the page titles use a consistent theme.
--   All page content including forms, buttons and text is presented inside the window.
+### Layout (Desktop)
+- The site uses the grid set up from Bootstrap, twelve columns split into various different ways across all pages.
+- The logo features in the left corner on every page across the site.
+- A convenient search bar is placed in the centre of screen.
+- On the right side features ‘My Account’ button containing a dropdown including register and login etc.
+- The shopping trolley icon links to the user basket which shows the total amount already added.
+- The navigation bar sits below the search bar on it’s own row, centred and spanning half the width of the screen.
+- The free delivery offer also spans across the width of the page
+but uses a black background and white text contrasting nicely against the grey on white.
+- Finally the footer contains three columns separated clearly by there titles.
+- More information presents links to three separate pages about us, FAQ’s and privacy policy.
+- Subscribe shows the an email input field in order to sign up the fictional newsletter using Mail Chimp.
+- The Contact us section contains a further link to an internal page where users can contact customer services via the form. Below the link, the social media icons open new tabs independently (Twitter and Instagram and live genuine links to Otter Hockey).
+
+### Index Page
+- The hero image covers the width of any screen viewing the site.
+- The welcome message is set on a transparent rounded box which focuses the visitors attention on the welcome message, tag line and button.
+The vast majority of pages follow a similar theme in terms of page title and subheading(s) if there is one.
+
+### Product Page
+- Product image
+- product count
+- Sort by option
+- Product name
+- Cut description
+- Power/control score (sticks only)
+- Rating
+- Price
+
+### Product Detail Page
+- Bigger product image (POSSIBLE LINK TO OPEN FULL SIZE)
+- full description
+- Select size
+- Adjust quantity
+- Return to result OR KEEP SHOPPING
+- Add to basket button
+
+### Basket (Desktop)
+- Table format
+- product image
+- Product name
+- Rating
+- size
+- SKU
+- Price per item
+- Adjust quantity
+- Subtotal
+- Remove from basket
+- Basket total
+- Free delivery offer (popover) icon changes.
+- Delivery total (default and offer)
+- Grand total
+- Checkout button
+
+### Allauth Pages
+- Form
+- black/grey border
+- Action button if there is one
+
+### About us
+- content
+
+### FAQ’s
+- accordion from bootstrap
+
+### Contact
+- Contact form
+- black/grey border
+- send button
+- interactive map
 
 ### Navigation Bar
 -   Located on the left side of screen, which includes the logo, menu items, opening times information and social media links.
@@ -302,36 +367,6 @@ Below is a brief overview showing the main features of the site.
 -   The alert is also triggered when the user logs outs.
 
 ![Boostrap - Alert](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/bootstrap-alert.PNG)
-
-### Boostrap Nav Pills
--   The menu page uses the bootstrap component nav pills.
--   By default it shows the starters but choices span across the window showing the mains, sides and desserts. Clicking on any of these options changes the data correspondingly.
-
-![Menu Page - Nav pills](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/menu-page.PNG)
-
-### Book A Table
--   The booking form self populates with the user's first name, last name and email address, taken from the registration form.
-
-![Booking Page - Form](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/booking-page.PNG)
-
--   Bookings must be submitted one day in advance and maximum 30 days prior.
--   On a successful submission, the user will receive an automated email confirmation, showing the location, date and time and the number of guests.
--   Also on a successful submission, the user will be redirected to the 'Manage Booking' page.
--   If the date and time isn't available on submit, the user is greeted with a validation error "Date and/or time not available, please try again."
--   If the user already has a booking that hasn't expired, they will be forced to either amend or delete their reservation by clicking on the 'Manage Booking' button.
-
-![Existing Booking Page](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/existing-booking-page.PNG)
-
-### Manage Booking
--   The booking data is presented only showing the critical details such as date and time, location  and number of guests.
--   The user has two clear buttons to amend or delete the booking.
--   Clicking the amend button produces the booking form again with the previously entered booking data.
--   When the user amends the booking and saves, the database is updated and when redirected, the manage booking page is updated to show the change(s).
--   If the user clicks the delete button, they are asked to confirm this, "Are you sure you want to delete your booking?". This is displayed alongside two options "No, Cancel" and "Yes, Delete"
--   Clicking on either of the buttons redirects the user back to the 'Manage Booking' Page, whether the booking is still seen is determined by which button the user clicked.
--   If the user doesn't have a booking in the database, they are notified by a simple paragraph "There is no booking currently in the database" and shown a button linking them to the 'Book A Table'.
-
-![Manage Booking](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/manage-booking-page.PNG)
 
 ### Django Admin Site
 
