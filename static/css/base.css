@@ -362,6 +362,10 @@ a .social-media-icons {
     cursor: pointer;
 }
 
+.fa-trash:hover {
+    color: #4D4D4D;
+}
+
 .progress {
     font-size: inherit;
 }

@@ -35,6 +35,7 @@ def bag_contents(request):
                     'quantity': quantity,
                     'product': product,
                     'clothes_size': clothes_size,
+                    'stick_size': stick_size,
                 })
         
     if product_count == 0:
