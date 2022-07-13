@@ -25,13 +25,13 @@
         <div class="product-container col-12">
             {% if bag_items %}
             <div class="desktop-headings row mb-3">
-                <div class="font-weight-bold col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                <div class="font-weight-bold col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     Product Info
                 </div>
                 <div class="font-weight-bold text-center col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     Price
                 </div>
-                <div class="font-weight-bold text-center col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="font-weight-bold text-center col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     Quantity
                 </div>
                 <div class="font-weight-bold text-center col-sm-12 col-md-1 col-lg-1 col-xl-1">
@@ -44,7 +44,7 @@
             {% for item in bag_items %}
 
             <div class="row">
-                <div class="image py-3 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                <div class="image py-3 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                     <div class="card h-100 border-0">
                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                     </div>
@@ -67,7 +67,7 @@
                     <p class="totals my-2 text-center"><label class="mobile-label">Price:</label>
                         £{{ item.product.price }}</p>
                 </div>
-                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
                         <div class="form-group">
