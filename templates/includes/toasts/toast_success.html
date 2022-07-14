@@ -1,4 +1,4 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="true" data-delay="10000">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark">
@@ -50,7 +50,7 @@
                     Free Delivery Offer</p>
                 <p class="small mb-0">Spend £{{ free_delivery_delta }} more for the free delivery offer!</p>
                 {% endif %}
-                <p class="small mt-1 mb-1">Delivery Total: 
+                <p class="mt-1 mb-1">Delivery Total: 
                 <span class="float-right">£{{ delivery|floatformat:2 }}</span>
                 </p>
                 <h5 class="subheading mt-2 mb-2">Grand Total:
