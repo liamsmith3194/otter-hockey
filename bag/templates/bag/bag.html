@@ -55,11 +55,16 @@
                         <p class="text-left"><i class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }}/10
                         </p>
                         <p class="my-0"><strong>Size: </strong>
-                            {{ item.size|upper }}
                             {% if item.product.has_clothes_size %}{{ item.clothes_size|upper }}
                             {% elif item.product.has_stick_size %}{{ item.stick_size }}
                             {% else %}N/A
                             {% endif %}</p>
+                            Size: {{ item.size|upper }}
+                            <br>
+                            Stick Size: {{ item.stick_size|upper }}
+                            <br>
+                            Clothes Size: {{ item.clothes_size|upper }}
+                            <br>
                         <p class="mb-0 text-muted text-left">SKU: {{ item.product.sku|upper }}</p>
                     </div>
                 </div>

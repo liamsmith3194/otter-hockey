@@ -17,7 +17,7 @@ body {
     height: 100%;
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
 }
 
 article {
@@ -409,6 +409,12 @@ a .social-media-icons {
 
 .toast-capper {
     height: 2px;
+}
+
+.toast-content {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ------------------------------- allauth */

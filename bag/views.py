@@ -27,16 +27,20 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if clothes_size in bag[item_id]['items_by_size'].keys():
                 bag[item_id]['items_by_size'][clothes_size] += quantity
+                messages.success(request, f'You added {product.name} to your basket')
             else:
                 bag[item_id]['items_by_size'][clothes_size] = quantity
+                messages.success(request, f'You added {product.name} to your basket')
         else:
             bag[item_id] = {'items_by_size': {clothes_size: quantity}}
+            messages.success(request, f'You added {product.name} to your basket')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
+            messages.success(request, f'You added {product.name} to your basket')
         else:
             bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            messages.success(request, f'You added {product.name} to your basket')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
