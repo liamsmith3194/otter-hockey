@@ -330,6 +330,14 @@ a .social-media-icons {
     background: white;
 }
 
+.product-description {
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 .product-name {
     font-family: 'Orbitron', sans-serif;
     color: #000;

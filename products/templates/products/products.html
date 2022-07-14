@@ -74,11 +74,9 @@
                     <div class="card-footer bg-white pt-0 border-0 text-left">
                         <div class="row">
                             <div class="col">
-
-                                <p class="mb-3 text-black text-left">{{ product.description }}</p>
+                                <p class="product-description mb-3 text-black text-left">{{ product.description }}</p>
                                 {% for category in current_categories %}
                                 {% if category.name == 'sticks' %}
-                    
                                 <div class="progress mb-3" style="height: 25px;">
                                     <div class="progress-bar bg-grey" role="progressbar" style="width: {{ product.power_score }}%;"
                                         aria-valuenow={{ product.power_score }} aria-valuemin="0" aria-valuemax="10">Power</div>
