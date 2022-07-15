@@ -12,36 +12,31 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Adds the product to the basket along with size and quantity """
 
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    clothes_size = None
-    stick_size = None
-    if 'clothes_size' in request.POST:
-        clothes_size = request.POST['clothes_size']
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
     bag = request.session.get('bag', {})
 
-    if clothes_size:
+    if size:
         if item_id in list(bag.keys()):
-            if clothes_size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][clothes_size] += quantity
-                messages.success(request,
-                                 (f'Updated size {clothes_size.upper()} ' f'{product.name} quantity to ' f'{bag[item_id]["items_by_size"][clothes_size]}'))
+            if size in bag[item_id]['items_by_size'].keys():
+                bag[item_id]['items_by_size'][size] += quantity
+                messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
             else:
-                bag[item_id]['items_by_size'][clothes_size] = quantity
-                messages.success(
-                    request, (f'Added size {clothes_size.upper()} ' f'{product.name} to your basket'))
+                bag[item_id]['items_by_size'][size] = quantity
+                messages.success(request, f'Added size {size.upper()} {product.name} to your basket')
         else:
-            bag[item_id] = {'items_by_size': {clothes_size: quantity}}
-            messages.success(
-                request, (f'Added size {clothes_size.upper()} ' f'{product.name} to your basket'))
+            bag[item_id] = {'items_by_size': {size: quantity}}
+            messages.success(request, f'Added size {size.upper()} {product.name} to your basket')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            messages.success(
-                request, (f'Updated {product.name} ' f'quantity to {bag[item_id]}'))
+            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Added {product.name} to your basket')
@@ -49,49 +44,28 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
-    if 'stick_size' in request.POST:
-        stick_size = request.POST['stick_size']
-    bag = request.session.get('bag', {})
-
-    if stick_size:
-        if item_id in list(bag.keys()):
-            if stick_size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][stick_size] += quantity
-            else:
-                bag[item_id]['items_by_size'][stick_size] = quantity
-        else:
-            bag[item_id] = {'items_by_size': {stick_size: quantity}}
-    else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-        else:
-            bag[item_id] = quantity
-
-    request.session['bag'] = bag
-    return redirect(redirect_url)
-
 
 def adjust_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """Adjust the quantity of the products updating the subtotal"""
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    clothes_size = None
-    if 'clothes_size' in request.POST:
-        clothes_size = request.POST['clothes_size']
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
     bag = request.session.get('bag', {})
 
-    if clothes_size:
+    if size:
         if quantity > 0:
-            bag[item_id]['items_by_size'][clothes_size] = quantity
+            bag[item_id]['items_by_size'][size] = quantity
             messages.success(
-                request, f'Updated size {clothes_size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][clothes_size]}')
+                request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
         else:
-            del bag[item_id]['items_by_size'][clothes_size]
+            del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
             messages.success(
-                request, f'Removed size {clothes_size.upper()} {product.name} from your bag')
+                request, f'Removed size {size.upper()} {product.name} from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
@@ -110,17 +84,17 @@ def remove_from_bag(request, item_id):
 
     try:
         product = get_object_or_404(Product, pk=item_id)
-        clothes_size = None
-        if 'clothes_size' in request.POST:
-            clothes_size = request.POST['clothes_size']
+        size = None
+        if 'product_size' in request.POST:
+            size = request.POST['product_size']
         bag = request.session.get('bag', {})
 
-        if clothes_size:
-            del bag[item_id]['items_by_size'][clothes_size]
+        if size:
+            del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
             messages.success(
-                request, f'Removed size {clothes_size.upper()} {product.name} from your bag')
+                request, f'Removed size {size.upper()} {product.name} from your bag')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')

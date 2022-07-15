@@ -55,16 +55,11 @@
                         <p class="text-left"><i class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }}/10
                         </p>
                         <p class="my-0"><strong>Size: </strong>
-                            {% if item.product.has_clothes_size %}{{ item.clothes_size|upper }}
-                            {% elif item.product.has_stick_size %}{{ item.stick_size }}
+                            {% if item.product.has_clothes_size %}{{ item.size|upper }}
+                            {% elif item.product.has_stick_size %}{{ item.size }}
                             {% else %}N/A
                             {% endif %}</p>
-                            Size: {{ item.size|upper }}
-                            <br>
-                            Stick Size: {{ item.stick_size|upper }}
-                            <br>
-                            Clothes Size: {{ item.clothes_size|upper }}
-                            <br>
+                            
                         <p class="mb-0 text-muted text-left">SKU: {{ item.product.sku|upper }}</p>
                     </div>
                 </div>
@@ -164,26 +159,23 @@
 
     <script type="text/javascript">
         // Update quantity on click
-        $('.update-link').click(function (e) {
+        $('.update-link').click(function(e) {
             var form = $(this).prev('.update-form');
             form.submit();
         })
-
+    
         // Remove item and reload on click
-        $('.remove-item').click(function (e) {
+        $('.remove-item').click(function(e) {
             var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('remove_')[1];
-            var size = $(this).data('clothes_size');
+            var size = $(this).data('product_size');
             var url = `/bag/remove/${itemId}/`;
-            var data = {
-                'csrfmiddlewaretoken': csrfToken,
-                'clothes_size': size
-            };
-
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+    
             $.post(url, data)
-                .done(function () {
-                    location.reload();
-                });
+             .done(function() {
+                 location.reload();
+             });
         })
 
         // Popover for delivery offer below threshold

@@ -8,12 +8,8 @@ def bag_contents(request):
 
     bag_items = []
     total = 0
-    delivery = 0
-    grand_total = 0
     product_count = 0
     bag = request.session.get('bag', {})
-    clothes_size = None
-    stick_size = None
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -27,29 +23,28 @@ def bag_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for clothes_size, quantity in item_data['items_by_size'].items():
+            for size, quantity in item_data['items_by_size'].items():
                 total += quantity * product.price
                 product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': quantity,
                     'product': product,
-                    'clothes_size': clothes_size,
+                    'size': size,
                 })
 
-        
     if product_count == 0:
         delivery = 0
         free_delivery_delta = 0
-        
+
     elif total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = Decimal(4.99)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    
+
     else:
         delivery = 0
         free_delivery_delta = 0
-        
+
     grand_total = delivery + total
 
     context = {
