@@ -3,6 +3,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+
 {% endblock %}
 
 {% block extra_title %}| Checkout {% endblock %}
@@ -25,7 +26,44 @@
         </div>
     </div>
     <div class="row">
-        
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <p class="font-weight-bold">Summary ({{ product_count }})</p>
+            <div class="row">
+                <div class="col-7 offset-2">
+                    <p class="mb-2 mt-0">Item</p>
+                </div>
+                <div class="col-3 text-right">
+                    <p class="mb-2 mt-0">Subtotal</p>
+                </div>
+            </div>
+            {% for item in bag_items %}
+                <div class="row">
+                    <div class="col-2 mb-1">
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            {% if item.product.image %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <h6 class="product-name font-weight-bold my-1">{{ item.product.name }}</h6>
+                        <p class="my-0">Size:
+                            {% if item.product.has_clothes_size %}{{ item.size|upper }}
+                            {% elif item.product.has_stick_size %}{{ item.size }}
+                            {% else %}N/A
+                            {% endif %}</p>
+                        <p class="my-0">Quantity: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 text-right">
+                    </div>
+                </div>
+            <hr class="my-2">
+            {% endfor %}
+            
+            
+        </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="contact-form">
@@ -59,31 +97,16 @@
                     <p class="font-weight-bold">Card Details</p>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
+                    <div class="form-group">
+                        <input type="card" name="card" class="form-style" id="exampleFormControlEmail"
+                            placeholder="Card Number" required>
+                    </div>
 
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
 
-                <div class="submit-button text-right mt-5 mb-2">                    
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
-                    </a>
-                    <button id="submit-button" class="btn btn-black rounded-0">
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </button>
-                    <p class="small text-danger my-0">
-                        <span class="icon">
-                            <i class="fas fa-exclamation-circle"></i>
-                        </span>
-                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
-                </div>
+                
             </form>
         </div>
     </div>

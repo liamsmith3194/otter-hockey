@@ -5,3 +5,11 @@ textarea {
     border-width: 3px;
     margin-bottom: 1rem;
 }
+
+.checkout-info {
+    text-align: right;
+}
+
+.checkout-buttons {
+    float: right;
+}

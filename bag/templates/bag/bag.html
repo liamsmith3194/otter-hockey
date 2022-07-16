@@ -59,7 +59,7 @@
                             {% elif item.product.has_stick_size %}{{ item.size }}
                             {% else %}N/A
                             {% endif %}</p>
-                            
+
                         <p class="mb-0 text-muted text-left">SKU: {{ item.product.sku|upper }}</p>
                     </div>
                 </div>
@@ -114,30 +114,30 @@
                     </a>
                 </div>
             </div>
-            {% endfor %}      
+            {% endfor %}
 
-        <div class="row mt-3">
-            <div class="checkout-info col-12">
-                <h5 class="font-weight-bold">Basket Total: £{{ total|floatformat:2 }}</h5>
-                {% if delivery == 0 %}
-                <p class="mb-0"><i class="fa-solid fa-circle-check fa-lg"></i> Free Delivery Offer</p>
-                {% else %}
-                <p class="mb-0"><i class="fa-solid fa-circle-xmark fa-lg" data-toggle="popover"
-                        data-content="Spend £{{ free_delivery_delta }} more for the free delivery offer!"></i>
-                    Free Delivery Offer</p>
-                {% endif %}
-                <p class="">Delivery Total: £{{ delivery|floatformat:2 }}</p>
-                <h3 class="subheading">Grand Total: £{{ grand_total|floatformat:2 }}</h3>
+            <div class="row mt-3">
+                <div class="checkout-info col-12">
+                    <h5 class="font-weight-bold">Basket Total: £{{ total|floatformat:2 }}</h5>
+                    {% if delivery == 0 %}
+                    <p class="mb-0"><i class="fa-solid fa-circle-check fa-lg"></i> Free Delivery Offer</p>
+                    {% else %}
+                    <p class="mb-0"><i class="fa-solid fa-circle-xmark fa-lg" data-toggle="popover"
+                            data-content="Spend £{{ free_delivery_delta }} more for the free delivery offer!"></i>
+                        Free Delivery Offer</p>
+                    {% endif %}
+                    <p class="">Delivery Total: £{{ delivery|floatformat:2 }}</p>
+                    <h3 class="subheading">Grand Total: £{{ grand_total|floatformat:2 }}</h3>
+                </div>
             </div>
-        </div>
-        <div class="checkout-buttons row mt-3">
-            <div class="col-12">
-                <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
-                    <span class="text-white">Secure Checkout</span>
-                    <span class="text-white icon"><i class="fas fa-lock"></i></span>
-                </a>
+            <div class="checkout-buttons row mt-3">
+                <div class="col-12">
+                    <a href="" class="btn-grey-add font-weight-bold py-2 px-4">
+                        <span class="text-white">Secure Checkout</span>
+                        <span class="text-white icon"><i class="fas fa-lock"></i></span>
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
         {% else %}
         <h5 class="py-4">Your basket is empty.</h5>
@@ -147,44 +147,46 @@
             <span>View our sticks</span>
         </a>
         {% endif %}
-
     </div>
 </div>
 
-    {% endblock %}
+{% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    {% include 'products/includes/quantity_input_script.html' %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 
-    <script type="text/javascript">
-        // Update quantity on click
-        $('.update-link').click(function(e) {
-            var form = $(this).prev('.update-form');
-            form.submit();
-        })
-    
-        // Remove item and reload on click
-        $('.remove-item').click(function(e) {
-            var csrfToken = "{{ csrf_token }}";
-            var itemId = $(this).attr('id').split('remove_')[1];
-            var size = $(this).data('product_size');
-            var url = `/bag/remove/${itemId}/`;
-            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
-    
-            $.post(url, data)
-             .done(function() {
-                 location.reload();
-             });
-        })
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
-        // Popover for delivery offer below threshold
-        $(document).ready(function () {
-            $('[data-toggle="popover"]').popover({
-                placement: 'left',
-                trigger: 'hover'
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+            'product_size': size
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
             });
-        });
-    </script>
+    })
 
-    {% endblock %}
+    // Popover for delivery offer below threshold
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover({
+            placement: 'left',
+            trigger: 'hover'
+        });
+    });
+</script>
+
+{% endblock %}
