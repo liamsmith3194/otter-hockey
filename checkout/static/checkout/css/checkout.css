@@ -1,3 +1,11 @@
 .form-style {
     margin-bottom: 1rem;
 }
+
+.checkout-confirmation {
+    padding: 0;
+}
+
+.font-weight-semi-bold {
+    font-weight: 600;
+}

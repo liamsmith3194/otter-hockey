@@ -17,3 +17,8 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
+def checkout_success(request):
+    
+
+    return render(request, 'checkout/checkout_success.html')
