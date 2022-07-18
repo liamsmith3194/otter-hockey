@@ -87,10 +87,19 @@ a:hover {
 }
 
 /* Navigation */
+
+.navbar-background {
+    background-color: #6D6D6D;
+}
+
+.navbar-collapse.show {
+    display: none;
+}
+
 .nav-link,
 .nav-item {
     font-family: 'Bebas Neue', sans-serif;
-    color: #6D6D6D;
+    color: #FFF;
     font-size: 1.1rem;
     letter-spacing: 2.5px;
 }
@@ -631,6 +640,17 @@ iframe {
     .subheading {
         margin-top: 1.5rem;
     }
+
+    .navbar-background {
+        background-color: #FFF;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+        background-color: darkred;
+    }
+
+    
 }
 
 @media screen and (max-width: 767px) {
