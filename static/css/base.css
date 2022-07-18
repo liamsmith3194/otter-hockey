@@ -503,16 +503,21 @@ input:focus-visible {
 }
 
 .form-style,
-textarea {
+textarea, select {
     width: 100%;
     padding: 0.375rem 0.75rem;
     border-width: 3px;
 }
 
-textarea {
+textarea, select {
     border-style: inset;
     border-width: 3px;
     border-image: initial;
+    color: #6D6D6D;
+}
+
+.select:focus {
+    border: none;
 }
 
 /* .collapse {
@@ -703,6 +708,7 @@ iframe {
 
     .nav-link {
         font-size: 0.9rem;
+        padding: 0.5rem;
     }
 
 }

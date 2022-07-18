@@ -6,11 +6,11 @@ var style = {
     base: {
         color: '#000',
         border: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontFamily: '"Montserrat", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '14px',
         '::placeholder': {
-            color: '#aab7c4'
+            color: '#6D6D6D'
         }
     },
     invalid: {
