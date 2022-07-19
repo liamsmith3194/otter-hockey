@@ -66,7 +66,7 @@
             <hr class="my-2">
             {% endfor %}
         </div>
-            <div class="checkout-section">
+            <div class="checkout-section mt-3">
                 <div class="row mt-3">
                     <div class="checkout-info col-12">
                         <h6 class="font-weight-bold">Basket Total: £{{ total|floatformat:2 }}</h6>
@@ -81,11 +81,12 @@
                         <h4 class="subheading">Grand Total: £{{ grand_total|floatformat:2 }}</h4>
                     </div>
                 </div>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="contact-form">
                 <div class="checkout-buttons row mt-3">
                     <div class="col-12">
-                        <a href="{% url 'checkout_success' %}" class="btn-grey-add font-weight-bold py-2 px-4">
+                        <button id="submit-button" class="btn-grey-add font-weight-bold py-2 px-4">
                             <span class="text-white">Confirm Order</span>
-                        </a>
+                        </button>
                         <a href="{% url 'view_bag' %}" class="btn-white-add font-weight-bold py-2 px-4">
                             <span>Return to Basket</span>
                         </a>
@@ -95,7 +96,7 @@
         </div>
         <div class="col-12 col-lg-6">
             <p>Please fill out the form below to complete your order.</p>
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="contact-form">
+            
                 {% csrf_token %}
                 <p class="font-weight-bold">Personal Details</p>
                 <fieldset>
@@ -130,6 +131,12 @@
                     <!-- Used to display form errors -->
                     <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
+                <p class="small text-danger my-0">
+                    <span class="icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                </p>
             </form>
         </div>
     </div>
