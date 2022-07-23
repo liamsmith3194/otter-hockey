@@ -453,21 +453,6 @@ a .social-media-icons {
     width: 100%;
 }
 
-/* input {
-    border-color: #6D6D6D;
-    border-radius: 0;
-    border-width: 3px;
-} */
-
-/* input {
-    border: none;
-} */
-
-/* input:focus {
-    background-color: yellow;
-    border: none;
-  } */
-
 input, input:focus {
     border-radius: 0;
 }
@@ -494,7 +479,6 @@ input:focus-visible {
 
 .allauth-buttons:hover {
     background-color: #4D4D4D;
-
 }
 
 .allauth-form-inner-content, .allauth-form-inner-content input, .allauth-form-inner-content input:focus {
