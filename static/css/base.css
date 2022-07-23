@@ -449,9 +449,7 @@ a .social-media-icons {
     text-decoration: underline #000
 }
 
-.signup input,
-.login input,
-.password_reset input {
+.allauth-form-style input {
     width: 100%;
 }
 
