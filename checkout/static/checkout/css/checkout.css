@@ -40,7 +40,7 @@
 }
 
 .order-summary {
-    height: 398px;
+    max-height: 398px;
     padding: 30px;
     overflow-x: hidden;
     overflow-y: auto;
