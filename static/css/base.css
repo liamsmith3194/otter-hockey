@@ -336,6 +336,10 @@ a .social-media-icons {
     color: #fff;
 }
 
+.font-weight-semi-bold {
+    font-weight: 600;
+}
+
 /* Products page */
 
 .overlay {
@@ -638,12 +642,7 @@ iframe {
 @media screen and (max-width: 767px) {
 
     .btn-grey-add {
-        width: 100%;
         margin-bottom: 1rem;
-    }
-
-    .btn-white-add {
-        width: 100%;
     }
 
     .checkout-table {
@@ -701,6 +700,10 @@ iframe {
 
     .display-4 {
         font-size: 2rem
+    }
+
+    .btn-grey-add, .btn-white-add {
+        width: 100%;
     }
 
 

@@ -39,12 +39,8 @@
     padding: 0;
 }
 
-.font-weight-semi-bold {
-    font-weight: 600;
-}
-
 .order-summary {
-    height: 350px;
+    height: 398px;
     padding: 30px;
     overflow-x: hidden;
     overflow-y: auto;
