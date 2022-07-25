@@ -504,6 +504,29 @@ textarea, select {
     border-width: 3px;
 }
 
+.form-style {
+    padding: 0.375rem 0.75rem;
+    border-width: 3px;
+    border-radius: 0;
+    border-color: #6D6D6D;
+    border-style: inset;
+}
+
+.form-control {
+    font-size: inherit;
+    color: inherit;
+}
+
+input:focus {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border-radius: 0;
+    border-color: #6D6D6D;
+    box-shadow: none;
+}
+
 textarea, select {
     border-style: inset;
     border-width: 3px;
@@ -511,9 +534,9 @@ textarea, select {
     color: #6D6D6D;
 }
 
-.select:focus {
+/* .select:focus {
     border: none;
-}
+} */
 
 /* .collapse {
     &:not(.show) {

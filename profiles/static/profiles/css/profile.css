@@ -6,21 +6,6 @@
     border-style: inset;
 }
 
-.form-control {
-    font-size: inherit;
-    color: inherit;
-}
-
-input:focus {
-    border-radius: 0;
-}
-
-.form-control:focus {
-    border-radius: 0;
-    border-color: #6D6D6D;
-    box-shadow: none;
-}
-
 #id_default_country option:first-child {
     color: #aab7c4;
 }
