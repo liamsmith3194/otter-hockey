@@ -7,6 +7,12 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+        labels = {
+            'sku': ('Item Reference'),
+            'control_score': ('Control Score (out of 100)'),
+            'power_score': ('Power Score (out of 100)'),
+            'rating': ('Rating (out of 10)'),
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

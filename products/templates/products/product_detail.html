@@ -50,6 +50,15 @@
                         {% else %}
                         <p class="text-left">No Rating</p>
                         {% endif %}
+                        {% if request.user.is_superuser %}
+                        <p>
+                            <small class="mb-3">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                        </p>
+                        
+                        {% endif %}
                         <p class="mb-3 text-black text-left">{{ product.description }}</p>
 
                         {% if product.price >= 100 %}
