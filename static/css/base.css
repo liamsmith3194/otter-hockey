@@ -8,12 +8,8 @@ html {
 }
 
 body {
-    /* background: url('/media/209475470_129587399214744_6805516309758510307_n.jpg') no-repeat center center fixed; */
-    background: url('/media/188985462_372364654218214_6879001854730362899_n.jpg') no-repeat center center fixed;
-    /* background: url('/media/277363439_4716761511779976_3292372955646677478_n.jpg') no-repeat center center fixed; */
-    /* background: url('/media/120195944_808408039907468_3570453029845818689_n_crop.jpg') no-repeat bottom center fixed; */
+    background: url('/media/otter-hockey-hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    /* height: calc(100vh - 164px); */
     height: 100%;
     color: #000;
     font-family: 'Montserrat', sans-serif;
