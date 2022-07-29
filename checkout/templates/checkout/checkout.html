@@ -153,5 +153,14 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script src="{% static 'checkout/js/stripe_elements.js' %}">
+
+    // Popover for delivery offer below threshold
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover({
+            placement: 'left',
+            trigger: 'hover'
+        });
+    });
+    </script>
 {% endblock %}

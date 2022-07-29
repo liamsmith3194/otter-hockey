@@ -8,8 +8,8 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     """
-    A user profile model for maintaining default
-    delivery information and order history
+    User Profile used for the profile template to amend 
+    default delivery details and view order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)

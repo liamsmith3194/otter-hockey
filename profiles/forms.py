@@ -9,16 +9,15 @@ class UserProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Add placeholders and remove labels, auto focus on Street Address 1
         """
         super().__init__(*args, **kwargs)
         placeholders = {
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
             'default_town_or_city': 'Town or City',
-            'default_postcode': 'Postal Code',
             'default_county': 'County',
+            'default_postcode': 'Postal Code',
             'default_country': 'Country',
         }
 
@@ -30,5 +29,5 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'profile-form-style'
+            self.fields[field].widget.attrs['class'] = ('profile-form-style')
             self.fields[field].label = False
