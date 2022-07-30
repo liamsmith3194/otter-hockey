@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 
 # Create your views here.
 
@@ -23,5 +24,8 @@ def privacy(request):
 
 def contact(request):
     """ A view to return the contact page"""
+    
+    if 'contact_us' in request.POST:
+        messages.success(request, 'test')
 
     return render(request, 'contact/contact.html')
