@@ -17,6 +17,14 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    # CLOTH_SIZES = (
+    #     ('0', None),
+    #     ('S', 'small'),
+    #     ('M', 'medium'),
+    #     ('L', 'large'),
+    #     ('XL', 'X-large'),
+        
+    # )
     name = models.CharField('Product Name', max_length=100)
     sku = models.CharField(max_length=50, null=True, blank=True)
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
@@ -24,6 +32,7 @@ class Product(models.Model):
     power_score = models.IntegerField(null=True, blank=True)
     control_score = models.IntegerField(null=True, blank=True)
     has_clothes_size = models.BooleanField(default=False, null=True, blank=True)
+    # cloth_size = models.CharField(choices=CLOTH_SIZES, default='0')
     description = models.TextField('Description')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.IntegerField(null=True, blank=True)
