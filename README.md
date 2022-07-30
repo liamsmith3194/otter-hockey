@@ -41,7 +41,7 @@ I have been given full permission to use all my static files and product informa
     -   [Layout](#layout)
     -   [Navigation Bar](#navigation-bar)
     -   [Allauth](#allauth)   
-    -   [Boostrap Alerts](#boostrap-alerts)
+    -   [Boostrap Alerts(Toasts)](#boostrap-alerts-toasts)
     -   [Bootstrap Nav Pills](#boostrap-nav-pills)
     -   [Book a Table](#book-a-table)
     -   [Manage Booking](#manage-booking)
@@ -291,22 +291,23 @@ but uses a black background and white text contrasting nicely against the grey o
 The vast majority of pages follow a similar theme in terms of page title and subheading(s) if there is one.
 
 ### Product Page
-- Product image
-- product count
-- Sort by option
-- Product name
-- Cut description
-- Power/control score (sticks only)
-- Rating
-- Price
+- The products page displays two products per row on a desktop and a single product on smaller devices.
+- Each product page (Sticks, Bags, Clothes, Accessories) carrys it's own page title and product count.
+- The sort by dropdown contains four options to filter on such as "Price (low to high)" and "Rating (high to low)".
+- The product name is displayed in the logo typeface (Orbitron)
+- Shows a brief/cut down product description
+- When viewing the Sticks page the user is shown the power/control score via Bootstrap progress bars.
+- The rating values are displayed along side the star icon and showing the user it is out of 10.
+- With the price displayed in a bolder font, the user is immediately aware of the product cost.
 
 ### Product Detail Page
-- Bigger product image (POSSIBLE LINK TO OPEN FULL SIZE)
-- full description
-- Select size
-- Adjust quantity
+- A bigger product image covers the left column and on click opens the linked image in a new tab.
+- The full description is revealed.
+- Select size dropdown options (if applicable):
+    - Sticks - 35.5", 36.5", 37.5", 38.5",
+    - Clothes &  Accessories - XS, S, M, L, XL
+- The plus and minus button enable the user to adjust quantity before adding the product to the basket.
 - Return to result OR KEEP SHOPPING
-- Add to basket button
 
 ### Basket (Desktop)
 - Table format
@@ -357,13 +358,13 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ### Allauth
 -   Allauth has been installed to enable users to create, login and sign out of their accounts.
--   The register form has been amended to include first and last name.
+-   The register form has been amended to include email address and password confirmation fields, ensure the input details match.
 -   All the user details are submitted and saved to the database.
 
 ![Allauth - Register Form](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/allauth-register-page.PNG)
 
-### Boostrap Alerts
--   When the user logs in, an alert appears in the navigation bar to show the user they have successfully signed in.
+### Boostrap Alerts (Toasts)
+-   When the user logs in, an alert appears on the right side of the screen underneath the basket total.
 -   The alert is also triggered when the user logs outs.
 
 ![Boostrap - Alert](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/bootstrap-alert.PNG)
@@ -396,12 +397,13 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 -   The form uses a dropdown menu to select the username, ensure the user has created an account in order to make a reservation.
 -   The location and number of guests use the same options as the site, keeping it consistent.
 
-![Django Admin - Add Booking](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-add-booking.PNG)
+![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-add-booking.PNG)
 
--   An admin user is also able to amend any booking and any piece of information from that booking, for example; date and time, location and number of guests.
+-   An admin user is also able to manually create an order.
+-   The 
 -   A booking can also be deleted as a batch or individually.
 
-![Django Admin - Edit Booking](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-edit-booking.PNG)
+![Django Admin - Amend Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-edit-booking.PNG)
 
 ## Agile Methodology - Implementation
 
@@ -778,4 +780,3 @@ https://stackoverflow.com/questions/30110455/paragraph-overflow-with-ellipsis
 -   My Mentor Narender
     -   Numerous video calls
     -   A lot of questions via Slack.
-    -   Introduced me to Pylint.
