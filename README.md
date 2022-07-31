@@ -326,84 +326,85 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 - Grand total
 - Checkout button
 
-### Allauth Pages
-- Form
-- black/grey border
-- Action button if there is one
+### Checkout (Desktop)
 
-### About us
-- content
 
-### FAQ’s
-- accordion from bootstrap
+### Checkout Confirmation (Desktop)
 
-### Contact
-- Contact form
-- black/grey border
-- send button
-- interactive map
+### My Profile
+- The 'My Profile' tab is only available once a user has created an account and logged in.
+- From this page they are able to add and amend default delivery details which are copied through to checkout to save the user repeating their information.
 
-### Navigation Bar
--   Located on the left side of screen, which includes the logo, menu items, opening times information and social media links.
+- Order history
 
-![Navigation Bar - Standard](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/nav-bar-new-user.PNG)
+### Product Management
+- Add product
 
--   The navigation bar automatically collapses at a screen width of 767px. This produces the "Hamburger button" to open and close the nav bar on a click.
+### Product Management (Admin)
+- When an admin user is logged on, they have the permission to edit and/or delete an product on the site.
+- When clicking the edit link, the user is reddirected to the product management form, autofilled with the product details from the database in order to amend on save.
 
-![Navigation Bar - Hamburger button](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/nav-bar-hamburger-button.PNG)
-
--   More menu items are available and shown after a user has signed in or registers for the first time. For example, 'Book A Table' and 'Manage Booking'.
-
-![Navigation Bar - User logged in](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/nav-bar-existing-user.PNG)
-
-### Allauth
--   Allauth has been installed to enable users to create, login and sign out of their accounts.
--   The register form has been amended to include email address and password confirmation fields, ensure the input details match.
--   All the user details are submitted and saved to the database.
-
-![Allauth - Register Form](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/allauth-register-page.PNG)
+### Allauth Pages (Register, Login, Logout etc)
+- The majority of Allauth pages contain a form or form element.
+- The input fields are spread across half the screen on large devices and full width on smaller devices.
+- The use of 'inset' black and grey borders carry more of a visual impact than standard or no border at all.
+- Action button(s) use the consistent grey and white theme. 
 
 ### Boostrap Alerts (Toasts)
--   When the user logs in, an alert appears on the right side of the screen underneath the basket total.
--   The alert is also triggered when the user logs outs.
+- Positioned on the right side of the screen underneath the basket total.
+- The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and checkout confirmation amoungst others.
 
-![Boostrap - Alert](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/bootstrap-alert.PNG)
+![Boostrap - Alert](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/bootstrap-alert.PNG)
+
+### About us
+- The about us content has been taken from [Otter Hockey](https://www.otterhockey.co.uk) displayed in simple block paragraphs with sub headings.
+
+### FAQ’s
+- The FAQ's are presented via a Bootstrap accordians, separated into three sections; Orders, Delivery and Returns. 
+
+### Privacy Policy
+- The privacy policy has been created using [Terms Feed](https://www.termsfeed.com/privacy-policy-generator/) and displayed in a similar format to the about us page using block paragraphs and sub headings.
+
+### Contact
+- Contact form continues the style theme from the Allauth pages in terms of black/grey inset borders.
+- On the right side is an interactive map showing the location of Otter Hockey HQ.
+- When the user submits the form they are ensured success through the toast notification.
 
 ### Django Admin Site
 
-![Django Admin - Overview](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-overview.PNG)
+![Django Admin - Overview](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-overview.PNG)
 
 -   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
 
-![Django Admin - Login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-login.PNG)
+![Django Admin - Login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-login.PNG)
 
 -   The "recent actions" panel shows the last 10 changes to users or bookings.
 -   The pencil icon indicates a change.
 -   The cross icon indicates a deletion.
 
-![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-recent-actions.PNG)
+![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-recent-actions.PNG)
 
 -   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
 
-![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-amend-user.PNG)
+![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-user.PNG)
 
 -   It also shows the user's activity in terms of their last login and when they registered.
 
 -   Finally, users can be deleted by an admin user.
 
-![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-user-dates.PNG)
+![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-user-dates.PNG)
 
--   As an admin user you have the ability to create manual bookings "ADD BOOKING"
--   The form uses a dropdown menu to select the username, ensure the user has created an account in order to make a reservation.
--   The location and number of guests use the same options as the site, keeping it consistent.
+-   As an admin user you have the ability to create manual orders "ADD ORDER"
+-   The form uses a dropdown menu to select the user profile to ensure the user has created an account in order to make a reservation.
+-   The user details are at the top page such as delivery address and then basket products at the bottom producing a list of database items
+-   The size field is available on all products and accepts stick sizes and clothes sizes.
+-   Adjusting the quantity will change the line item total on save. 
 
-![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-add-booking.PNG)
+![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-add-booking.PNG)
 
--   An admin user is also able to manually create an order.
--   The 
--   A booking can also be deleted as a batch or individually.
+![Django Admin - Amend Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-order.PNG)
 
-![Django Admin - Amend Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/django-admin-edit-booking.PNG)
+![Django Admin - Amend Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-order.PNG)
 
 ## Agile Methodology - Implementation
 
@@ -420,7 +421,7 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 -   [Heroku](https://www.Heroku.com/) was used to share the site online.
 -   [AWS](https://aws.amazon.com/) was used to store static files. 
--   [Bootstrap](https://getbootstrap.com/) was used to create the framework for the site, including the grid set up and other components such as buttons, toasts and progress bars.
+-   [Bootstrap](https://getbootstrap.com/) was used to create the framework for the site, including the grid set up and other components such as buttons, toasts, progress bars and the accordian.
 -   [Font Awesome](https://fontawesome.com/) was used for the social media icons within the footer.
 -   [Google Fonts](https://fonts.google.com/) was used to import the 'Orbitron', 'Bebas Neue' and 'Montserrat' into the style.css file.
 -   [GitPod](https://gitpod.io/) was used to create and update the website throughout, via the terminal to push changes to GitHub.
@@ -483,7 +484,7 @@ TO BE REPLACED
     - [x] Username already exists
         - Attempting to create a user with the same username produces a validation error, "A user with that username already exists."
 
-        ![User exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/user-exists.PNG)
+        ![User exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/user-exists.PNG)
 
     - [x] All fields required except email address (optional)
         - The form does not submit unless all the fields have been completed with valid data.
@@ -491,12 +492,12 @@ TO BE REPLACED
     - [x] Passwords don't match
         - When creating a user and the passwords don't match, a validation error is presented. "You must type the same password each time."
 
-        ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/password-dont-match.PNG)
+        ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-dont-match.PNG)
 
     - [x] Password not secure
         - If the password isn't strong enough, another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
 
-        ![Password not strong enough](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/password-too-short.PNG)
+        ![Password not strong enough](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-too-short.PNG)
 
     - [x] Sign in link
         - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
@@ -505,7 +506,7 @@ TO BE REPLACED
     - [x] Invalid credentials
         - Attempting to sign in as a user that has not been registered I am greeted with an error message, "The username and/or password you specified are not correct."
 
-        ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/invalid-user.PNG)
+        ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/invalid-user.PNG)
 
     - [x] Remember me
         - The 'remember me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
@@ -522,14 +523,14 @@ TO BE REPLACED
     - [x] Date unavailable before or on the day of booking
         - The calendar ensure the invalid dates can not be selected.
 
-        ![Today's date unavailable](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/todays-date-unavailable.PNG)
+        ![Today's date unavailable](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/todays-date-unavailable.PNG)
 
     - [x] No bookings will be taken after 30 days in advance
         - The calendar ensure the user is unable to select a date 30 days in advance of today's' date.
     - [x] Double booking
         - The booking will not submit if the date and time is the same as an existing booking in the database.
 
-        ![Date unavailable](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/date-unavailable.PNG)
+        ![Date unavailable](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/date-unavailable.PNG)
 
     - [x] All account details coming through
         - Tested 3 different users and all pulled through user credentials (first name, last name & email address) when going to book a table.
@@ -554,7 +555,7 @@ TO BE REPLACED
         - After saving the changes to the booking, the manage booking page is updated.
         - Whether one field or multiple are changed, the view from the user is updated along with the database.
 
-![Manage booking - Update](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/edit-booking.PNG)
+![Manage booking - Update](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/edit-booking.PNG)
 
 - Manage Booking Page (Delete)
     - [x] Cancel button keeps booking and returns the user to the manage booking page
@@ -563,7 +564,7 @@ TO BE REPLACED
         - After clicking the delete button the user is redirected to the manage booking page, the booking has been removed from view and removed from the system.
         - As there is no booking in the database for the user, they are able to book a table. 
 
-![Manage booking - Delete](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/delete-booking.PNG)
+![Manage booking - Delete](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delete-booking.PNG)
 
 - Menu Page
     - [x] All links show correct data
@@ -575,11 +576,11 @@ TO BE REPLACED
 
 - Desktop Results
 
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/lighthouse-desktop.PNG)
+![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lighthouse-desktop.PNG)
 
 - Mobile Results
 
-![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/lighthouse-mobile.PNG)
+![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lighthouse-mobile.PNG)
 
 ### Continued Testing
 
@@ -608,12 +609,12 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 2. Fill in the field for App name - It must be a unique name to Heroku. 
     -   Then select the region of Europe and click "Create app".
 
-![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/heroku-create-app.PNG)
+![Heroku - New app](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/heroku-create-app.PNG)
 
 3. In the "Resources" tab, scroll down to "Add-ons" and search for "Heroku Postgres".
     -   Once selected and saved in the "Settings" tab click "Reveal Config Vars", this produces a database url.
 
-![Heroku - Add Heroku Postgres](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/heroku-resources.PNG)
+![Heroku - Add Heroku Postgres](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/heroku-resources.PNG)
 
 4. In GitPod set up an env.py file in the repository.
     -   Create an environment variable for "DATABASE_URL" and paste the value from Heroku.
@@ -649,15 +650,15 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
     -   Enter the GitHub repository name and click "Search".
     -   The repository should appear below, then click "Connect".
 
-![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/heroku-deploy-section.PNG)
+![Heroku - Deployment method](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/heroku-deploy-section.PNG)
 
 12.  Then click the "Deploy Branch" button in the "Manual deploy" section. This way you can see the code being written.
 
-![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/heroku-manual-deploy.PNG)
+![Heroku - Manual deployment](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/heroku-manual-deploy.PNG)
 
 13. Once that is complete, a message will appear with "Your app was successfully deployed" and a "View" button. This will take you to the app directly.
 
-![Heroku - Successfully Deployed](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/images/readme-images/heroku-deployed-successfully.PNG)
+![Heroku - Successfully Deployed](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/heroku-deployed-successfully.PNG)
 
 -   On final deployment the project must be set up in the following way:
     -   DEBUG is set to false in settings.py file
