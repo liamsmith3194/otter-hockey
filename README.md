@@ -38,12 +38,10 @@ I have been given full permission to use all my static files and product informa
     -   [Typography](#typography)
     -   [Imagery](#imagery)
 3.  [Features](#features)
-    -   [Layout](#layout)
-    -   [Navigation Bar](#navigation-bar)
+    -   [Layout](#layout-desktop)
     -   [Allauth](#allauth)   
     -   [Boostrap Alerts(Toasts)](#boostrap-alerts-toasts)
     -   [Bootstrap Nav Pills](#boostrap-nav-pills)
-    -   [Book a Table](#book-a-table)
     -   [Manage Booking](#manage-booking)
     -   [Django Admin Site](#django-admin-site)
 4.  [Implementation](#agile-methodology---implementation)
@@ -266,8 +264,6 @@ The User Profile stores the default delivery details again, assuming the user is
 -   The hero image has been taken from the Otter Hockey Instagram page .... add more info when chosen
 -   All the other imagery used on the site show the products on offer.
 
-# TO BE COMPLETED AFTER BUILD
-
 ## Features
 Below is a brief overview showing the main features of the site.
 
@@ -290,6 +286,8 @@ but uses a black background and white text contrasting nicely against the grey o
 - The welcome message is set on a transparent rounded box which focuses the visitors attention on the welcome message, tag line and button.
 The vast majority of pages follow a similar theme in terms of page title and subheading(s) if there is one.
 
+![Index Page](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/index-page.PNG)
+
 ### Product Page
 - The products page displays two products per row on a desktop and a single product on smaller devices.
 - Each product page (Sticks, Bags, Clothes, Accessories) carrys it's own page title and product count.
@@ -300,6 +298,10 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 - The rating values are displayed along side the star icon and showing the user it is out of 10.
 - With the price displayed in a bolder font, the user is immediately aware of the product cost.
 
+![Products - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-sticks.PNG)
+
+![Products - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-others.PNG)
+
 ### Product Detail Page
 - A bigger product image covers the left column and on click opens the linked image in a new tab.
 - The full description is revealed.
@@ -308,6 +310,10 @@ The vast majority of pages follow a similar theme in terms of page title and sub
     - Clothes &  Accessories - XS, S, M, L, XL
 - The plus and minus button enable the user to adjust quantity before adding the product to the basket.
 - Return to result OR KEEP SHOPPING
+
+![Product Details - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-sticks.PNG)
+
+![Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others.PNG)
 
 ### Basket (Desktop)
 - Table format
@@ -331,18 +337,30 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ### Checkout Confirmation (Desktop)
 
+![Order Confirmation](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/order-confirmation.PNG)
+
 ### My Profile
 - The 'My Profile' tab is only available once a user has created an account and logged in.
 - From this page they are able to add and amend default delivery details which are copied through to checkout to save the user repeating their information.
+- Order history provides a list of confirmed orders from the logged in user.
+- It shows the order number, linked to the order confirmation.
+- The date the order was submitted, items from the order and the sub total are also on view.
 
-- Order history
+![My Profile](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/my-profile.PNG)
 
-### Product Management
-- Add product
+- A toast notification appears to make the user aware that this is a previous order
+- From the order confirmation the user is able to return to the profile using the action button.
 
-### Product Management (Admin)
+![My Profile - Order Confirmation](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/my-profile-order-confirmation.PNG)
+
+### Product Management (Page)
+- As an admin user, under the product management tab you are able to add products to the database using the form displayed.
+- MORE TO ADD.
+
+### Product Management (Products)
 - When an admin user is logged on, they have the permission to edit and/or delete an product on the site.
 - When clicking the edit link, the user is reddirected to the product management form, autofilled with the product details from the database in order to amend on save.
+- After the admin user has saved their changes they are reddirected back to the product detail page of that product.
 
 ### Allauth Pages (Register, Login, Logout etc)
 - The majority of Allauth pages contain a form or form element.
@@ -350,25 +368,41 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 - The use of 'inset' black and grey borders carry more of a visual impact than standard or no border at all.
 - Action button(s) use the consistent grey and white theme. 
 
+![Sign In](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/sign-in.PNG)
+
+![Sign Up](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/sign-up.PNG)
+
 ### Boostrap Alerts (Toasts)
 - Positioned on the right side of the screen underneath the basket total.
 - The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and checkout confirmation amoungst others.
 
-![Boostrap - Alert](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/bootstrap-alert.PNG)
+![Toast - Sign In](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-sign-in.PNG)
+![Toast - Log Out](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-log-out.PNG)
+![Toast - Add to Basket](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-add-to-basket.PNG)
+![Toast - Remove from Basket](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-remove-from-basket.PNG)
+![Toast - Order Confirmation](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-order-confirmation.PNG)
 
 ### About us
 - The about us content has been taken from [Otter Hockey](https://www.otterhockey.co.uk) displayed in simple block paragraphs with sub headings.
 
+![About Us](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/about-us.PNG)
+
 ### FAQ’s
-- The FAQ's are presented via a Bootstrap accordians, separated into three sections; Orders, Delivery and Returns. 
+- The FAQ's are presented via a Bootstrap accordians, separated into three sections; Orders, Delivery and Returns.
+
+![FAQ's](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/faqs.PNG)
 
 ### Privacy Policy
 - The privacy policy has been created using [Terms Feed](https://www.termsfeed.com/privacy-policy-generator/) and displayed in a similar format to the about us page using block paragraphs and sub headings.
 
-### Contact
+![Privacy Policy](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/privacy-policy.PNG)
+
+### Contact Us
 - Contact form continues the style theme from the Allauth pages in terms of black/grey inset borders.
 - On the right side is an interactive map showing the location of Otter Hockey HQ.
 - When the user submits the form they are ensured success through the toast notification.
+
+![Contact Us](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/contact-us.PNG)
 
 ### Django Admin Site
 
@@ -402,9 +436,13 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-add-booking.PNG)
 
+- Amend order text
+
 ![Django Admin - Amend Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-order.PNG)
 
-![Django Admin - Amend Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-order.PNG)
+- Amend product text
+
+![Django Admin - Amend Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-product.PNG)
 
 ## Agile Methodology - Implementation
 
