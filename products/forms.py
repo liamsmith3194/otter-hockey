@@ -8,6 +8,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+        required_fields = 'sku'
         labels = {
             'sku': ('Item Reference'),
             'control_score': ('Control Score (out of 100)'),

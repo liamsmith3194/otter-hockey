@@ -316,24 +316,45 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 ![Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others.PNG)
 
 ### Basket (Desktop)
-- Table format
-- product image
-- Product name
-- Rating
-- size
-- SKU
-- Price per item
-- Adjust quantity
-- Subtotal
-- Remove from basket
-- Basket total
-- Free delivery offer (popover) icon changes.
-- Delivery total (default and offer)
-- Grand total
-- Checkout button
+- The table format works well for larger devices containing a larger image, product details such as product name, rating, size selected and sku reference. 
+- The next column contains the price per item
+- As a user you are able to adjust the quantity of each item in the basket. This is activited via the plus and minus buttons and then by clicking 'update'.
+- Making any changes to the quantity of an item will adjust the subtotal.
+- The final column displays a bin icon used to remove an item from the basket.
+
+![Dekstop Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-basket-1.PNG)
+
+- All of the costs are contained in their own row including the basket total (no delivery cost), delivery total and grand total.
+- All three totals are split out and easy to differentiate based on the various fonts.
+- The free delivery offer uses a icon to display to user if they have qualified for the deal.
+- When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
+- The Checkout button uses another icon from FontAwesome and follows the same button theme.
+
+![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-basket-2.PNG)
+
+- An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
+
+![Empty Basket](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/empty-basket.PNG)
+
+### Basket (Mobile)
+
+- Viewing the basket on a mobile/smaller devices shows a very different layout.
+- All the basket details are spread across the width of the screen.
+- The product image is at the top of the screen and centred followed by product name, rating, size and sku all left aligned.
+- The price is centred and bold
+- The quantity selector is on the following row
+- Followed by the subtotal copying the price styling.
+- The bin icon is the last graphic centred below the subtotal.
+
+![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-1.PNG)
+
+- After the final item in the basket the user is shown the final costs along with the secure checkout button.
+
+![Mobile Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-2.PNG)
 
 ### Checkout (Desktop)
 
+![Checkout](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout.PNG)
 
 ### Checkout Confirmation (Desktop)
 
