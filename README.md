@@ -38,11 +38,24 @@ I have been given full permission to use all my static files and product informa
     -   [Typography](#typography)
     -   [Imagery](#imagery)
 3.  [Features](#features)
-    -   [Layout](#layout-desktop)
-    -   [Allauth](#allauth)   
+    -   [Layout - Desktop](#layout-desktop)
+    -   [Layout - Mobile](#layout-mobile)
+    -   [Index Page](#index-page)
+    -   [Products Page](#products-page)
+    -   [Product Detail Page](#product-detail-page)
+    -   [Basket - Desktop](#basket-desktop)
+    -   [Basket - Mobile](#basket-mobile)
+    -   [Checkout](#checkout-desktop)
+    -   [Checkout Confirmation](#checkout-confirmation-desktop)
+    -   [My Profile](#my-profile)
+    -   [Product Management Page](#product-management-page)
+    -   [Product Management - Via Products](#product-management---via-products)
+    -   [Allauth Pages](#allauth-pages-register-login-logout-etc)   
     -   [Boostrap Alerts(Toasts)](#boostrap-alerts-toasts)
-    -   [Bootstrap Nav Pills](#boostrap-nav-pills)
-    -   [Manage Booking](#manage-booking)
+    -   [About Us](#about-us)
+    -   [FAQ's](#faqs)
+    -   [Privacy Policy](#privacy-policy)
+    -   [Contact Us](#contact-us)
     -   [Django Admin Site](#django-admin-site)
 4.  [Implementation](#agile-methodology---implementation)
     -   [Programs](#programs)
@@ -146,7 +159,7 @@ As a customer/site user ...
 
 1.  I want to be able to *trust the sites' checkout security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
 
-1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check  should I want to do so.**
+1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
 
 1.  I want to be able to *receive an email order confirmation after payment* so that I can **trust my order has been processed, and I have the written confirmation to prove it.**
 
@@ -160,7 +173,7 @@ As a customer/site user ...
 
 1.  I want to be able to *read through the privacy policy* so that I can **know my personal information is secure.**
 
-1.  I want to be able to *subscribe to the sites mailing list* so that I can **recieve all the latest deals, offers and news.**
+1.  I want to be able to *subscribe to the site's mailing list* so that I can **receive all the latest deals, offers and news.**
 
 As an administrator/owner ...
 
@@ -212,10 +225,10 @@ The Products model is used to add products to the site. Only the site owner/admi
 The Category model is used so that the site owner/admin can assign products to a Category. This ensures the products are in the correct location for users to find. The product category links to the Category name.
 
 #### Order
-The Order model is used for the order details (when an order is placed by a user). The user profile of the order model is linked to the User Profile model providing the user is registered.
+The Order model is used for the order details (when an order is placed by a user). The user profile of the order model is linked to the User Profile model, providing the user is registered.
 
 #### Order Line Items
-Used for the checkout details. This is linked to the Order Line Items model which contains the products (and products model) ordered by the user.
+Used for the checkout details. This is linked to the Order Line Items model, which contains the products (and products model) ordered by the user.
 
 #### User Profile
 The User Profile stores the default delivery details again, assuming the user is registered and chose to save their delivery details.
@@ -224,115 +237,131 @@ The User Profile stores the default delivery details again, assuming the user is
 
 ### Colour Scheme
 
--   The site colour scheme is minimalistic but effective.
+-   The site colour scheme is minimalistic but effective.
 
--   #6D6D6D - Grey
-    -   The grey is used throughout the site, for the logo, navigation bar, footer and some action buttons such as "Add to Basket"
-    -   All the sticks on offer on the site have a 'progress bar' used for power and control, this uses our main grey against a lighter grey for the background.
+-   #6D6D6D - Grey
+    -   The grey is used throughout the site, for the logo, navigation bar, footer and some action buttons such as "Add to Basket"
+    -   All the sticks on offer on the site have a 'progress bar' used for power and control, this uses our main grey against a lighter grey for the background.
 
--   #000000 - Black
-    -   Black is used for the vast majority of the text
-    -   The navigation bar items carry a hover & active black pseudo-class to highlight where the cursor is and current page to the user.
-    -   A black banner is used to show the free delivery offer and provides a nice contrast from the navigation bar.
+-   #000000 - Black
+    -   Black is used for the vast majority of the text
+    -   The navigation bar items carry a hover & active black pseudo-class to highlight where the cursor is and current page to the user.
+    -   A black banner is used to show the free delivery offer and provides a nice contrast from the navigation bar.
 
--   #FFFFFF - White
-    -   The header containing the logo, search bar and account/basket buttons.
-    -   The navigation menu items are white at the default state.
-    -   The 'free delivery offer' text against the black background is drawn to the users attention.
+-   #FFFFFF - White
+    -   The header containing the logo, search bar and account/basket buttons.
+    -   The navigation menu items are white at the default state.
+    -   The 'free delivery offer' text against the black background is drawn to the user's attention.
 
 ### Typography
 
--   Orbitron
-    -   I have chosen to use the same typeface as used on https://www.otterhockey.co.uk for the logo and product names on the product detail pages. This is a conscious choice to increase the continuity on the site with regards to the product images.
-    -   The logo uses the bold style, but also carrys a subtle dropshadow to make it stand out.
-    -   The product name uses the regular style.
-    -   As a couple of products contain the letter O and a zero this typeface provides a completely different look making it easier for the user to understand the product name.
+-   Orbitron
+    -   I have chosen to use the same typeface as used on https://www.otterhockey.co.uk for the logo and product names on the product detail pages. This is a conscious choice to increase the continuity on the site in regard to the product images.
+    -   The logo uses the bold style, but also carries a subtle drop shadow to make it stand out.
+    -   The product name uses the regular style.
+    -   As a couple of products contain the letter O and a zero, this typeface provides a completely different look, making it easier for the user to understand the product name.
 
--   Montserrat (light, medium & bold) 
-    -   A large majority of text on the site uses Montserrat.
-    -   This is a very popular font for web design because of its readability.
-    -   The uses of light, medium and bold varies and highlights certain details. For example the order confirmation uses the light style for the field names, the medium for the field values and the bold for the sub-headings.
-    -   This make it more appealing to the user and easier to read or quickly check.
+-   Montserrat (light, medium & bold) 
+    -   A large majority of text on the site uses Montserrat.
+    -   This is a very popular font for web design because of its readability.
+    -   The uses of light, medium and bold varies and highlights certain details. For example, the order confirmation uses the light style for the field names, the medium for the field values and the bold for the subheadings.
+    -   This make it more appealing to the user and easier to read or quickly check.
 
--   Bebas Neue
-    -   This typeface is used sparcely but provides a strong contrast between Orbitron and Montserrat
-    -   It is used for the navigation items and the basket total.
-    -   Increased letter spacing makes the font more legible for the users.
+-   Bebas Neue
+    -   This typeface is used sparsely, but provides a strong contrast between Orbitron and Montserrat
+    -   It is used for the navigation items and the basket total.
+    -   Increased letter spacing makes the font more legible for the users.
 
 ### Imagery
--   All imagery has been taken from Otter Hockey's site with permission from Kyle as [previously mentioned above](#permission)
--   The hero image has been taken from the Otter Hockey Instagram page .... add more info when chosen
--   All the other imagery used on the site show the products on offer.
+-   All imagery has been taken from Otter Hockey's site with permission from Kyle as [previously mentioned above](#permission)
+-   The hero image has been taken from the Otter Hockey Instagram page .... add more info when chosen
+-   All the other imagery used on the site show the products on offer.
 
 ## Features
-Below is a brief overview showing the main features of the site.
+Below is an overview showing the main features of the site.
 
 ### Layout (Desktop)
 - The site uses the grid set up from Bootstrap, twelve columns split into various different ways across all pages.
 - The logo features in the left corner on every page across the site.
-- A convenient search bar is placed in the centre of screen.
+- A convenient search bar is placed in the centre of the screen.
 - On the right side features ‘My Account’ button containing a dropdown including register and login etc.
-- The shopping trolley icon links to the user basket which shows the total amount already added.
-- The navigation bar sits below the search bar on it’s own row, centred and spanning half the width of the screen.
+- The shopping trolley icon links to the user's basket, which shows the total amount already added.
+- The navigation bar sits below the search bar on its own row, centred and spanning half the width of the screen.
 - The free delivery offer also spans across the width of the page
-but uses a black background and white text contrasting nicely against the grey on white.
-- Finally the footer contains three columns separated clearly by there titles.
+but uses a black background and white text, contrasting nicely against the grey on white.
+- The vast majority of pages follow a similar theme in terms of page title and subheading(s) if there is one.
+- Finally, the footer contains three columns separated clearly by their subheadings.
 - More information presents links to three separate pages about us, FAQ’s and privacy policy.
-- Subscribe shows the an email input field in order to sign up the fictional newsletter using Mail Chimp.
+- Subscribe shows an email input field in order to sign up to the fictional newsletter using Mail Chimp.
 - The Contact us section contains a further link to an internal page where users can contact customer services via the form. Below the link, the social media icons open new tabs independently (Twitter and Instagram and live genuine links to Otter Hockey).
+
+### Layout (Mobile)
+- On smaller devices, the navigation bar is broken down into the collapsable menu via the 'hamburger button'
+- The search feature is activated by clicking the icon with the search bar spanning the width of the screen.
+- The 'My Account' and trolley icon buttons remain visually identical, except equidistant spacing.
+- The footer items are listed in one column, flowing from one to subheading to the next.
 
 ### Index Page
 - The hero image covers the width of any screen viewing the site.
-- The welcome message is set on a transparent rounded box which focuses the visitors attention on the welcome message, tag line and button.
-The vast majority of pages follow a similar theme in terms of page title and subheading(s) if there is one.
+- The welcome message is set on a transparent rounded box which focuses the visitor's attention on the welcome message, tag line and button.
 
 ![Index Page](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/index-page.PNG)
 
-### Product Page
+### Products Page
 - The products page displays two products per row on a desktop and a single product on smaller devices.
-- Each product page (Sticks, Bags, Clothes, Accessories) carrys it's own page title and product count.
-- The sort by dropdown contains four options to filter on such as "Price (low to high)" and "Rating (high to low)".
+- Each product page (Sticks, Bags, Clothes, Accessories) carries its own page title and product count.
+- The sort by dropdown contains four options to filter on, such as "Price (low to high)" and "Rating (high to low)".
 - The product name is displayed in the logo typeface (Orbitron)
 - Shows a brief/cut down product description
-- When viewing the Sticks page the user is shown the power/control score via Bootstrap progress bars.
-- The rating values are displayed along side the star icon and showing the user it is out of 10.
+- When viewing the Sticks page, the user is shown the power/control score via Bootstrap progress bars.
+- The rating values are displayed alongside the star icon and showing the user it is out of 10.
 - With the price displayed in a bolder font, the user is immediately aware of the product cost.
 
-![Products - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-sticks.PNG)
+![Desktop - Products - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-sticks-desktop.PNG)
 
-![Products - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-others.PNG)
+![Desktop - Products - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-others-desktop.PNG)
+
+![Mobile - Products - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-sticks-mobile.PNG)
+
+![Mobile - Products - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-others-mobile.PNG)
 
 ### Product Detail Page
-- A bigger product image covers the left column and on click opens the linked image in a new tab.
+- A bigger product image covers the left column, and on click opens the linked image in a new tab.
 - The full description is revealed.
 - Select size dropdown options (if applicable):
-    - Sticks - 35.5", 36.5", 37.5", 38.5",
-    - Clothes &  Accessories - XS, S, M, L, XL
+    - Sticks - 35.5", 36.5", 37.5", 38.5",
+    - Clothes &  Accessories - XS, S, M, L, XL
 - The plus and minus button enable the user to adjust quantity before adding the product to the basket.
 - Return to result OR KEEP SHOPPING
 
-![Product Details - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-sticks.PNG)
+![Desktop - Product Details - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-sticks-desktop.PNG)
 
-![Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others.PNG)
+![Desktop - Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others-desktop.PNG)
+
+- All action elements such as size dropdowns, the quantity selector, add to basket button and keep shopping button all layout in single columns, full width of the container.
+
+![Mobile - Product Details - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-sticks-mobile.PNG)
+
+![Mobile - Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others-mobile.PNG)
 
 ### Basket (Desktop)
 - The table format works well for larger devices containing a larger image, product details such as product name, rating, size selected and sku reference. 
 - The next column contains the price per item
-- As a user you are able to adjust the quantity of each item in the basket. This is activited via the plus and minus buttons and then by clicking 'update'.
+- As a user, you are able to adjust the quantity of each item in the basket. This is activated via the plus and minus buttons and then by clicking 'update'.
 - Making any changes to the quantity of an item will adjust the subtotal.
 - The final column displays a bin icon used to remove an item from the basket.
 
 ![Dekstop Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-basket-1.PNG)
 
-- All of the costs are contained in their own row including the basket total (no delivery cost), delivery total and grand total.
+- All the costs are contained in their own row, including the basket total (no delivery cost), delivery total and grand total.
 - All three totals are split out and easy to differentiate based on the various fonts.
-- The free delivery offer uses a icon to display to user if they have qualified for the deal.
+- The free delivery offer uses an icon to display to the user if they have qualified for the deal.
 - When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
 - The Checkout button uses another icon from FontAwesome and follows the same button theme.
 
 ![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-basket-2.PNG)
 
-- An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
+- An Empty basket present a different basket look, informing the user there are no items to check out and provides a handy link to the sticks page.
 
 ![Empty Basket](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/empty-basket.PNG)
 
@@ -348,7 +377,7 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-1.PNG)
 
-- After the final item in the basket the user is shown the final costs along with the secure checkout button.
+- After scrolling past the final item in the basket, the user is shown the final costs along with the secure checkout button.
 
 ![Mobile Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-2.PNG)
 
@@ -362,26 +391,26 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ### My Profile
 - The 'My Profile' tab is only available once a user has created an account and logged in.
-- From this page they are able to add and amend default delivery details which are copied through to checkout to save the user repeating their information.
-- Order history provides a list of confirmed orders from the logged in user.
+- From this page they are able to add and amend default delivery details which are copied through to checkout page to save the user repeating their information.
+- Order history provides a list of confirmed orders from the logged-in user.
 - It shows the order number, linked to the order confirmation.
-- The date the order was submitted, items from the order and the sub total are also on view.
+- The date the order was submitted, items from the order and the subtotal are also on view.
 
 ![My Profile](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/my-profile.PNG)
 
 - A toast notification appears to make the user aware that this is a previous order
-- From the order confirmation the user is able to return to the profile using the action button.
+- From the order confirmation, the user is able to return to the profile using the action button.
 
 ![My Profile - Order Confirmation](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/my-profile-order-confirmation.PNG)
 
-### Product Management (Page)
-- As an admin user, under the product management tab you are able to add products to the database using the form displayed.
+### Product Management - (Page)
+- As an admin user, under the product management tab, you are able to add products to the database using the form displayed.
 - MORE TO ADD.
 
-### Product Management (Products)
-- When an admin user is logged on, they have the permission to edit and/or delete an product on the site.
-- When clicking the edit link, the user is reddirected to the product management form, autofilled with the product details from the database in order to amend on save.
-- After the admin user has saved their changes they are reddirected back to the product detail page of that product.
+### Product Management - (Via Products)
+- When an admin user is logged on, they have the permission to edit and/or delete any product on the site.
+- When clicking the edit link, the user is redirected to the product management form, autofilled with the product details from the database in order to amend on save.
+- After the admin user has saved their changes, they are redirected back to the product detail page of that product.
 
 ### Allauth Pages (Register, Login, Logout etc)
 - The majority of Allauth pages contain a form or form element.
@@ -395,7 +424,7 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ### Boostrap Alerts (Toasts)
 - Positioned on the right side of the screen underneath the basket total.
-- The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and checkout confirmation amoungst others.
+- The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and checkout confirmation amongst others.
 
 ![Toast - Sign In](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-sign-in.PNG)
 ![Toast - Log Out](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-log-out.PNG)
@@ -404,24 +433,24 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 ![Toast - Order Confirmation](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-order-confirmation.PNG)
 
 ### About us
-- The about us content has been taken from [Otter Hockey](https://www.otterhockey.co.uk) displayed in simple block paragraphs with sub headings.
+- The about us content has been taken from [Otter Hockey](https://www.otterhockey.co.uk) displayed in simple block paragraphs with subheadings.
 
 ![About Us](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/about-us.PNG)
 
 ### FAQ’s
-- The FAQ's are presented via a Bootstrap accordians, separated into three sections; Orders, Delivery and Returns.
+- The FAQ's are presented via a Bootstrap accordions, separated into three sections; Orders, Delivery and Returns.
 
 ![FAQ's](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/faqs.PNG)
 
 ### Privacy Policy
-- The privacy policy has been created using [Terms Feed](https://www.termsfeed.com/privacy-policy-generator/) and displayed in a similar format to the about us page using block paragraphs and sub headings.
+- The privacy policy has been created using [Terms Feed](https://www.termsfeed.com/privacy-policy-generator/) and displayed in a similar format to the about us page using block paragraphs and subheadings.
 
 ![Privacy Policy](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/privacy-policy.PNG)
 
 ### Contact Us
 - Contact form continues the style theme from the Allauth pages in terms of black/grey inset borders.
 - On the right side is an interactive map showing the location of Otter Hockey HQ.
-- When the user submits the form they are ensured success through the toast notification.
+- When the user submits the form, they are ensured success through the toast notification.
 
 ![Contact Us](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/contact-us.PNG)
 
@@ -429,31 +458,31 @@ The vast majority of pages follow a similar theme in terms of page title and sub
 
 ![Django Admin - Overview](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-overview.PNG)
 
--   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
+-   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
 
 ![Django Admin - Login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-login.PNG)
 
--   The "recent actions" panel shows the last 10 changes to users or bookings.
--   The pencil icon indicates a change.
--   The cross icon indicates a deletion.
+-   The "recent actions" panel shows the last 10 changes to users or bookings.
+-   The pencil icon indicates a change.
+-   The cross icon indicates a deletion.
 
 ![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-recent-actions.PNG)
 
--   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
+-   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
 
 ![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-user.PNG)
 
--   It also shows the user's activity in terms of their last login and when they registered.
+-   It also shows the user's activity in terms of their last login and when they registered.
 
--   Finally, users can be deleted by an admin user.
+-   Finally, users can be deleted by an admin user.
 
 ![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-user-dates.PNG)
 
--   As an admin user you have the ability to create manual orders "ADD ORDER"
--   The form uses a dropdown menu to select the user profile to ensure the user has created an account in order to make a reservation.
--   The user details are at the top page such as delivery address and then basket products at the bottom producing a list of database items
--   The size field is available on all products and accepts stick sizes and clothes sizes.
--   Adjusting the quantity will change the line item total on save. 
+-   As an admin user you have the ability to create manual orders "ADD ORDER"
+-   The form uses a dropdown menu to select the user profile to ensure the user has created an account in order to make a reservation.
+-   The user details are at the top page such as delivery address and then basket products at the bottom producing a list of database items
+-   The size field is available on all products and accepts stick sizes and clothes sizes.
+-   Adjusting the quantity will change the line item total on save. 
 
 ![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-add-booking.PNG)
 
