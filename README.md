@@ -46,7 +46,7 @@ I have been given full permission to use all my static files and product informa
     -   [Basket - Desktop](#basket-desktop)
     -   [Basket - Mobile](#basket-mobile)
     -   [Checkout](#checkout-desktop)
-    -   [Checkout Confirmation](#checkout-confirmation-desktop)
+    -   [Order Confirmation](#order-confirmation-desktop)
     -   [My Profile](#my-profile)
     -   [Product Management Page](#product-management-page)
     -   [Product Management - Via Products](#product-management---via-products)
@@ -57,8 +57,16 @@ I have been given full permission to use all my static files and product informa
     -   [Privacy Policy](#privacy-policy)
     -   [Contact Us](#contact-us)
     -   [Django Admin Site](#django-admin-site)
+        -   [Login](#login)
+        -   [Create Order](#create-order)
+        -   [Amend Order](#amend-order)
+        -   [Amend Product](#amend-product)
+        -   [Amend User](#amend-user)
+        -   [User Activity](#user-activity)
+        -   [Recent Actions](#recent-actions)
 4.  [Implementation](#agile-methodology---implementation)
     -   [Programs](#programs)
+    -   [Web Marketing](#web-marketing)
 5.  [Testing](#agile-methodology---testing)
     -   [Validation Testing](#validation-testing)
     -   [Manual Testing](#manual-testing)
@@ -373,7 +381,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Followed by the subtotal copying the price styling.
 - The bin icon is the last graphic centred below the subtotal.
 
-![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-1-mobile.PNG)
+![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-1-mobile.PNG)
 
 - After scrolling past the final item in the basket, the user is shown the final costs along with the secure checkout button.
 
@@ -501,16 +509,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Amending an existing product is a simple task, after clicking on the product link the form is autofilled with product details.
 - After changing a field or fields, clicking save at the bottom of the page updates the database and therefore the site.
 
-
 ![Django Admin - Amend Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-product.PNG)
-
-#### Recent Actions
-
-- The "recent actions" panel shows the last 10 changes to any database on the admin site.
-- The pencil icon indicates a change.
-- The cross icon indicates a deletion.
-
-![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-recent-actions.PNG)
 
 #### Amend User
 
@@ -524,6 +523,14 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Finally, users can be deleted by an admin user.
 
 ![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-user-dates.PNG)
+
+#### Recent Actions
+
+- The "recent actions" panel shows the last 10 changes to any database on the admin site.
+- The pencil icon indicates a change.
+- The cross icon indicates a deletion.
+
+![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-recent-actions.PNG)
 
 ## Agile Methodology - Implementation
 
@@ -548,6 +555,14 @@ but uses a black background and white text, contrasting nicely against the grey 
 -   [GitHub](https://github.com/) was used to commit changes during development and ensure no work was lost.
 -   [Figma](https://figma.com/) was used to create the wireframes during the design process.
 -   [Lucidchart](https://lucidchart.com/) was used to create the step by step workflow to visualise how the user can book and manage their reservation.
+
+### Web Marketing
+-   A Facebook page has been created in order to promote the company, site and products.
+
+![Facebook Page 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/facebook-page-1.PNG)
+![Facebook Page 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/facebook-page-2.PNG)
+
+-   Another use of web marketing is the use of MailChimp, this has set up to connect the user to a fictional monthly newsletter.
 
 ### Search Engine Optimisation (SEO)
 
