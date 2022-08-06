@@ -301,11 +301,13 @@ but uses a black background and white text, contrasting nicely against the grey 
 - The 'My Account' and trolley icon buttons remain visually identical, except equidistant spacing.
 - The footer items are listed in one column, flowing from one to subheading to the next.
 
+![Layout - Mobile](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/index-page-mobile.PNG)
+
 ### Index Page
 - The hero image covers the width of any screen viewing the site.
 - The welcome message is set on a transparent rounded box which focuses the visitor's attention on the welcome message, tag line and button.
 
-![Index Page](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/index-page.PNG)
+![Index Page](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/index-page-desktop.PNG)
 
 ### Products Page
 - The products page displays two products per row on a desktop and a single product on smaller devices.
@@ -318,11 +320,9 @@ but uses a black background and white text, contrasting nicely against the grey 
 - With the price displayed in a bolder font, the user is immediately aware of the product cost.
 
 ![Desktop - Products - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-sticks-desktop.PNG)
-
 ![Desktop - Products - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-others-desktop.PNG)
 
 ![Mobile - Products - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-sticks-mobile.PNG)
-
 ![Mobile - Products - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-others-mobile.PNG)
 
 ### Product Detail Page
@@ -335,13 +335,11 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Return to result OR KEEP SHOPPING
 
 ![Desktop - Product Details - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-sticks-desktop.PNG)
-
 ![Desktop - Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others-desktop.PNG)
 
 - All action elements such as size dropdowns, the quantity selector, add to basket button and keep shopping button all layout in single columns, full width of the container.
 
 ![Mobile - Product Details - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-sticks-mobile.PNG)
-
 ![Mobile - Product Details - Others](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/product-details-others-mobile.PNG)
 
 ### Basket (Desktop)
@@ -351,7 +349,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Making any changes to the quantity of an item will adjust the subtotal.
 - The final column displays a bin icon used to remove an item from the basket.
 
-![Dekstop Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-basket-1.PNG)
+![Desktop Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-1-desktop.PNG)
 
 - All the costs are contained in their own row, including the basket total (no delivery cost), delivery total and grand total.
 - All three totals are split out and easy to differentiate based on the various fonts.
@@ -359,9 +357,9 @@ but uses a black background and white text, contrasting nicely against the grey 
 - When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
 - The Checkout button uses another icon from FontAwesome and follows the same button theme.
 
-![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-basket-2.PNG)
+![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-2-desktop.PNG)
 
-- An Empty basket present a different basket look, informing the user there are no items to check out and provides a handy link to the sticks page.
+- An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
 
 ![Empty Basket](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/empty-basket.PNG)
 
@@ -375,17 +373,35 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Followed by the subtotal copying the price styling.
 - The bin icon is the last graphic centred below the subtotal.
 
-![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-1.PNG)
+![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-1-mobile.PNG)
 
 - After scrolling past the final item in the basket, the user is shown the final costs along with the secure checkout button.
 
-![Mobile Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-basket-2.PNG)
+![Mobile Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-2-mobile.PNG)
 
 ### Checkout (Desktop)
 
+- The checkout page follows a similar theme, with the checkout form covering the left side of the screen (on larger devices).
+- The same inset border has been used along with the placeholders.
+- Split into three sections; Personal Details, Delivery Details and Card Details.
+- The Personal Details are quite standard, with full name and email address. Invalid email addresses will produce a validation error and will stop confirmation.  
+- If the user has created an account and is logged in, they can either manually enter their delivery address in and save it to their profile using the tick box, or enter their details in the 'my profile' page [(as seen below)](#my-profile) to enable the autofill.
+- If this is a new user without an account instead of seeing a save tick box, they are shown two links, one to create an account (linking to the registration page) the other to login.
+- The final section shows an input field used for the user's card number, expiry date and security code.
+- Just like the email field, a validation error will appear should any card details be incorrect
+- The final charge amount is displayed at the bottom of the page below the card input field. Providing further assurance to the user that the correct amount will be processed.
+- The order summary on the right side provides a list of the items in the basket including their key details such as name, size, quantity and subtotal, along with a small image.
+- When the summary contains multiple items pushing past the checkout form, a scroll bar then appears to keep the page to a sensible scrolling size.
+- The costs are presented in the same way as the basket page.
+- Next to the confirm order button is a return to basket formatted in the secondary button theme.
+
 ![Checkout](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout.PNG)
 
-### Checkout Confirmation (Desktop)
+### Order Confirmation (Desktop)
+
+- The order confirmation page is almost identical to the checkout page, but instead of input fields, all the checkout data is written with the user input in bold. This includes all delivery details and final costings.
+- The order number is randomly generated with a string of 32 characters.
+- From the order confirmation, the user is able to link to their profile (assuming the user is registered)
 
 ![Order Confirmation](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/order-confirmation.PNG)
 
@@ -458,25 +474,13 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ![Django Admin - Overview](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-overview.PNG)
 
+#### Login
+
 -   The admin site is username and password protected for obvious reason. Only a "Superuser" or "Staff status" have access.
 
 ![Django Admin - Login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-login.PNG)
 
--   The "recent actions" panel shows the last 10 changes to users or bookings.
--   The pencil icon indicates a change.
--   The cross icon indicates a deletion.
-
-![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-recent-actions.PNG)
-
--   They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
-
-![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-user.PNG)
-
--   It also shows the user's activity in terms of their last login and when they registered.
-
--   Finally, users can be deleted by an admin user.
-
-![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-user-dates.PNG)
+#### Create Order
 
 -   As an admin user you have the ability to create manual orders "ADD ORDER"
 -   The form uses a dropdown menu to select the user profile to ensure the user has created an account in order to make a reservation.
@@ -486,13 +490,40 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-add-booking.PNG)
 
-- Amend order text
+#### Amend Order
+
+- Via the orders tab, an admin user is able to amend any order in the database, ranging from the personal details such as the delivery address to line items like adding and removing products and amending sizes and quantities.
 
 ![Django Admin - Amend Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-order.PNG)
 
-- Amend product text
+#### Amend Product
+
+- Amending an existing product is a simple task, after clicking on the product link the form is autofilled with product details.
+- After changing a field or fields, clicking save at the bottom of the page updates the database and therefore the site.
+
 
 ![Django Admin - Amend Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-product.PNG)
+
+#### Recent Actions
+
+- The "recent actions" panel shows the last 10 changes to any database on the admin site.
+- The pencil icon indicates a change.
+- The cross icon indicates a deletion.
+
+![Django Admin - Recent Actions](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-recent-actions.PNG)
+
+#### Amend User
+
+- They have the ability to add and amend users, including changing their names, email address, username and even their password and permissions.
+
+![Django Admin - Amend User](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-amend-user.PNG)
+
+#### User Activity
+
+- It also shows the user's activity in terms of their last login and when they registered.
+- Finally, users can be deleted by an admin user.
+
+![Django Admin - User Important Dates](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-user-dates.PNG)
 
 ## Agile Methodology - Implementation
 
@@ -509,6 +540,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 -   [Heroku](https://www.Heroku.com/) was used to share the site online.
 -   [AWS](https://aws.amazon.com/) was used to store static files. 
+-   [Stripe](https://stripe.com/en-gb) was used to enable users to make a transaction.
 -   [Bootstrap](https://getbootstrap.com/) was used to create the framework for the site, including the grid set up and other components such as buttons, toasts, progress bars and the accordian.
 -   [Font Awesome](https://fontawesome.com/) was used for the social media icons within the footer.
 -   [Google Fonts](https://fonts.google.com/) was used to import the 'Orbitron', 'Bebas Neue' and 'Montserrat' into the style.css file.

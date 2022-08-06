@@ -718,11 +718,11 @@ iframe {
     }
 
     .welcome-container {
-        margin: 20px auto 30px;
+        margin: 40px auto 30px;
     }
 
     .display-4 {
-        font-size: 2rem
+        font-size: 2.5rem
     }
 
     .btn-grey-add, .btn-white-add {
