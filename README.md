@@ -568,7 +568,33 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 TO BE COMPLETED
 
-In order to find the relevant keywords for my project I made the following searches on Google and Word Tracker along with a few combinations:
+In order to find the relevant keywords for my project I made the following searches on Google and [Word Tracker](https://www.wordtracker.com/). Below is a list of keywords used:
+- Hockey sticks
+- Premimum hockey sticks
+- Hockey equipment
+- Hockey bags
+- Hockey accessories
+- Hockey gifts
+
+After making these searches I discovered that because of what Americans would call hockey (Ice Hockey), I should add 'Field' to my searches.
+
+- Field Hockey sticks
+- Premimum field hockey sticks
+- Field hockey equipment
+- Field Hockey bags
+- Field Hockey accessories
+- Field Hockey gifts
+
+The results were very dissapointing with hockey brands coming back as alternative searches, such as
+- Grays field hockey sticks
+- Adidas field hockey sticks
+- TK hockey sticks
+- Osaka field hockey sticks
+
+Using this feedback I added all 'field' combinations to my metadata keywords.
+It also shows that the target market for hockey products, espically sticks, are aware of the brands and know what type of stick they would like to purchase.
+It seems it is all about brand awareness!
+
 
 ## Agile Methodology - Testing
 
