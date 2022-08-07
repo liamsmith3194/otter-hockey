@@ -566,8 +566,6 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ### Search Engine Optimisation (SEO)
 
-TO BE COMPLETED
-
 In order to find the relevant keywords for my project I made the following searches on Google and [Word Tracker](https://www.wordtracker.com/). Below is a list of keywords used:
 - Hockey sticks
 - Premimum hockey sticks
@@ -632,22 +630,29 @@ TO BE REPLACED
     - At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
 
 - Index Page
-    - [x] Ace of Steaks logo link 
-        - Links to from every page successfully.
+    - [x] Otter Hockey logo link 
+        - Links to the home page from every page successfully.
     - [x] Individual page links
         - All pages link to one another from any page.
     - [x] Social media links open in new tab
         - All three social media sites are linked to open new tabs, this can be done from any web page.
-    - [x] Window link to menu page
-        - See menu button successfully links to the menu page showing the default data; starters.
+    - [x] Window link to sticks products page
+        - Window button 'View all Sticks' successfully links to the sticks products page.
 
 - Register Page
+    - [x] Email address already exists
+        - Attempting to create a user with the same email address produces a validation error, "A user is already registered with this e-mail address."
+
+        ![Email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
+
     - [x] Username already exists
         - Attempting to create a user with the same username produces a validation error, "A user with that username already exists."
 
-        ![User exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/user-exists.PNG)
+        ![Username exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
 
-    - [x] All fields required except email address (optional)
+        ![Username & email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-address-exists.PNG)
+
+    - [x] All fields are required
         - The form does not submit unless all the fields have been completed with valid data.
     - [x] Not a recognised email address
     - [x] Passwords don't match
@@ -657,8 +662,9 @@ TO BE REPLACED
 
     - [x] Password not secure
         - If the password isn't strong enough, another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
+        - Using a purely numerical password isn't allowed either. "This password is entirely mumeric."
 
-        ![Password not strong enough](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-too-short.PNG)
+        ![Password invalid](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-invalid.PNG)
 
     - [x] Sign in link
         - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
@@ -678,7 +684,7 @@ TO BE REPLACED
     - [x] Logout link
         - The logout button works from any page on the site.
 
-- Booking Page
+- Products Page
     - [x] All fields required
         - The booking will not submit unless all the fields have been completed with valid input.
     - [x] Date unavailable before or on the day of booking
