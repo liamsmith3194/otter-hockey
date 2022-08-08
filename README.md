@@ -248,37 +248,37 @@ The User Profile stores the default delivery details again, assuming the user is
 -   The site colour scheme is minimalistic but effective.
 
 -   #6D6D6D - Grey
-    -   The grey is used throughout the site, for the logo, navigation bar, footer and some action buttons such as "Add to Basket"
-    -   All the sticks on offer on the site have a 'progress bar' used for power and control, this uses our main grey against a lighter grey for the background.
+    -   The grey is used throughout the site, for the logo, navigation bar, footer and some action buttons such as "Add to Basket"
+    -   All the sticks on offer on the site have a 'progress bar' used for power and control, this uses our main grey against a lighter grey for the background.
 
 -   #000000 - Black
-    -   Black is used for the vast majority of the text
-    -   The navigation bar items carry a hover & active black pseudo-class to highlight where the cursor is and current page to the user.
-    -   A black banner is used to show the free delivery offer and provides a nice contrast from the navigation bar.
+    -   Black is used for the vast majority of the text
+    -   The navigation bar items carry a hover & active black pseudo-class to highlight where the cursor is and current page to the user.
+    -   A black banner is used to show the free delivery offer and provides a nice contrast from the navigation bar.
 
 -   #FFFFFF - White
-    -   The header containing the logo, search bar and account/basket buttons.
-    -   The navigation menu items are white at the default state.
-    -   The 'free delivery offer' text against the black background is drawn to the user's attention.
+    -   The header containing the logo, search bar and account/basket buttons.
+    -   The navigation menu items are white at the default state.
+    -   The 'free delivery offer' text against the black background is drawn to the user's attention.
 
 ### Typography
 
 -   Orbitron
-    -   I have chosen to use the same typeface as used on https://www.otterhockey.co.uk for the logo and product names on the product detail pages. This is a conscious choice to increase the continuity on the site in regard to the product images.
-    -   The logo uses the bold style, but also carries a subtle drop shadow to make it stand out.
-    -   The product name uses the regular style.
-    -   As a couple of products contain the letter O and a zero, this typeface provides a completely different look, making it easier for the user to understand the product name.
+    -   I have chosen to use the same typeface as used on https://www.otterhockey.co.uk for the logo and product names on the product detail pages. This is a conscious choice to increase the continuity on the site in regard to the product images.
+    -   The logo uses the bold style, but also carries a subtle drop shadow to make it stand out.
+    -   The product name uses the regular style.
+    -   As a couple of products contain the letter O and a zero, this typeface provides a completely different look, making it easier for the user to understand the product name.
 
 -   Montserrat (light, medium & bold) 
-    -   A large majority of text on the site uses Montserrat.
-    -   This is a very popular font for web design because of its readability.
-    -   The uses of light, medium and bold varies and highlights certain details. For example, the order confirmation uses the light style for the field names, the medium for the field values and the bold for the subheadings.
-    -   This make it more appealing to the user and easier to read or quickly check.
+    -   A large majority of text on the site uses Montserrat.
+    -   This is a very popular font for web design because of its readability.
+    -   The uses of light, medium and bold varies and highlights certain details. For example, the order confirmation uses the light style for the field names, the medium for the field values and the bold for the subheadings.
+    -   This make it more appealing to the user and easier to read or quickly check.
 
 -   Bebas Neue
-    -   This typeface is used sparsely, but provides a strong contrast between Orbitron and Montserrat
-    -   It is used for the navigation items and the basket total.
-    -   Increased letter spacing makes the font more legible for the users.
+    -   This typeface is used sparsely, but provides a strong contrast between Orbitron and Montserrat
+    -   It is used for the navigation items and the basket total.
+    -   Increased letter spacing makes the font more legible for the users.
 
 ### Imagery
 -   All imagery has been taken from Otter Hockey's site with permission from Kyle as [previously mentioned above](#permission)
@@ -337,8 +337,8 @@ but uses a black background and white text, contrasting nicely against the grey 
 - A bigger product image covers the left column, and on click opens the linked image in a new tab.
 - The full description is revealed.
 - Select size dropdown options (if applicable):
-    - Sticks - 35.5", 36.5", 37.5", 38.5",
-    - Clothes &  Accessories - XS, S, M, L, XL
+    - Sticks - 35.5", 36.5", 37.5", 38.5",
+    - Clothes &  Accessories - XS, S, M, L, XL
 - The plus and minus button enable the user to adjust quantity before adding the product to the basket.
 - Return to result OR KEEP SHOPPING
 
@@ -361,11 +361,14 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 - All the costs are contained in their own row, including the basket total (no delivery cost), delivery total and grand total.
 - All three totals are split out and easy to differentiate based on the various fonts.
-- The free delivery offer uses an icon to display to the user if they have qualified for the deal.
-- When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
 - The Checkout button uses another icon from FontAwesome and follows the same button theme.
 
 ![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-2-desktop.PNG)
+
+- The free delivery offer uses an icon to display to the user if they have qualified for the deal.
+- When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
+
+![Delivery popover](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-popover.PNG)
 
 - An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
 
@@ -496,7 +499,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 -   The size field is available on all products and accepts stick sizes and clothes sizes.
 -   Adjusting the quantity will change the line item total on save. 
 
-![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-add-booking.PNG)
+![Django Admin - Create Order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/django-admin-create-order.PNG)
 
 #### Amend Order
 
@@ -557,6 +560,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 -   [Lucidchart](https://lucidchart.com/) was used to create the step by step workflow to visualise how the user can book and manage their reservation.
 
 ### Web Marketing
+
 -   A Facebook page has been created in order to promote the company, site and products.
 
 ![Facebook Page 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/facebook-page-1.PNG)
@@ -593,10 +597,7 @@ Using this feedback I added all 'field' combinations to my metadata keywords.
 It also shows that the target market for hockey products, espically sticks, are aware of the brands and know what type of stick they would like to purchase.
 It seems it is all about brand awareness!
 
-
 ## Agile Methodology - Testing
-
-TO BE REPLACED 
 
 ### Validation Testing
 
@@ -623,48 +624,54 @@ These have now all be rectified.
 
 ### Manual Testing
 
-TO BE REPLACED 
-
 - Responsive Testing
     - The site has been tested on an iMac, PC, Laptop, iPad and iPhone X.
     - At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
+    - All forms are spread across the width of the screen on smaller devices
+    - The vast majority of buttons are also spread across the width and stacked above one another.
+    - The footer elements are displayed in a singe column on smaller devices, with all content centred.
 
 - Index Page
     - [x] Otter Hockey logo link 
         - Links to the home page from every page successfully.
+    - [x] Search bar results
+        - Produces results when keyword found with number of results.
+        - Zero results found on any keyword not in the database '0 Products found for "test"'
     - [x] Individual page links
         - All pages link to one another from any page.
     - [x] Social media links open in new tab
         - All three social media sites are linked to open new tabs, this can be done from any web page.
-    - [x] Window link to sticks products page
-        - Window button 'View all Sticks' successfully links to the sticks products page.
+    - [x] Window links to the sticks products page
+    - Window button 'View all Sticks' successfully links to the sticks products page.
 
 - Register Page
     - [x] Email address already exists
         - Attempting to create a user with the same email address produces a validation error, "A user is already registered with this e-mail address."
 
-        ![Email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
+    ![Email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
 
     - [x] Username already exists
         - Attempting to create a user with the same username produces a validation error, "A user with that username already exists."
 
-        ![Username exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
+    ![Username exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
 
-        ![Username & email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-address-exists.PNG)
+    ![Username & email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-email-exists.PNG)
 
     - [x] All fields are required
         - The form does not submit unless all the fields have been completed with valid data.
-    - [x] Not a recognised email address
+    - [x] Not a recognised email address.
+        - A common validation error could be the follow:
+        'Please use an '@' in the email address'.
     - [x] Passwords don't match
         - When creating a user and the passwords don't match, a validation error is presented. "You must type the same password each time."
 
-        ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-dont-match.PNG)
+    ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-dont-match.PNG)
 
     - [x] Password not secure
         - If the password isn't strong enough, another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
-        - Using a purely numerical password isn't allowed either. "This password is entirely mumeric."
+        - Using a purely numerical password also isn't allowed. "This password is entirely numeric."
 
-        ![Password invalid](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-invalid.PNG)
+    ![Password invalid](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-invalid.PNG)
 
     - [x] Sign in link
         - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
@@ -673,10 +680,10 @@ TO BE REPLACED
     - [x] Invalid credentials
         - Attempting to sign in as a user that has not been registered I am greeted with an error message, "The username and/or password you specified are not correct."
 
-        ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/invalid-user.PNG)
+    ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/invalid-user.PNG)
 
     - [x] Remember me
-        - The 'remember me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
+        - The 'Remember Me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
     - [x] Register link "sign up"
         - The link redirects the user to the register form as expected.
 
@@ -685,57 +692,101 @@ TO BE REPLACED
         - The logout button works from any page on the site.
 
 - Products Page
-    - [x] All fields required
-        - The booking will not submit unless all the fields have been completed with valid input.
-    - [x] Date unavailable before or on the day of booking
-        - The calendar ensure the invalid dates can not be selected.
+    - [x] View products by category
+        - The navigation bar provides a very easy and convenient way to view the products by category.
+    - [x] Product count
+        - Each category shows the amount of products on offer.
+    - [x] Product name links to product detail page
+        - As the product range is small, I have been able to test all product links via the product name.
+    - [x] Product image links to product detail page
+        - As the product range is small, I have been able to test all product links via the product image.
+    - [x] Sort by filter
+        - Each filter has been tested on every category page and works as expected.
+    - [x] Stick parameters
+        - As expected, the stick parameters are only visible on the sticks category page. All the values match the database input figures.
+    - [x] Return to top of the page
+        - The back to top button is visible on all product pages and sends the user back to the first row of products.
 
-        ![Today's date unavailable](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/todays-date-unavailable.PNG)
+- Product Details Page
+    - [x] Larger product image in new tab
+        - Every product image opens in a new tab linked to s3, where the images are stored.
+    - [x] Stick parameters
+        - Only the stick products display the power and control progress bars.
+    - [x] Size dropdown
+        - All products have been checked ensuring the sticks use the stick sizes, all clothes use the clothes sizes and the bags don't show a size selector.
+        - All the accessories except the chamois grip use clothes sizes.
+        - All the products that have a size options are required in order to the item to the basket.
+    - [x] Quantity buttons
+        - All the products show the quantity selector option.
+        - It is impossible to add another below 1 to the basket
+        - The quantity selector is always right aligned whether a sizes field is required or not.
+    - [x] Add to basket button
+        - Providing all the fields are filled in correctly, every product can added to the basket.
+    - [x] Keep shopping button
+        - The keep shopping button returns the user to the all products page on every product detail page tested.
 
-    - [x] No bookings will be taken after 30 days in advance
-        - The calendar ensure the user is unable to select a date 30 days in advance of today's' date.
-    - [x] Double booking
-        - The booking will not submit if the date and time is the same as an existing booking in the database.
+- Basket
+    - [x] Correct product image
+        - Every product added to the basket produced the correct image.
+    - [x] Correct product name
+        - Every product added to the basket produced the correct product name.
+    - [x] Correct product rating
+        - Every product added to the basket produced the correct product rating.
+    - [x] Correct product sku
+        - Every product added to the basket produced the correct product sku.
+    - [x] Correct product price
+        - Every product added to the basket produced the correct product price.
+    - [x] Correct selected quantity
+        - Every product added to the basket produced the quantity input from the product detail page.
+    - [x] Basket total
+        - To ensure the basket total was correct I added numerous products to the basket multiple times and added them up using a calculator.
+    - [x] Delivery offer icon
+        - The delivery offer icon changes everytime I go over the £100 mark as expected.
+    - [x] Delivery popover calculation
+        - The popover calculation was tested a number of times with different amounts in the basket and then manually calculated.
+    - [x] Delivery total
+        - The delivery total automatically updates when the basket is over £100 to £0.00
+        - By default the delivery total is £5.00
+    - [x] Grand total
+        - To ensure the grand total was correct I added numerous products to the basket multiple times and added them up using a calculator.
+        - I also made sure to edit the basket continiously to update the basket total and delivery total.
+    - [x] Secure checkout button
+        - The checkout button links successfully.
+    - [x] Empty basket
+        - The empty basket page is displayed correctly when nothing is in the basket and when all items have been manually removed from the basket.
 
-        ![Date unavailable](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/date-unavailable.PNG)
+- Checkout
+    - [x] All '*' fields are required
+    - [x] Email address is valid
+    - [x] User details autofill
+    - [x] Create and log in links
+    - [x] Save checkbox is available
+    - [x] Card details verification
+    - [x] Charge amount is correct.
+    - [x] Order summary matches basket
+    - [x] Basket total
+    - [x] Delivery offer icon
+    - [x] Delivery popover calculation
+    - [x] Delivery total
+    - [x] Grand total
+    - [x] Confirm order button
+    - [x] Return to basket button
 
-    - [x] All account details coming through
-        - Tested 3 different users and all pulled through user credentials (first name, last name & email address) when going to book a table.
-
-- Manage Booking Page (Overview)
-    - [x] All data matches user input
-        - Made numerous bookings under different users and all the data synced correctly.
-    - [x] Old bookings are removed from view
-        - Bookings passed the date of reservation are being deleted from the user's manage booking page. Giving them the ability to book a new table.
-
-- Manage Booking Page (Update)
-    - [x] Form loads user entry
-        - The form autopopulates with the data taken from the booking made.
-        - The date and time field does not autopopulate. [See below](#issues)
-    - [x] Date unavailable before or on the day of booking
-        - The same restriction remains on the calendar to ensure the invalid dates can not be selected.
-    - [x] No bookings will be taken after 30 days in advance
-        - The same checks are in place to ensure the user is unable to select a date 30 days in advance of today's' date.
-    - [x] Double booking
-        - The new booking still checks to ensure the date and time doesn't clash with any other booking in the database.
-    - [x] Booking change saved and updated in overview and database
-        - After saving the changes to the booking, the manage booking page is updated.
-        - Whether one field or multiple are changed, the view from the user is updated along with the database.
-
-![Manage booking - Update](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/edit-booking.PNG)
-
-- Manage Booking Page (Delete)
-    - [x] Cancel button keeps booking and returns the user to the manage booking page
-        - When clicking the cancel button, the user is redirected to the manage booking page with the booking intact and editable.
-    - [x] Delete button removes booking from user's view and from the database
-        - After clicking the delete button the user is redirected to the manage booking page, the booking has been removed from view and removed from the system.
-        - As there is no booking in the database for the user, they are able to book a table. 
-
-![Manage booking - Delete](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delete-booking.PNG)
-
-- Menu Page
-    - [x] All links show correct data
-        - All four navigation tabs open the correct information, and it doesn't matter what order the tabs are clicked in.
+- Order Confirmation 
+    - [x] Email confirmation has been sent to email address from checkout
+    - [x] Order number has been randomly generated
+    - [x] Order date is correct
+    - [x] All delivery information matches the checkout fields
+    - [x] Save checkbox is available
+    - [x] Card details verification
+    - [x] Charge amount is correct.
+    - [x] Order summary matches basket
+    - [x] order total matches basket total from checkout
+    - [x] Delivery total matches checkout
+    - [x] Grand total matches checkout
+    - [x] Purchased products matches Order summary from checkout
+    - [x] Return home button
+    - [x] View account button
 
 ### Lighthouse Testing
 
