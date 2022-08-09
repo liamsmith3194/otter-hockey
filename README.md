@@ -70,6 +70,15 @@ I have been given full permission to use all my static files and product informa
 5.  [Testing](#agile-methodology---testing)
     -   [Validation Testing](#validation-testing)
     -   [Manual Testing](#manual-testing)
+        - [Responsive](#responsive-testing)
+        - [Index Page](#index-page-1)
+        - [Register Page](#register-page)
+        - [Login Page](#login-page)
+        - [Products](#products-page-1)
+        - [Product Details](#product-details-page)
+        - [Basket](#basket)
+        - [Check Out](#checkout-1)
+        - [Order Confirmation](#order-confirmation)
     -   [Continued Testing](#continued-testing)   
     -   [Glitches](#glitches)
     -   [Issues](#issues)
@@ -368,7 +377,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 - The free delivery offer uses an icon to display to the user if they have qualified for the deal.
 - When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
 
-![Delivery popover](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-popover.PNG)
+![Delivery pop-over](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-pop-over.PNG)
 
 - An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
 
@@ -624,169 +633,203 @@ These have now all be rectified.
 
 ### Manual Testing
 
-- Responsive Testing
-    - The site has been tested on an iMac, PC, Laptop, iPad and iPhone X.
-    - At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
-    - All forms are spread across the width of the screen on smaller devices
-    - The vast majority of buttons are also spread across the width and stacked above one another.
-    - The footer elements are displayed in a singe column on smaller devices, with all content centred.
+#### Responsive Testing
+- The site has been tested on an iMac, PC, Laptop, iPad and iPhone X.
+- At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
+- All forms are spread across the width of the screen on smaller devices
+- The vast majority of buttons are also spread across the width and stacked above one another.
+- The footer elements are displayed in a singe column on smaller devices, with all content centred.
 
-- Index Page
-    - [x] Otter Hockey logo link 
-        - Links to the home page from every page successfully.
-    - [x] Search bar results
-        - Produces results when keyword found with number of results.
-        - Zero results found on any keyword not in the database '0 Products found for "test"'
-    - [x] Individual page links
-        - All pages link to one another from any page.
-    - [x] Social media links open in new tab
-        - All three social media sites are linked to open new tabs, this can be done from any web page.
-    - [x] Window links to the sticks products page
-    - Window button 'View all Sticks' successfully links to the sticks products page.
+#### Index Page
+- [x] Otter Hockey logo link 
+    - Links to the home page from every page successfully.
+- [x] Search bar results
+    - Produces results when keyword found with number of results.
+    - Zero results found on any keyword not in the database '0 Products found for "test"'
+- [x] Individual page links
+    - All pages link to one another from any page.
+- [x] Social media links open in new tab
+    - All three social media sites are linked to open new tabs, this can be done from any web page.
+- [x] Window links to the sticks products page
+- Window button 'View all Sticks' successfully links to the sticks products page.
 
-- Register Page
-    - [x] Email address already exists
-        - Attempting to create a user with the same email address produces a validation error, "A user is already registered with this e-mail address."
+#### Register Page
+- [x] Email address already exists
+    - Attempting to create a user with the same email address produces a validation error, "A user is already registered with this e-mail address."
 
-    ![Email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
+![Email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
 
-    - [x] Username already exists
+- [x] Username already exists
         - Attempting to create a user with the same username produces a validation error, "A user with that username already exists."
 
-    ![Username exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
+![Username exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-exists.PNG)
 
-    ![Username & email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-email-exists.PNG)
+![Username & email address exists](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/username-email-exists.PNG)
 
-    - [x] All fields are required
-        - The form does not submit unless all the fields have been completed with valid data.
-    - [x] Not a recognised email address.
-        - A common validation error could be the follow:
+- [x] All fields are required
+    - The form does not submit unless all the fields have been completed with valid data.
+- [x] Not a recognised email address.
+    - A common validation error could be the follow:
         'Please use an '@' in the email address'.
-    - [x] Passwords don't match
-        - When creating a user and the passwords don't match, a validation error is presented. "You must type the same password each time."
+- [x] Passwords don't match
+    - When creating a user and the passwords don't match, a validation error is presented. "You must type the same password each time."
 
-    ![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-dont-match.PNG)
+![Passwords don't match](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-dont-match.PNG)
 
-    - [x] Password not secure
-        - If the password isn't strong enough, another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
-        - Using a purely numerical password also isn't allowed. "This password is entirely numeric."
+- [x] Password not secure
+    - If the password isn't strong enough, another validation error is shown. "This password is too short. It must contain at least 8 characters. This password is too common."
+    - Using a purely numerical password also isn't allowed. "This password is entirely numeric."
 
-    ![Password invalid](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-invalid.PNG)
+![Password invalid](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/password-invalid.PNG)
 
-    - [x] Sign in link
-        - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
+- [x] Sign in link
+    - The link redirects the user to the sign-in form as expected, autofilling if the user uses the 'remember me' feature.
 
-- Login Page
-    - [x] Invalid credentials
-        - Attempting to sign in as a user that has not been registered I am greeted with an error message, "The username and/or password you specified are not correct."
+#### Login Page
+- [x] Invalid credentials
+    - Attempting to sign in as a user that has not been registered I am greeted with an error message, "The username and/or password you specified are not correct."
 
-    ![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/invalid-user.PNG)
+![Invalid credentials](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/invalid-user.PNG)
 
-    - [x] Remember me
-        - The 'Remember Me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
-    - [x] Register link "sign up"
-        - The link redirects the user to the register form as expected.
+- [x] Remember me
+    - The 'Remember Me' checkbox works correctly, after logging in with one user, clicking the checkbox and signing out. The username produced was the last used. This was tested on multiple user accounts.
+- [x] Register link "sign up"
+    - The link redirects the user to the register form as expected.
 
-- Logout Page
-    - [x] Logout link
-        - The logout button works from any page on the site.
+#### Logout Page
+- [x] Logout link
+    - The logout button works from any page on the site.
 
-- Products Page
-    - [x] View products by category
-        - The navigation bar provides a very easy and convenient way to view the products by category.
-    - [x] Product count
-        - Each category shows the amount of products on offer.
-    - [x] Product name links to product detail page
-        - As the product range is small, I have been able to test all product links via the product name.
-    - [x] Product image links to product detail page
-        - As the product range is small, I have been able to test all product links via the product image.
-    - [x] Sort by filter
-        - Each filter has been tested on every category page and works as expected.
-    - [x] Stick parameters
-        - As expected, the stick parameters are only visible on the sticks category page. All the values match the database input figures.
-    - [x] Return to top of the page
-        - The back to top button is visible on all product pages and sends the user back to the first row of products.
+#### Products Page
+- [x] View products by category
+    - The navigation bar provides a very easy and convenient way to view the products by category.
+- [x] Product count
+    - Each category shows the amount of products on offer.
+- [x] Product name links to product detail page
+    - As the product range is small, I have been able to test all product links via the product name.
+- [x] Product image links to product detail page
+    - As the product range is small, I have been able to test all product links via the product image.
+- [x] Sort by filter
+    - Each filter has been tested on every category page and works as expected.
+- [x] Stick parameters
+    - As expected, the stick parameters are only visible on the sticks category page. All the values match the database input figures.
+- [x] Return to top of the page
+    - The back to top button is visible on all product pages and sends the user back to the first row of products.
 
-- Product Details Page
-    - [x] Larger product image in new tab
-        - Every product image opens in a new tab linked to s3, where the images are stored.
-    - [x] Stick parameters
-        - Only the stick products display the power and control progress bars.
-    - [x] Size dropdown
-        - All products have been checked ensuring the sticks use the stick sizes, all clothes use the clothes sizes and the bags don't show a size selector.
-        - All the accessories except the chamois grip use clothes sizes.
-        - All the products that have a size options are required in order to the item to the basket.
-    - [x] Quantity buttons
-        - All the products show the quantity selector option.
-        - It is impossible to add another below 1 to the basket
-        - The quantity selector is always right aligned whether a sizes field is required or not.
-    - [x] Add to basket button
-        - Providing all the fields are filled in correctly, every product can added to the basket.
-    - [x] Keep shopping button
-        - The keep shopping button returns the user to the all products page on every product detail page tested.
+#### Product Details Page
+- [x] Larger product image in new tab
+    - Every product image opens in a new tab linked to s3, where the images are stored.
+- [x] Stick parameters
+    - Only the stick products display the power and control progress bars.
+- [x] Size dropdown
+    - All products have been checked ensuring the sticks use the stick sizes, all clothes use the clothes sizes and the bags don't show a size selector.
+    - All the accessories except the chamois grip use clothes sizes.
+    - All the products that have a size options are required in order to the item to the basket.
+- [x] Quantity buttons
+    - All the products show the quantity selector option.
+    - It is impossible to add another below 1 to the basket
+    - The quantity selector is always right aligned whether a sizes field is required or not.
+- [x] Add to basket button
+    - Providing all the fields are filled in correctly, every product can added to the basket.
+- [x] Keep shopping button
+    - The keep shopping button returns the user to the all products page on every product detail page tested.
 
-- Basket
-    - [x] Correct product image
-        - Every product added to the basket produced the correct image.
-    - [x] Correct product name
-        - Every product added to the basket produced the correct product name.
-    - [x] Correct product rating
-        - Every product added to the basket produced the correct product rating.
-    - [x] Correct product sku
-        - Every product added to the basket produced the correct product sku.
-    - [x] Correct product price
-        - Every product added to the basket produced the correct product price.
-    - [x] Correct selected quantity
-        - Every product added to the basket produced the quantity input from the product detail page.
-    - [x] Basket total
-        - To ensure the basket total was correct I added numerous products to the basket multiple times and added them up using a calculator.
-    - [x] Delivery offer icon
-        - The delivery offer icon changes everytime I go over the £100 mark as expected.
-    - [x] Delivery popover calculation
-        - The popover calculation was tested a number of times with different amounts in the basket and then manually calculated.
-    - [x] Delivery total
-        - The delivery total automatically updates when the basket is over £100 to £0.00
-        - By default the delivery total is £5.00
-    - [x] Grand total
-        - To ensure the grand total was correct I added numerous products to the basket multiple times and added them up using a calculator.
-        - I also made sure to edit the basket continiously to update the basket total and delivery total.
-    - [x] Secure checkout button
-        - The checkout button links successfully.
-    - [x] Empty basket
-        - The empty basket page is displayed correctly when nothing is in the basket and when all items have been manually removed from the basket.
+#### Basket
+- [x] Correct product image
+    - Every product added to the basket produced the correct image.
+- [x] Correct product name
+    - Every product added to the basket produced the correct product name.
+- [x] Correct product rating
+    - Every product added to the basket produced the correct product rating.
+- [x] Correct product sku
+    - Every product added to the basket produced the correct product sku.
+- [x] Correct product price
+    - Every product added to the basket produced the correct product price.
+- [x] Correct selected quantity
+    - Every product added to the basket produced the quantity input from the product detail page.
+- [x] Basket total
+    - To ensure the basket total was correct I added numerous products to the basket multiple times and added them up using a calculator.
+- [x] Delivery offer icon
+    - The delivery offer icon changes everytime I go over the £100 mark as expected.
+- [x] Delivery pop-over calculation
+    - The pop-over calculation was tested a number of times with different amounts in the basket and then manually calculated.
+- [x] Delivery total
+    - The delivery total automatically updates when the basket is over £100 to £0.00
+    - By default the delivery total is £5.00
+- [x] Grand total
+    - To ensure the grand total was correct I added numerous products to the basket multiple times and added them up using a calculator.
+    - I also made sure to edit the basket continiously to update the basket total and delivery total.
+- [x] Secure checkout button
+    - The checkout button links successfully.
+- [x] Empty basket
+    - The empty basket page is displayed correctly when nothing is in the basket and when all items have been manually removed from the basket.
 
-- Checkout
-    - [x] All '*' fields are required
-    - [x] Email address is valid
-    - [x] User details autofill
-    - [x] Create and log in links
-    - [x] Save checkbox is available
-    - [x] Card details verification
-    - [x] Charge amount is correct.
-    - [x] Order summary matches basket
-    - [x] Basket total
-    - [x] Delivery offer icon
-    - [x] Delivery popover calculation
-    - [x] Delivery total
-    - [x] Grand total
-    - [x] Confirm order button
-    - [x] Return to basket button
+#### Checkout
+- [x] All '*' fields are required
+    - Only the fields with a '*' in the placeholder are required, not filling these fields in will not submit the order.
+    - Every other delivery field can be left blank, and the order will be submitted successfully.
+- [x] Email address is valid
+    - The email address field follows the same checks on the checkout page as when a user registers.
+- [x] User details autofill
+    - The user's delivery details auto-populate providing the user has created an account and filled in their profile information.
+    - They also update when amending from the 'My Profile' page, even when there are items already in the basket.
+- [x] Create and log in links
+    - The create and log in links only appear when a user hasn't logged in to their account.
+    - Both links redirect to the correct pages.
+- [x] Save checkbox is available
+    - The save details checkbox is present only when a user has created an account and is signed in.
+    - Creating a number of users and clicking the option updated as expected.
+    - Leaving the option unticked leaves the default values as the last saved input credentials, either from the checkout page or 'My Profile'.
+- [x] Card details verification
+    - The card input field has built in verification from Stripe, this notifies the user if the card number, expiry date or security code is invalid.
+    - The error message is displayed underneath the input field.
+- [x] Charge amount is correct.
+    - The charge amount has been calculated manually and matches the grand total.
+- [x] Order summary matches basket
+    - The order summary is an exact match to what has been shown in the basket every time.
+- [x] Basket total
+    - The basket total has never differed from the value shown on the basket page.
+- [x] Delivery offer icon
+    - The delivery offer icon remains in place with the icons used
+- [x] Delivery pop-over calculation
+    - The pop-over calculation also remains in place with the same calculation shown to the user, matching the basket calculation.
+- [x] Delivery total
+    - The delivery total copies through from the basket as expected with only two outcomes £5.00 or £0.00
+- [x] Grand total
+    - Again, the grand total is an exact match to the grand total shown on the basket page.
+    - To ensure this is correct, I have manually calculated the grand total numerous times.
+- [x] Confirm order button
+    - As stated above, providing the required fields have been filled in and the bank details are valid, the confirm order button works as expected and the user is redirected to the order confirmation page.
+- [x] Return to basket button
+    - The return to basket sends the user back to the basket with all items intact to amend or add to.
 
-- Order Confirmation 
-    - [x] Email confirmation has been sent to email address from checkout
-    - [x] Order number has been randomly generated
-    - [x] Order date is correct
-    - [x] All delivery information matches the checkout fields
-    - [x] Save checkbox is available
-    - [x] Card details verification
-    - [x] Charge amount is correct.
-    - [x] Order summary matches basket
-    - [x] order total matches basket total from checkout
-    - [x] Delivery total matches checkout
-    - [x] Grand total matches checkout
-    - [x] Purchased products matches Order summary from checkout
-    - [x] Return home button
-    - [x] View account button
+#### Order Confirmation 
+- [x] Email confirmation has been sent to email address from checkout
+    - The email address, highlighted in bold, corresponds to the email input field on the checkout page.
+    - Checked out using multiple users, with email confirmations successfully received.
+- [x] Order number has been randomly generated
+    - The order number randomly generated from a mixture of 32 characters. 
+    - Duplicates are almost impossible.
+- [x] Order date is correct
+    - The order date shown is correct to the GMT (Greenwich Mean Time)
+    - This includes BST (British Summer Time) UTC +1
+- [x] All delivery information matches the checkout fields
+    - The delivery address are the same details as input on the checkout page.
+- [x] order total matches basket total from checkout
+    - For the third page in a row, the basket total is a direct copy and has been manually calculated.
+- [x] Delivery total matches checkout
+    - For the third page in a row, the delivery total copies through as expected with only two outcomes £5.00 or £0.00
+    - No need for the free delivery icon on this page.
+- [x] Grand total matches checkout
+    - For the third page in a row, the grand total is a match to all previous two pages and has been manually calculated to ensure the maths are correct.
+- [x] Purchased products matches Order summary from checkout
+    - The purchase summary matches the checkout page with the same product details pulling through.
+- [x] Return home button
+    - The return home button redirects the user to the index page as expected, whether the user is logged in or out.
+- [x] View account button
+    - Clicking the view account button provides two different outcomes depending on if the user is logged in or not
+    - If the user IS logged in, they will be sent to the 'My Profile' page where they will be able to see the order they have just placed, and any past orders should there be any.
+    - If the user is NOT logged in, clicking the button will force the user to sign in or register as a new user.
 
 ### Lighthouse Testing
 
