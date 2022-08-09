@@ -84,7 +84,9 @@ I have been given full permission to use all my static files and product informa
     -   [Issues](#issues)
 6.  [Deployment](#deployment)
     -   [Heroku & Gitpod](#heroku--gitpod)
-    -   [Updated Heroku Deployment Via Terminal](#updated-heroku-deployment-via-terminal)
+    -   [Amazon S3](#amazon-S3)
+    -   [Amazon IAM](#amazon-iam)
+    -   [Updated Heroku Deployment Via Terminal](#heroku-deployment-via-terminal)
 7.  [Evaluation](#agile-methodology---evaluation)
     -   [Site Visitor Goals](#site-visitor-goals-1)
     -   [Admin User/Owner Goals](#admin-userowner-goals-1)
@@ -718,7 +720,7 @@ These have now all be rectified.
 
 #### Product Details Page
 - [x] Larger product image in new tab
-    - Every product image opens in a new tab linked to s3, where the images are stored.
+    - Every product image opens in a new tab linked to S3, where the images are stored.
 - [x] Stick parameters
     - Only the stick products display the power and control progress bars.
 - [x] Size dropdown
@@ -904,7 +906,7 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 10. Create a Procfile
     -   It must be named like so; "Procfile" and sit inside the root directory.
     -   Within the file add "web: gunicorn" followed by the app name .wsgi.
-    -   For example: "web: gunicorn aceofsteaks.wsgi".
+    -   For example: "web: gunicorn otter_hockey.wsgi".
 
 11. Scroll back and click the tab "Deploy".
     -   Choose "GitHub" as the Deployment method.
@@ -921,13 +923,90 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 
 ![Heroku - Successfully Deployed](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/heroku-deployed-successfully.PNG)
 
--   On final deployment the project must be set up in the following way:
-    -   DEBUG is set to false in settings.py file
-    -   staticcollect=1 from Config Vars in Heroku deleted.
+### Amazon S3
+Amazon S3 was used to store all media and static file for the site. It was set up using the following steps after creating an Amazon Web Service account:
+- Search for S3 under the services tab
 
-### Updated Heroku Deployment Via Terminal
+#### Creating a Bucket
+1.  Click the orange 'Create a Bucket' button. Give the bucket a name, I used "otter-hockey"
+1.  I then selected my closest region "EU (London) eu-west-2" and changed the 'Object Ownership' setting to ACLs enabled. 
+1.  Finally, I unticked the 'Block all public access' box and ticked the 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.' box and clicked on the 'Create Bucket' button.
 
-During the timeframe of this project Heroku had to change security settings internally which meant disabling automatic deployment. Therefore deployment to Heroku had to be completed in the following way:
+#### Properties
+1.  On the properties tab, scroll to the bottom of the page and turned on static website hosting. 
+2. Fill in the index and error document fields with the default values as they won't be used and click save.
+-   This provides a new endpoint that can be used to access it from the internet.
+
+#### Permissions
+1.  On the permissions tab, scroll down to 'Cross-origin resource sharing (CORS)' section and paste in the following CORS configuration:
+```
+[
+{
+    "AllowedHeaders": [
+    "Authorization"
+    ],
+
+    "AllowedMethods": [
+    "GET"
+    ],
+
+    "AllowedOrigins": [
+    "*"
+    ],
+
+    "ExposeHeaders": []
+}
+]
+```
+-   This provides access between our Heroku app and this S3 bucket.
+
+2.  Next, click on the 'Bucket Policy' tab and click 'Policy Generator'
+3.  Policy type is "S3 Bucket Policy", In the principal field add a "*" which will allow all. Using the actions dropdown, select "GetObject"
+4.  Copy the ARN, which can be found in 'Properties' tab, under 'Bucket Overview' and paste into the 'ARN' field.
+5.  Click 'Add Statement', then 'Generate Policy' and then select and copy the policy.
+6.  Paste the policy into the 'Bucket policy' editor
+7.  To allow access to all resources in this bucket, add a "/*" to the end of the "Resource" line ``` "Resource": "arn:aws:s3:::otter-hockey/*"``` and click 'Save'.
+8.  Lastly, under the 'Access control list (ACL)' section, click edit and enable 'List' for 'Everyone (public access)' and accept the warning box.
+
+### Amazon IAM
+- To access the bucket you need to create a user, this is where Amazon IAM (Identify and Access Management) comes in.
+- Search for IAM under the services tab
+
+1.  Create a User group - Click on 'User Groups' and then click button 'Create Group' giving it the name "manage-otter-hockey".
+2.  Create the Policy used to access our bucket by clicking 'Policies' and then click button 'Create Policy'. 
+3.  Click on the JSON tab and select 'Import managed policy' to import a pre-built AWS policy for full access to S3. Then click 'Import'.
+4.  Inside the JSON editor, we need to amend the "Resource" line again to give access to the bucket. (You may need to go back to S3 and copy the ARN again)
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::otter-hockey",
+                "arn:aws:s3:::otter-hockey/*"
+            ]
+        }
+    ]
+}
+```
+-   The "arn:aws:s3:::otter-hockey/*" allows access to all files and folders in the bucket.
+
+5.  The click 'Review policy'. Provide a name and a description. I used "otter-hockey-policy" with a description of "Access to S3 bucket for Otter Hockey static files".
+
+6.  Next, attach the policy to the Group by clicking 'User Groups', selecting the group name "manage-otter-hockey" and clicking on the 'permissions' tab.
+7.  Then click on the button that says 'Add permissions' and click 'Attach policies'.
+8.  Select the policy "otter-hockey-policy" and click 'Add permissions' at the bottom of the page.
+9.  Finally, create a user clicking 'User' User's page and clicking 'Add users' button. Give the user a name, I called mine "otter-hockey-staticfiles-user" I created a user named clay-and-fire-static-files-user and gave them 'Programmatic access'. Click 'Next'.
+10. Select the group you want to assign the user to by ticking the box and click 'Next'. Keeping clicking until you reach 'Create user', click one more time and download the CSV file.
+
+### Heroku Deployment Via Terminal
+
+Code and site updates pushed to Heroku were conducted in the following way:
 1.  Via the terminal in GitPod, login in to Heroku using the command: "heroku login -i"
 2.  Enter the email address linked the Heroku user.
 3.  Enter your password, if your password doesn't work use the API key which is found in Heruko under the account settings towards the bottom of the page.
@@ -935,6 +1014,10 @@ During the timeframe of this project Heroku had to change security settings inte
 5.  You then select the applicaion you want to deploy with the command: "heroku git:remote -a (app name)"
 6.  Successfully identifying the app, the terminal will show this message "set git remote heroku to `https://git.heroku.com/(app name).git`"
 7.  The final command: "git push heroku main".
+
+-   On final deployment the project must be set up in the following way:
+    -   DEBUG is set to false in settings.py file
+    -   staticcollect=1 from Config Vars in Heroku deleted.
 
 ## Agile Methodology - Evaluation
 
