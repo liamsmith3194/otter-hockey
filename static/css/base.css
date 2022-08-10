@@ -656,7 +656,11 @@ iframe {
 
     .navbar-collapse.show {
         display: block;
-        background-color: #6D6D6D;
+        background-color: #FFF;
+    }
+
+    .nav-item {
+        color: #6D6D6D;
     }
 
     

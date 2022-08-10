@@ -85,7 +85,12 @@ I have been given full permission to use all my static files and product informa
 6.  [Deployment](#deployment)
     -   [Heroku & Gitpod](#heroku--gitpod)
     -   [Amazon S3](#amazon-S3)
+        - [Create a Bucket](#create-a-bucket)
+        - [Properties](#properties)
+        - [Permissions](#permissions)
     -   [Amazon IAM](#amazon-iam)
+    -   [Update settings.py](#update-settingspy)
+    -   [Create customstorages.py](#create-customstoragespy)
     -   [Updated Heroku Deployment Via Terminal](#heroku-deployment-via-terminal)
 7.  [Evaluation](#agile-methodology---evaluation)
     -   [Site Visitor Goals](#site-visitor-goals-1)
@@ -927,14 +932,14 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 Amazon S3 was used to store all media and static file for the site. It was set up using the following steps after creating an Amazon Web Service account:
 - Search for S3 under the services tab
 
-#### Creating a Bucket
+#### Create a Bucket
 1.  Click the orange 'Create a Bucket' button. Give the bucket a name, I used "otter-hockey"
-1.  I then selected my closest region "EU (London) eu-west-2" and changed the 'Object Ownership' setting to ACLs enabled. 
-1.  Finally, I unticked the 'Block all public access' box and ticked the 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.' box and clicked on the 'Create Bucket' button.
+2.  I then selected my closest region "EU (London) eu-west-2" and changed the 'Object Ownership' setting to ACLs enabled. 
+3.  Finally, I unticked the 'Block all public access' box and ticked the 'I acknowledge that the current settings might result in this bucket and the objects within becoming public.' box and clicked on the 'Create Bucket' button.
 
 #### Properties
 1.  On the properties tab, scroll to the bottom of the page and turned on static website hosting. 
-2. Fill in the index and error document fields with the default values as they won't be used and click save.
+2.  Fill in the index and error document fields with the default values as they won't be used and click save.
 -   This provides a new endpoint that can be used to access it from the internet.
 
 #### Permissions
@@ -997,25 +1002,78 @@ Amazon S3 was used to store all media and static file for the site. It was set u
 -   The "arn:aws:s3:::otter-hockey/*" allows access to all files and folders in the bucket.
 
 5.  The click 'Review policy'. Provide a name and a description. I used "otter-hockey-policy" with a description of "Access to S3 bucket for Otter Hockey static files".
-
 6.  Next, attach the policy to the Group by clicking 'User Groups', selecting the group name "manage-otter-hockey" and clicking on the 'permissions' tab.
 7.  Then click on the button that says 'Add permissions' and click 'Attach policies'.
 8.  Select the policy "otter-hockey-policy" and click 'Add permissions' at the bottom of the page.
 9.  Finally, create a user clicking 'User' User's page and clicking 'Add users' button. Give the user a name, I called mine "otter-hockey-staticfiles-user" I created a user named clay-and-fire-static-files-user and gave them 'Programmatic access'. Click 'Next'.
 10. Select the group you want to assign the user to by ticking the box and click 'Next'. Keeping clicking until you reach 'Create user', click one more time and download the CSV file.
+11. This file contains the User's Access Key and Secret Access Key, both of which are used later in the settings.py file but first need adding to the "Config Vars" in Heroku:
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+12. While in the "Config Vars" add with a new variable:
+- USE_AWS = True
+
+### Update settings.py
+
+1.  In order to connect Django to the newly created S3 bucket, install two packages and freeze them:
+- boto3
+- django-storages
+2.  In settings.py add 'storages' to the list of 'INSTALLED_APPS'
+3.  Under the static files information towards the bottom of the page, we need to add the following if statement:
+```
+if 'USE_AWS' in os.environ:
+            
+    AWS_STORAGE_BUCKET_NAME = 'otter-hockey'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+     
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+4.  I then added the following to our 'Config Vars' on Heroku:
+- USE_AWS = True
+- AWS_ACCESS_KEY_ID, taken from the new user credentials
+- AWS_SECRET_ACCESS_KEY, taken from the new user credentials
+
+5.  The next step is to tell Django that in production we want to use s3 to store our static files whenever someone runs collectstatic and that we want any uploaded product images to go there also. To do that, I created a file called custom_storages.py.
+
+### Create custom_storages.py
+
+1.  To store the static files in S3 during production, we need to create a new file called 'custom_storages.py'
+2.  First import settings from django.conf and the s3boto3 storage class from Django Storages.
+3.  Then create a custom class 'StaticStorage' and 'MediaStorage' and set the location to use the 'USE_AWS' if statement from settings.py
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
 
 ### Heroku Deployment Via Terminal
 
 Code and site updates pushed to Heroku were conducted in the following way:
 1.  Via the terminal in GitPod, login in to Heroku using the command: "heroku login -i"
-2.  Enter the email address linked the Heroku user.
-3.  Enter your password, if your password doesn't work use the API key which is found in Heruko under the account settings towards the bottom of the page.
+2.  Enter the email address linked to the Heroku user.
+3.  Enter your password, if your password doesn't work use the API key which is found in Heroku under the account settings towards the bottom of the page.
 4.  The terminal prints "Logged in as (email address)"
-5.  You then select the applicaion you want to deploy with the command: "heroku git:remote -a (app name)"
+5.  You then select the application you want to deploy with the command: "heroku git:remote -a (app name)"
 6.  Successfully identifying the app, the terminal will show this message "set git remote heroku to `https://git.heroku.com/(app name).git`"
 7.  The final command: "git push heroku main".
 
--   On final deployment the project must be set up in the following way:
+-   On final deployment, the project **must** be set up in the following way:
     -   DEBUG is set to false in settings.py file
     -   staticcollect=1 from Config Vars in Heroku deleted.
 
