@@ -25,19 +25,19 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <input id="nameInput" type="text" name="name" class="form-style"
-                        Placeholder="Full name" required>
+                        Placeholder="Full name *" required>
                 </div>
                 <div class="form-group">
                     <input type="email" name="email" class="form-style" id="exampleFormControlEmail"
-                        placeholder="Email address" required>
+                        placeholder="Email address *" required>
                 </div>
                 <div class="form-group">
                     <input id="subjectInput" type="text" name="subject" class="form-style"
-                        Placeholder="Subject" required>
+                        Placeholder="Subject *" required>
                 </div>
                 <div class="form-group">
                     <textarea class="form-style" name="message" id="exampleFormControlTextarea1" rows="6"
-                        placeholder="Message content" required></textarea>
+                        placeholder="Message content *" required></textarea>
                 </div>
                 <div class="submit-button text-right mb-2">
                     <button class="allauth-buttons font-weight-bold" type="submit">Send Message</button>

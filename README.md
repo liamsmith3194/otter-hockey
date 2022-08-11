@@ -838,6 +838,62 @@ These have now all be rectified.
     - If the user IS logged in, they will be sent to the 'My Profile' page where they will be able to see the order they have just placed, and any past orders should there be any.
     - If the user is NOT logged in, clicking the button will force the user to sign in or register as a new user.
 
+    #### My Profile 
+- [x] Default address fields placeholders
+    - The
+- [x] Country dropdown
+    - The
+- [x] Update button
+    - The
+- [x] Order history relates
+    - The
+- [x] Order links work
+    - The
+- [x] Order data matches the users order
+    - The
+- [x] Previous order known to user
+    - The
+- [x] all details match
+    - The
+- [x] return to profile
+    - The
+
+    #### Product Management
+- [x] Required fields
+    - The
+- [x] category dropdown
+    - The
+- [x] Invalid price
+    - The
+- [x] Invalid rating
+    - The
+- [x] No image used
+    - The
+- [x] select image
+    - The
+- [x] return home button
+    - The
+- [x] add product links to product details
+    - The
+
+    #### FAQ'S
+- [x] Accordians function
+    - The
+
+    #### Contact
+- [x] Required fields
+    - The
+- [x] Send button
+    - The
+- [x] Map display
+    - The
+
+    #### Subscribe
+- [x] Invalid email address
+    - The
+- [x] Works with success message
+    - The
+
 ### Lighthouse Testing
 
 TO BE REPLACED 
@@ -1170,6 +1226,8 @@ https://www.benmarshall.me/responsive-iframes/
 https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
 
 https://stackoverflow.com/questions/30110455/paragraph-overflow-with-ellipsis
+
+Codemy - https://www.youtube.com/watch?v=w4ilq6Zk-08
 
 ## Conclusion
 
