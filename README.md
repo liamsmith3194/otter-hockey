@@ -5,6 +5,10 @@
 Welcome to Otter Hockey!
 
 Based on https://www.otterhockey.co.uk
+(Before website update in mid July)
+![Otter Hockey - Home](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/otter-hockey-home.PNG)
+![Otter Hockey - Products](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/otter-hockey-products.PNG)
+![Otter Hockey - Sticks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/otter-hockey-sticks.PNG)
 
 An online E-Commerce store for hockey fans to purchase our products.
 From top of the range sticks to a pair a shin pads.
@@ -79,6 +83,11 @@ I have been given full permission to use all my static files and product informa
         - [Basket](#basket)
         - [Check Out](#checkout-1)
         - [Order Confirmation](#order-confirmation)
+        - [My Profile](#my-profile-1)
+        - [Product Management](#product-management)
+        - [FAQ's](#faqs-1)
+        - [Contact](#contact)
+        - [Subscribe](#subscribe)
     -   [Continued Testing](#continued-testing)   
     -   [Glitches](#glitches)
     -   [Issues](#issues)
@@ -838,7 +847,7 @@ These have now all be rectified.
     - If the user IS logged in, they will be sent to the 'My Profile' page where they will be able to see the order they have just placed, and any past orders should there be any.
     - If the user is NOT logged in, clicking the button will force the user to sign in or register as a new user.
 
-    #### My Profile 
+#### My Profile 
 - [x] Default address fields placeholders
     - The
 - [x] Country dropdown
@@ -858,7 +867,7 @@ These have now all be rectified.
 - [x] return to profile
     - The
 
-    #### Product Management
+#### Product Management
 - [x] Required fields
     - The
 - [x] category dropdown
@@ -876,23 +885,26 @@ These have now all be rectified.
 - [x] add product links to product details
     - The
 
-    #### FAQ'S
-- [x] Accordians function
-    - The
+#### FAQ'S
+- [x] Accordions
+    - Every combination of the accordions has been checked.
+    - Only one question per section can be opened at once.
+    - Opening another question from the same section will close the first opened accordion.
 
-    #### Contact
+#### Contact
 - [x] Required fields
-    - The
-- [x] Send button
-    - The
-- [x] Map display
-    - The
+    - All the contact fields are required, leaving any fields blank will result in the form not being submitted.
+- [x] Email address is valid
+    - Like all email fields, the email address input must be valid, for example uses a "@".
+- [x] Message sent
+    - The send button is activated when all the fields having been field in
+    - On a successful post, the user is redirected to the home page with a toast notification - "Your message has been sent, we will contact you via ... as soon as possible."
 
-    #### Subscribe
-- [x] Invalid email address
-    - The
-- [x] Works with success message
-    - The
+#### Subscribe
+- [x] Email address is valid
+    - Attempting to submit an invalid email address, produces a validation error, "Please enter a valid email address."
+- [x] Success message displayed
+    - Assuming a valid email address has been entered, after clicking the subscribe button the user receives a success message "Thank you for subscribing!"
 
 ### Lighthouse Testing
 
