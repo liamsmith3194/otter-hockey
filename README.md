@@ -1227,7 +1227,7 @@ https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
 
 https://stackoverflow.com/questions/30110455/paragraph-overflow-with-ellipsis
 
-Codemy - https://www.youtube.com/watch?v=w4ilq6Zk-08
+Codemy https://www.youtube.com/watch?v=w4ilq6Zk-08
 
 ## Conclusion
 
