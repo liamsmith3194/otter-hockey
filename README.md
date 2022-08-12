@@ -652,6 +652,7 @@ These have now all be rectified.
 #### Responsive Testing
 - The site has been tested on an iMac, PC, Laptop, iPad and iPhone X.
 - At mobile phone width the 'hamburger bars' are shown, in order to shrink and expand the navigation bar.
+![Hamburger bars](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/hamburger-bars.PNG)
 - All forms are spread across the width of the screen on smaller devices
 - The vast majority of buttons are also spread across the width and stacked above one another.
 - The footer elements are displayed in a singe column on smaller devices, with all content centred.
@@ -662,6 +663,7 @@ These have now all be rectified.
 - [x] Search bar results
     - Produces results when keyword found with number of results.
     - Zero results found on any keyword not in the database '0 Products found for "test"'
+![No results found](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/no-results.PNG)
 - [x] Individual page links
     - All pages link to one another from any page.
 - [x] Social media links open in new tab
@@ -741,6 +743,7 @@ These have now all be rectified.
     - All products have been checked ensuring the sticks use the stick sizes, all clothes use the clothes sizes and the bags don't show a size selector.
     - All the accessories except the chamois grip use clothes sizes.
     - All the products that have a size options are required in order to the item to the basket.
+![Size required](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/size-required.PNG)
 - [x] Quantity buttons
     - All the products show the quantity selector option.
     - It is impossible to add another below 1 to the basket
@@ -791,14 +794,17 @@ These have now all be rectified.
     - They also update when amending from the 'My Profile' page, even when there are items already in the basket.
 - [x] Create and log in links
     - The create and log in links only appear when a user hasn't logged in to their account.
+![Create an account or login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout-create-account-login.PNG)
     - Both links redirect to the correct pages.
 - [x] Save checkbox is available
     - The save details checkbox is present only when a user has created an account and is signed in.
+![Save to profile](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout-save-to-profile.PNG)
     - Creating a number of users and clicking the option updated as expected.
     - Leaving the option unticked leaves the default values as the last saved input credentials, either from the checkout page or 'My Profile'.
 - [x] Card details verification
     - The card input field has built in verification from Stripe, this notifies the user if the card number, expiry date or security code is invalid.
     - The error message is displayed underneath the input field.
+![Card verification](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/card-verification.PNG)
 - [x] Charge amount is correct.
     - The charge amount has been calculated manually and matches the grand total.
 - [x] Order summary matches basket
@@ -844,61 +850,72 @@ These have now all be rectified.
     - The return home button redirects the user to the index page as expected, whether the user is logged in or out.
 - [x] View account button
     - Clicking the view account button provides two different outcomes depending on if the user is logged in or not
-    - If the user IS logged in, they will be sent to the 'My Profile' page where they will be able to see the order they have just placed, and any past orders should there be any.
-    - If the user is NOT logged in, clicking the button will force the user to sign in or register as a new user.
+    - If the user **is** logged in, they will be sent to the 'My Profile' page where they will be able to see the order they have just placed, and any past orders should there be any.
+    - If the user **is not** logged in, clicking the button will force the user to sign in or register as a new user.
 
 #### My Profile 
 - [x] Default address fields placeholders
-    - The
+    - All the placeholders are visible to every logged-in user.
 - [x] Country dropdown
-    - The
-- [x] Update button
-    - The
-- [x] Order history relates
-    - The
-- [x] Order links work
-    - The
-- [x] Order data matches the users order
-    - The
+    - A full list of countries are presented
+    - The option of "Country" is used as a placeholder
+    - However, this option will not work for the checkout page, ensuring it can't be missed, and the validation error will appear.
+- [x] Update details
+    - With none of the fields being required, the form saves via the click of the button
+    - Every time the profile is updated the checkout delivery address is changed
+    - This includes going from an input address to removing it completely.
+- [x] Order history
+    - Logging in as various users, the order history is only showing orders relating to that logged-in user.
+- [x] Order data
+    - The order data shown in the history relates to the user's order
+    - Proving the order number, the date ordered, the items and the total.
+- [x] Order link
+    - The order number underlined produces a link to the confirmation order and links through to any user order.
 - [x] Previous order known to user
-    - The
-- [x] all details match
-    - The
-- [x] return to profile
-    - The
+    - A toast notification is raised when the order confirmation is shown, for example, "This is a past confirmation for order number 29AEDBC9DEDA48659494F13C75564175."
+![Previous order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/previous-order.PNG)
+- [x] Order Confirmation
+    - The order confirmation shown from the profile link matches the order confirmation shown to the user from the standard checkout procedure.
+- [x] Return to profile
+    - The return to profile button is present on all order history links and is only displayed to the user via the 'My Profile' page.
 
 #### Product Management
 - [x] Required fields
-    - The
+    - The required fields are marked up with asterisks to notify the user that they need to contain valid data.
 - [x] category dropdown
-    - The
+    - The category dropdown contains the options taken from the site using the friendly name and ensure the new product is located in the correct category.
 - [x] Invalid price
-    - The
+    - The price field is set to two decimal places and maximum of 6 figures.
+    - Entering a price for example like "100.999" is not submitted
+    - A validation error is shown, "Please enter a valid value".
 - [x] Invalid rating
-    - The
-- [x] No image used
-    - The
-- [x] select image
-    - The
+    - Similarly, the rating field only uses integers and therefore decimal places are not allowed.
+    - Like the price field producing a validation error.
+- [x] No image
+    - When no image has been specified, the default image (Otter Hockey logo) is used as the product image
+    - This is shown on the products page and inside the product details.
+- [x] Select image
+    - Conversely, selecting an image to use is displayed as expected.
 - [x] return home button
-    - The
-- [x] add product links to product details
-    - The
+    - The return home button cancels the product creation and redirects the user back to the index page.
+- [x] Add product
+    - Using a valid product form and clicking the add product button, creates the product in the database and redirects the user to the newly created item.
+    - All details filled in from the form are carried through, for example name, description, price, rating and stick parameters (category permitting).
 
 #### FAQ'S
 - [x] Accordions
-    - Every combination of the accordions has been checked.
-    - Only one question per section can be opened at once.
-    - Opening another question from the same section will close the first opened accordion.
+    - Every combination of the accordions has been checked.
+    - Only one question per section can be opened at once.
+    - Opening another question from the same section will close the first opened accordion.
 
 #### Contact
 - [x] Required fields
-    - All the contact fields are required, leaving any fields blank will result in the form not being submitted.
+    - All the contact fields are required, leaving any fields blank will result in the form not being submitted.
 - [x] Email address is valid
-    - Like all email fields, the email address input must be valid, for example uses a "@".
+    - Like all email fields, the email address input must be valid, for example uses a "@".
 - [x] Message sent
-    - The send button is activated when all the fields having been field in
-    - On a successful post, the user is redirected to the home page with a toast notification - "Your message has been sent, we will contact you via ... as soon as possible."
+    - The send button is activated when all the fields having been field in
+    - On a successful post, the user is redirected to the home page with a toast notification - "Your message has been sent, we will contact you via ... as soon as possible."
 
 #### Subscribe
 - [x] Email address is valid
