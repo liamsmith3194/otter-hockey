@@ -393,7 +393,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 - The free delivery offer uses an icon to display to the user if they have qualified for the deal.
 - When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
 
-![Delivery pop-over](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-pop-over.PNG)
+![Delivery pop-over](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-popover.PNG)
 
 - An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
 
@@ -631,7 +631,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to ensure ther
 - [W3C HTML Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fotter-hockey.herokuapp.com%2F)
     -   Script type warnings - The suggested code from Bootstrap and EmailJS included script type="text/javascript".
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fotter-hockey.herokuapp.com)
-    -   The only errors/warnings from the validation were seen in Bootstrap styles, not the developer's css.
+    -   The only warning produces from the developers CSS was pointing to the 'cut-down' decription shown on the products page. However due to this being a reference and it working correctly on all devices, the code remains.
+![CSS Warnings](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/css-warning.PNG)
+    -   The only warnings from the validation were seen from Mailchimp and Bootstrap styles, not the developer's css.
 - [Jshint JavaScript linter](https://jshint.com/) - No errors were found
 - [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
 Checking all individual files separately produced numerous errors. On the first use my code produced over 30 warnings and/or errors including:
@@ -924,9 +926,11 @@ These have now all be rectified.
     - Assuming a valid email address has been entered, after clicking the subscribe button the user receives a success message "Thank you for subscribing!"
 
 ### Lighthouse Testing
-
-TO BE REPLACED 
-
+On first testing, the lighthouse performance results were below par at around 70-75 (url dependent). Pointing to various oppertunities such as:
+-   Eliminate render-blocking resources
+-   Reduce unused JavaScript
+-   Enable text compression
+Although there isn't much I can do about the Stripe and Boostrap components, I can ensure my CSS doesn't contain unused code.
 - Desktop Results
 
 ![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lighthouse-desktop.PNG)
@@ -945,11 +949,12 @@ TO BE REPLACED
 
 ### Glitches
 
-Glitches here
+- Viewing the site on my mobile, the navigation bar appears to be transparent and therefore on a scroll the content container is viewable over the nav.
+    - This doesn't occur using the Google Chrome developer tool.
 
 ## Issues
 
-Issues here
+Adjust bag - Size is removed.
 
 ## Deployment
 
@@ -958,7 +963,6 @@ Issues here
 Heroku & GitPod were the program used to share and deploy the app, it was accomplished by using the following steps:
 
 1. Log in to Heroku. On your dashboard, click "New" and then click "Create new app".
-
 2. Fill in the field for App name - It must be a unique name to Heroku. 
     -   Then select the region of Europe and click "Create app".
 
@@ -972,32 +976,31 @@ Heroku & GitPod were the program used to share and deploy the app, it was accomp
 4. In GitPod set up an env.py file in the repository.
     -   Create an environment variable for "DATABASE_URL" and paste the value from Heroku.
     -   Create an environment variable for "SECRET_KEY" and create your key using any characters available.
-
 5.  Copy the secret key to Heroku by adding the variable in the "Config Vars" section.
-
 6.  In the settings.py file import:
     -   os
     -   dj_database_url
 -   Add the if statement:
-    -   if os.path.isfile('env.py'): import env
-
+```
+if os.path.isfile('env.py'): import env
+```
 7.  Amend the secret key variable to the secure key created earlier:
-    -   "SECRET_KEY = os.environ.get('SECRET_KEY')
-
+```
+SECRET_KEY = os.environ.get('SECRET_KEY')
+```
 8.  Add our Heroku host name into the allowed hosts, this is your Heroku app name followed by herokuapp.com.
     -   Add "localhost" too, so the app can be ran locally.
-
 9.  Scroll down to the "DATABASES" section
     -   'Comment out' the default code and add the "DATABASE_URL" variable created earlier:
-    -   DATABASES = {
+```
+DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
+```
 10. Create a Procfile
     -   It must be named like so; "Procfile" and sit inside the root directory.
     -   Within the file add "web: gunicorn" followed by the app name .wsgi.
     -   For example: "web: gunicorn otter_hockey.wsgi".
-
 11. Scroll back and click the tab "Deploy".
     -   Choose "GitHub" as the Deployment method.
     -   Enter the GitHub repository name and click "Search".
@@ -1166,15 +1169,17 @@ Code and site updates pushed to Heroku were conducted in the following way:
 
 ### Site Visitor Goals
 
-QUESTIONS TO BE ANSWERED
-
 As a customer/site user ...
+
+#### Customer Viewing
 
 1.  I want to be able to *immediately understand the purpose and meaning of the site* so that I can **feel assured that I am on the right site for what I am looking to purchase.**
 
 1.  I want to be able to *be made aware of any deals available* so that I can **make the most of what is on offer, whether it is free delivery or 10% off etc.**
 
 1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the Company.**
+
+#### Products
 
 1.  I want to be able to *view a list of all products per category* so that I can **select any product(s) to purchase.**
 
@@ -1186,6 +1191,8 @@ As a customer/site user ...
 
 1.  I want to be able to *add a product to my bag* so that I can **purchase the item(s) I have selected.**
 
+#### Notifications
+
 1.  I want to be able to *be notified of when I have added a product to my bag* so that I can **see that my request to add the item(s) has been successful.**
 
 1.  I want to be able to *be shown an overview of my bag* so that I can **see the product and the important details I have selected to ensure they are correct.**
@@ -1195,6 +1202,8 @@ As a customer/site user ...
 1.  I want to be able to *find out how much more I need to spend to receive free delivery* so that I can **see if it is cost-effective adding another product(s) to qualify for free delivery.**
 
 1.  I want to be able to *click a button which takes me to my bag and checkout* so that I can **proceed with payment easily.**
+
+#### Registration
 
 1.  I want to be able to *register an account* so that I can **I have all the access I require from the site.**
 
@@ -1208,6 +1217,8 @@ As a customer/site user ...
 
 1.  I want to be able to *add a default delivery address* so that I can **when I go to checkout, my delivery information is already populated, making the process easier.**
 
+#### Sorting & Searching
+
 1.  I want to be able to *sort the products by certain criteria* so that I can **view the products by a common look such as price lowest to highest etc.**
 
 1.  I want to be able to *search by product category* so that I can **navigate through the products by category e.g. sticks, bags or accessories.**
@@ -1216,19 +1227,35 @@ As a customer/site user ...
 
 1.  I want to be able to *retrieve all products from a keyword search* so that I can **be shown a reduced list of products using the keyword as a filter.**
 
+#### Checkout
+
 1.  I want to be able to *view all items in my bag* so that I can **check my bag and ensure I have all the items and quantities are correct.**
 
 1.  I want to be able to *easily amend any product in my bag* so that I can **add to and reduce the quantity per item.**
 
 1.  I want to be able to *pay for my order* so that I can **process my order and eventually receive my item(s).**
 
-1.  I want to be able to *trust the sites' checkout security* so that I can **I feel that personal details are safe, and the site can be trusted.**
+1.  I want to be able to *trust the sites' checkout security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
 
-1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check  should I want to do so.**
+1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
 
 1.  I want to be able to *receive an email order confirmation after payment* so that I can **trust my order has been processed, and I have the written confirmation to prove it.**
 
+#### Company Information
+
+1.  I want to be able to *find out more information about the company* so that I can **look into their background and develop an understanding of the business.**
+
+1.  I want to be able to *review the FAQ's* so that I can **should I have a question, I can see if it has already been answered.**
+
+1.  I want to be able to *contact them directly* so that I can **ensure my query/question can be answered.**
+
+1.  I want to be able to *read through the privacy policy* so that I can **know my personal information is secure.**
+
+1.  I want to be able to *subscribe to the site's mailing list* so that I can **receive all the latest deals, offers and news.**
+
 As an administrator/owner ...
+
+#### Admin Rights
 
 1.  I want to be able to *add products to the site* so that I can **add new products to show potential customers.**
 
@@ -1243,8 +1270,6 @@ TO BE CONFIRMED
 ## References
 
 ### Code
-
-CODE REFERENCES
 
 - Boutique Ado:
 header

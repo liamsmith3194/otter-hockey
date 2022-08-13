@@ -1,18 +1,11 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block extra_title %}| Product Management {% endblock %}
-
-
+{% extends "base.html" %} {% load static %} {% block extra_title %}| Product Management {% endblock %}
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -27,22 +20,17 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %} {% csrf_token %} {% for field in form %} {% if field.name != 'image' %}
+                {{ field | as_crispy_field }} {% else %} {{ field }} {% endif %} {% endfor %}
                 <div class="checkout-buttons row mt-3">
                     <div class="col-12">
                         <button id="submit-button" class="btn-grey-add font-weight-bold py-2 px-4">
                             <span class="text-white">Update Product</span>
                         </button>
-                        <a href="{% url 'product_detail' product.id %}" class="btn-white-add font-weight-bold py-2 px-4">
+                        <a href="{% url 'product_detail' product.id %}"
+                            class="btn-white-add font-weight-bold py-2 px-4">
                             <span>Return to Product</span>
                         </a>
                     </div>
