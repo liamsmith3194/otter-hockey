@@ -1,14 +1,21 @@
-{% extends "base.html" %} {% load static %} {% block extra_title %}| {{ product.name }} {% endblock %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}| {{ product.name }} {% endblock %}
+
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <div class="overlay"></div>
 <div class="container">
-    <div class="row py-3" ->
+    <div class="row py-3">
         <div class="py-3 col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card h-100 border-0">
                 {% if product.image %}
@@ -39,22 +46,21 @@
                     <div class="col">
                         {% if product.rating %}
                         <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
-                            10
-                        </p>
+                            10</p>
                         {% else %}
                         <p class="text-left">No Rating</p>
-                        {% endif %} {% if request.user.is_superuser %}
+                        {% endif %}
+                        {% if request.user.is_superuser %}
                         <p>
                             <small class="mb-3">
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                                 <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                             </small>
                         </p>
-
                         {% endif %}
                         <p class="mb-3 text-black text-left">{{ product.description }}</p>
-
-                        {% if product.price >= 100 %}
+                        {% with product.has_stick_size as ss %}
+                        {% if ss %}
                         <div class="progress mb-3" style="height: 30px;">
                             <div class="progress-bar bg-grey" role="progressbar"
                                 style="width: {{ product.power_score }}%;" aria-valuenow={{ product.power_score }}
@@ -64,7 +70,8 @@
                             <div class="progress-bar bg-grey" role="progressbar"
                                 style="width: {{ product.control_score }}%;" aria-valuenow={{ product.control_score }}
                                 aria-valuemin="0" aria-valuemax="10">Control</div>
-                            {% endif %}
+                        {% endif %}
+                        {% endwith %}
                         </div>
                     </div>
                 </div>
@@ -74,7 +81,8 @@
                         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
                             <div class="row">
-                                {% with product.has_clothes_size as cs %} {% if cs %}
+                                {% with product.has_clothes_size as cs %}
+                                {% if cs %}
                                 <div class="col-12 col-sm-6 ml-auto">
                                     <select class="w-100 mb-3 btn-select-size py-2 px-4" name="product_size"
                                         id="id_clothes_size" required>
@@ -86,24 +94,28 @@
                                         <option value="xl">XL</option>
                                     </select>
                                 </div>
-                                {% endif %} {% endwith %} {% with product.has_stick_size as ss %} {% if ss %}
+                                {% endif %}
+                                {% endwith %}
+
+                                {% with product.has_stick_size as ss %}
+                                {% if ss %}
                                 <div class="col-12 col-sm-6 ml-auto">
                                     <select class="w-100 mb-3 btn-select-size py-2 px-4" name="product_size"
                                         id="id_stick_size" required>
                                         <option value="" disabled selected>Select Size:</option>
                                         <option value='35.5"'>35.5"</option>
                                         <option value='36.5"'>36.5"</option>
-                                        <option value=' 37.5"'>37.5"</option>
+                                        <option value='37.5"'>37.5"</option>
                                         <option value='38.5"'>38.5"</option>
                                     </select>
                                 </div>
-                                {% endif %} {% endwith %}
+                                {% endif %}
+                                {% endwith %}
 
                                 <div class="col-12 col-sm-6 ml-auto">
                                     <div class="input-group border-black">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-grey rounded-0"
-                                                aria-label="button to decrease the quanity of the item shown"
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
@@ -115,7 +127,6 @@
                                             id="id_qty_{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-grey rounded-0"
-                                                aria-label="button to increase the quanity of the item shown"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
@@ -144,6 +155,7 @@
     </div>
 </div>
 {% endblock %}
+
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}

@@ -457,7 +457,8 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ### Product Management - (Page)
 - As an admin user, under the product management tab, you are able to add products to the database using the form displayed.
-- MORE TO ADD.
+- Ensuring the required fields contain valid data you are able to submit the product addding to the database and the site for users to view.
+- Creating a product that doesn't yet have a product image will display the Otter Hockey logo by default.
 
 ### Product Management - (Via Products)
 - When an admin user is logged on, they have the permission to edit and/or delete any product on the site.
@@ -629,25 +630,72 @@ It seems it is all about brand awareness!
 The W3C Markup Validator and W3C CSS Validator Services were used to ensure there were no syntax errors in the project.
 
 - [W3C HTML Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fotter-hockey.herokuapp.com%2F)
-    -   Script type warnings - The suggested code from Bootstrap and EmailJS included script type="text/javascript".
+    -   "Element li not allowed as child of element nav in this context. (Suppressing further errors from this subtree.)"
+    -   I tried different options to eliminate this error, but everything attempting broke the dropdown links.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fotter-hockey.herokuapp.com)
-    -   The only warning produces from the developers CSS was pointing to the 'cut-down' decription shown on the products page. However due to this being a reference and it working correctly on all devices, the code remains.
+    -   The only warning produces from the developer's CSS was pointing to the 'cut-down' description shown on the products page. However, due to this being a [reference](#references) and it working correctly on all devices, the code remains.
 ![CSS Warnings](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/css-warning.PNG)
-    -   The only warnings from the validation were seen from Mailchimp and Bootstrap styles, not the developer's css.
-- [Jshint JavaScript linter](https://jshint.com/) - No errors were found
+-   The only warnings from the validation were seen from Mailchimp and Bootstrap styles, not the developer's css.
+- [Jshint JavaScript Linter](https://jshint.com/)
+- All the Javascript files have been tested and validated through jshint.
+    - 'stripe_element.js' returned just two warnings pointing to the same statment - " 'template literal syntax' is only available in ES6 (use 'esversion: 6')."
+    - It appeared to not recognise the backtick. 
+
 - [PEP8](http://pep8online.com/) Python linter was used to ensure there were no syntax errors in the project.
-Checking all individual files separately produced numerous errors. On the first use my code produced over 30 warnings and/or errors including:
-    - "line too long (127 > 79 characters)"
+Checking all individual files separately produced numerous errors. The vast majority looking at easily fixed issues, such as:
+    - "line too long"
     - "blank line contains whitespace"
+    - "too many blank lines (2)"
     - "indentation is not a multiple of four"
 
 These have now all be rectified.
+Below are links to all indivdual Pep8 results
 
-- [Bookings App - URLS](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/booking_urls_result.txt)
+#### Otter_Hockey App
 
-- [Bookings App - Models](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/booking_models_result.txt)
+- [otter_hockey app - urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/otter_hockey_urls_results.txt)
 
-- [Bookings App - Views](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/booking_views_result.txt)
+#### Home App
+
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/home_urls_results.txt)
+
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/home_views_results.txt)
+
+#### Products App
+
+- [admin.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/products_admin_results.txt)
+
+- [forms.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/products_forms_results.txt)
+
+- [models.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/products_models_results.txt)
+
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/products_urls_results.txt)
+
+#### Bag App
+
+- [context.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/bag_context_results.txt)
+
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/bag_urls_results.txt)
+
+#### Checkout App
+
+- [admin.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_admin_results.txt)
+
+- [forms.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_forms_results.txt)
+
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_urls_results.txt)
+
+#### Profiles App
+
+- [forms.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/profiles_forms_results.txt)
+
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/profiles_urls_results.txt)
+
+#### Company App 
+
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/company_urls_results.txt)
+
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/company_views_results.txt)
 
 ### Manual Testing
 

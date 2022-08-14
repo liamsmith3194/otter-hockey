@@ -1,15 +1,24 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 
-<head> {% block meta %}
+<head>
+
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Premium affordable hockey sticks">
-    <meta name="keywords"
+    <meta name="description"
+        content="Premium affordable hockey sticks">
+    <meta name="keywords" 
         content="Hockey sticks, hockey bags, hockey accessories, field hockey sticks, field hockey bags, field hockey accessories, free delivery, 3D skills, dragflicking, aerials, lifted hitting, low bow, mid bow, pro bow, kit bags, ">
-    {% endblock %} {% block extra_meta %} {% endblock %} {% block corecss %}
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +30,12 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}"> {% endblock %} {% block extra_css %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
     {% block corejs %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -32,7 +46,12 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/5507f4abfd.js" crossorigin="anonymous"></script>
-    <script src="https://js.stripe.com/v3/"></script> {% endblock %} {% block extra_js %} {% endblock %}
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
     <title>Otter Hockey {% block extra_title %}{% endblock %}</title>
 </head>
 
@@ -51,10 +70,11 @@
                             <input class="form-control border border-grey rounded-0" type="text" name="q"
                                 placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="form-control btn-grey border border-grey rounded-0" type="submit"
-                                    aria-label="Search icon used after input field complete"> <span class="icon">
+                                <button class="form-control btn-grey border border-grey rounded-0" type="submit">
+                                    <span class="icon">
                                         <i class="fas fa-search text-white"></i>
-                                    </span> </button>
+                                    </span>
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -62,27 +82,37 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-grey nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                            <a class="text-grey nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="text-grey nav-link p-0 my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0"> {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %} <a href="{% url 'add_product' %}"
-                                    class="dropdown-item">Product Management</a> {% endif %} <a
-                                    href="{% url 'profile' %}" class="dropdown-item">My Profile</a> <a
-                                    href="{% url 'account_logout' %}" class="dropdown-item">Logout</a> {% else %} <a
-                                    href="{% url 'account_signup' %}" class="dropdown-item">Register</a> <a
-                                    href="{% url 'account_login' %}" class="dropdown-item">Login</a> {% endif %} </div>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
                         </li>
                         <li class="list-inline-item">
                             <a class="text-grey nav-link" href="{% url 'view_bag'%}">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-                                    <p class="text-grey nav-link p-0 my-0"> {% if grand_total %}
-                                        £{{ grand_total|floatformat:2 }} {% else %} £0.00 {% endif %} </p>
+                                    <p class="text-grey nav-link p-0 my-0">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -93,24 +123,47 @@
                 <div class="navbar-background p-0 col text-white">
                     <nav class="navbar navbar-expand-lg navbar-light w-100">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"> <span
-                                class="navbar-toggler-icon"></span> </button>
-                        {% include 'includes/mobile-top-header.html' %} {% include 'includes/main-nav.html' %} </nav>
+                            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        {% include 'includes/mobile-top-header.html' %}
+                        {% include 'includes/main-nav.html' %}
+                    </nav>
                 </div>
             </div>
+
             <div id="delivery-banner" class="row text-center">
                 <div class="col bg-black text-white">
-                    <h5 class="banner-offer my-1">FREE DELIVERY ON ORDERS OVER £{{ free_delivery_threshold }}!</h5>
+                    <p class="banner-offer my-1">FREE DELIVERY ON ORDERS OVER £{{ free_delivery_threshold }}!</p>
                 </div>
             </div>
         </header>
-        <main> {% if messages %}
-            <div class="message-container"> {% for message in messages %} {% with message.level as level %}
-                {% if level == 40 %} {% include 'includes/toasts/toast_error.html' %} {% elif level == 30 %}
-                {% include 'includes/toasts/toast_warning.html' %} {% elif level == 25 %}
-                {% include 'includes/toasts/toast_success.html' %} {% else %}
-                {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %} {% endfor %} </div>
-            {% endif %} {% block page_header %} {% endblock %} {% block content %} {% endblock %} </main>
+        <main>
+            {% if messages %}
+            <div class="message-container">
+                {% for message in messages %}
+                {% with message.level as level %}
+                {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+                {% endwith %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% block page_header %}
+            {% endblock %}
+
+            {% block content %}
+            {% endblock %}
+        </main>
+
         <footer class="footer">
             <div class="footer-div">
                 <div class="container">
@@ -119,16 +172,24 @@
                             <h4 class="nav-item text-white">
                                 More Information
                             </h4>
-                            <div> <a href="{% url 'about' %}" class="footer-item text-white">About us</a> </div>
-                            <div> <a href="{% url 'faqs' %}" class="footer-item text-white">FAQ'S</a> </div>
-                            <div> <a href="{% url 'privacy' %}" class="footer-item text-white">Privacy Policy</a> </div>
+                            <div>
+                                <a href="{% url 'about' %}" class="footer-item text-white">About us</a>
+                            </div>
+                            <div>
+                                <a href="{% url 'faqs' %}" class="footer-item text-white">FAQ'S</a>
+                            </div>
+                            <div>
+                                <a href="{% url 'privacy' %}" class="footer-item text-white">Privacy Policy</a>
+                            </div>
                         </div>
                         <div class="col-md-4 footer-column text-center">
                             <h4 class="nav-item text-white">
                                 Subscribe
                             </h4>
                             <p class="footer-item text-white">Get exclusive offers and discount codes by subscribing to
-                                our monthly newsletter</p>
+                                our
+                                monthly
+                                newsletter</p>
                             <div id="mc_embed_signup" class="mailchimp-form">
                                 <form
                                     action="https://github.us10.list-manage.com/subscribe/post?u=f5d0f85a1edc96dc177c5c458&amp;id=76aeff1f29"
@@ -137,21 +198,22 @@
                                     <div id="mc_embed_signup_scroll">
                                         <div class="mc-field-group">
                                             <input type="email" value="" name="EMAIL" class="required email"
-                                                placeholder="Email address" id="mce-EMAIL"> </div>
+                                                placeholder="Email address" id="mce-EMAIL">
+                                        </div>
                                         <div id="mce-responses" class="clear foot">
                                             <div class="response" id="mce-error-response" style="display:none"></div>
                                             <div class="response" id="mce-success-response" style="display:none"></div>
                                         </div>
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                            <input type="text" name="b_731631d0774a276b4921995cb_76f3fd5fb5"
-                                                tabindex="-1" value="">
-                                        </div>
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
+                                                type="text" name="b_731631d0774a276b4921995cb_76f3fd5fb5" tabindex="-1"
+                                                value=""></div>
                                         <div class="optionalParent">
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
                                                     <input type="submit" value="Subscribe" name="subscribe"
                                                         id="mc-embedded-subscribe"
-                                                        class="btn-white font-weight-bold py-2 px-4"> </div>
+                                                        class="btn-white font-weight-bold py-2 px-4">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -162,24 +224,30 @@
                             <h4 class="nav-item text-white">
                                 Contact Us
                             </h4>
-                            <div> <a href="{% url 'contact' %}" class="footer-item text-white">Send us a message</a>
+                            <div>
+                                <a href="{% url 'contact' %}" class="footer-item text-white">Send us a message</a>
                             </div>
-                            <div> <a href="https://facebook.com" target="_blank" rel="noopener"
+                            <div>
+                                <a href="https://facebook.com" target="_blank" rel="noopener"
                                     aria-label="Visit our Facebook page (opens in new tab)"><i
-                                        class="social-media-icons fab fa-facebook"></i></a> <a
-                                    href="https://twitter.com/otterhockey1" target="_blank" rel="noopener"
+                                        class="social-media-icons fab fa-facebook"></i></a></li>
+                                <a href="https://twitter.com/otterhockey1" target="_blank" rel="noopener"
                                     aria-label="Visit our Twitter page (opens in new tab)"><i
-                                        class="social-media-icons fab fa-twitter"></i></a> <a
-                                    href="https://www.instagram.com/otterhockey/" target="_blank" rel="noopener"
+                                        class="social-media-icons fab fa-twitter"></i></a></li>
+                                <a href="https://www.instagram.com/otterhockey/" target="_blank" rel="noopener"
                                     aria-label="Visit our Instagram page (opens in new tab)"><i
-                                        class="social-media-icons fab fa-instagram"></i></a> </div>
-                            <div class="footer-item text-white">© Otter Hockey, 2022 </div>
+                                        class="social-media-icons fab fa-instagram"></i></a>
+                            </div>
+                            <div class="footer-item text-white">© Otter Hockey, 2022
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-    </article> {% block postloadjs %}
+    </article>
+
+    {% block postloadjs %}
     <script>
         $('.toast').toast('show');
     </script>
@@ -202,7 +270,8 @@
             ftypes[5] = 'birthday';
         }(jQuery));
         var $mcj = jQuery.noConflict(true);
-    </script> {% endblock %}
+    </script>
+    {% endblock %}
 </body>
 
 </html>
