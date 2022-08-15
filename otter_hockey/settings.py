@@ -14,6 +14,8 @@ import dj_database_url
 
 from pathlib import Path
 
+development = os.environ.get('DEVELOPMENT', False)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,9 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPEMENT' in os.environ
-DEBUG = True
 
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['otter-hockey.herokuapp.com', 'localhost']
 

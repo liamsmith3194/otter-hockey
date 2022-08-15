@@ -689,7 +689,11 @@ Below are links to all indivdual Pep8 results
 
 - [forms.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/profiles_forms_results.txt)
 
+- [models.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/profiles_models_results.txt)
+
 - [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/profiles_urls_results.txt)
+
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/profiles_views_results.txt)
 
 #### Company App 
 
@@ -1330,6 +1334,8 @@ https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
 https://stackoverflow.com/questions/30110455/paragraph-overflow-with-ellipsis
 
 Codemy https://www.youtube.com/watch?v=w4ilq6Zk-08
+
+Error 404 Page - https://www.youtube.com/watch?v=3SKjPppM_DU
 
 ## Conclusion
 
