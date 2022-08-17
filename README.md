@@ -1227,21 +1227,42 @@ As a customer/site user ...
 
 1.  I want to be able to *immediately understand the purpose and meaning of the site* so that I can **feel assured that I am on the right site for what I am looking to purchase.**
 
+    - With the hero image advertising a stick product and the name ‘Otter Hockey’ shown for the logo, it is abundantly clear what the site is selling, even as someone who doesn’t play the sport.
+
 1.  I want to be able to *be made aware of any deals available* so that I can **make the most of what is on offer, whether it is free delivery or 10% off etc.**
+    - The use of the banner is a great way to advertise deals, in this case free delivery over £100.
+    - The colour scheme of white on black provides a good contrast to the navigation bar.
 
 1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the Company.**
+    - All the social media links located at the bottom of the page makes positional sense and situated in it’s on section breaks down the footer nicely.
 
 #### Products
 
 1.  I want to be able to *view a list of all products per category* so that I can **select any product(s) to purchase.**
 
+    - The navigation bar allows me to view products by category really easily, with the links taking me straight to the product in question.
+    - Each product category page uses a subtitle such as ‘Full range of sticks’, giving me reassurance that I have followed the correct link. 
+
 1.  I want to be able to *select a product and view the product details* so that I can **see an overview of the product showing me the important details such as description, price and rating etc.**
+
+    - I am able to see the vast majority of important product details from the products page
+    - Nicely presented with different typography displaying different pieces of data.
+    - The use of the ‘progress bars’ adds something different to the sticks category page, and coloured in the nav grey fits in with the theme.
 
 1.  I want to be able to *view product size if applicable* so that I can **select the size of product I wish to purchase (stick size or clothing size).**
 
+    - The size selector dropdown is easily identified, with the ‘Select Size’ placeholder
+    - The size options are dependent on product category, and anything without a size doesn’t have the dropdown menu to view.
+
 1.  I want to be able to *select a quantity choice* so that I can **order one or more of the same item.**
 
+    - The plus/minus boxes are presented well in order to change the quantity
+    - Clicking the buttons changes the quantity value accordingly. Also, the ability to never add anything lower than 1, provides a clever ‘safety net’.
+
 1.  I want to be able to *add a product to my bag* so that I can **purchase the item(s) I have selected.**
+
+    - Providing the required fields contain valid data, I am able to add any product to my basket with a click of a button.
+    - Every item adding to the basket, displays a handy notification ensuring me that I have add the product successfully. 
 
 #### Notifications
 
