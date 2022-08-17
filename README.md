@@ -49,7 +49,7 @@ I have been given full permission to use all my static files and product informa
     -   [Product Detail Page](#product-detail-page)
     -   [Basket - Desktop](#basket-desktop)
     -   [Basket - Mobile](#basket-mobile)
-    -   [Checkout](#checkout-desktop)
+    -   [Check Out](#check-out-desktop)
     -   [Order Confirmation](#order-confirmation-desktop)
     -   [My Profile](#my-profile)
     -   [Product Management Page](#product-management-page)
@@ -81,7 +81,7 @@ I have been given full permission to use all my static files and product informa
         - [Products](#products-page-1)
         - [Product Details](#product-details-page)
         - [Basket](#basket)
-        - [Check Out](#checkout-1)
+        - [Check Out](#check out-1)
         - [Order Confirmation](#order-confirmation)
         - [My Profile](#my-profile-1)
         - [Product Management](#product-management)
@@ -156,7 +156,7 @@ As a customer/site user ...
 
 1.  I want to be able to *find out how much more I need to spend to receive free delivery* so that I can **see if it is cost-effective adding another product(s) to qualify for free delivery.**
 
-1.  I want to be able to *click a button which takes me to my bag and checkout* so that I can **proceed with payment easily.**
+1.  I want to be able to *click a button which takes me to my bag and check out* so that I can **proceed with payment easily.**
 
 #### Registration
 
@@ -170,7 +170,7 @@ As a customer/site user ...
 
 1.  I want to be able to *view previous orders* so that I can **see my purchase history and link to an item I have bought previously.**
 
-1.  I want to be able to *add a default delivery address* so that I can **when I go to checkout, my delivery information is already populated, making the process easier.**
+1.  I want to be able to *add a default delivery address* so that I can **when I go to check out, my delivery information is already populated, making the process easier.**
 
 #### Sorting & Searching
 
@@ -182,7 +182,7 @@ As a customer/site user ...
 
 1.  I want to be able to *retrieve all products from a keyword search* so that I can **be shown a reduced list of products using the keyword as a filter.**
 
-#### Checkout
+#### check out
 
 1.  I want to be able to *view all items in my bag* so that I can **check my bag and ensure I have all the items and quantities are correct.**
 
@@ -190,7 +190,7 @@ As a customer/site user ...
 
 1.  I want to be able to *pay for my order* so that I can **process my order and eventually receive my item(s).**
 
-1.  I want to be able to *trust the sites' checkout security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
+1.  I want to be able to *trust the sites' check out security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
 
 1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
 
@@ -261,7 +261,7 @@ The Category model is used so that the site owner/admin can assign products to a
 The Order model is used for the order details (when an order is placed by a user). The user profile of the order model is linked to the User Profile model, providing the user is registered.
 
 #### Order Line Items
-Used for the checkout details. This is linked to the Order Line Items model, which contains the products (and products model) ordered by the user.
+Used for the check out details. This is linked to the Order Line Items model, which contains the products (and products model) ordered by the user.
 
 #### User Profile
 The User Profile stores the default delivery details again, assuming the user is registered and chose to save their delivery details.
@@ -386,7 +386,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 - All the costs are contained in their own row, including the basket total (no delivery cost), delivery total and grand total.
 - All three totals are split out and easy to differentiate based on the various fonts.
-- The Checkout button uses another icon from FontAwesome and follows the same button theme.
+- The check out button uses another icon from FontAwesome and follows the same button theme.
 
 ![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-2-desktop.PNG)
 
@@ -395,7 +395,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ![Delivery pop-over](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-popover.PNG)
 
-- An Empty basket present a different basket look, informing the user there are no items to checkout and provides a handy link to the sticks page.
+- An Empty basket present a different basket look, informing the user there are no items to check out and provides a handy link to the sticks page.
 
 ![Empty Basket](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/empty-basket.PNG)
 
@@ -411,13 +411,13 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-1-mobile.PNG)
 
-- After scrolling past the final item in the basket, the user is shown the final costs along with the secure checkout button.
+- After scrolling past the final item in the basket, the user is shown the final costs along with the secure check out button.
 
 ![Mobile Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-2-mobile.PNG)
 
-### Checkout (Desktop)
+### Check Out (Desktop)
 
-- The checkout page follows a similar theme, with the checkout form covering the left side of the screen (on larger devices).
+- The check out page follows a similar theme, with the check out form covering the left side of the screen (on larger devices).
 - The same inset border has been used along with the placeholders.
 - Split into three sections; Personal Details, Delivery Details and Card Details.
 - The Personal Details are quite standard, with full name and email address. Invalid email addresses will produce a validation error and will stop confirmation.  
@@ -427,15 +427,15 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Just like the email field, a validation error will appear should any card details be incorrect
 - The final charge amount is displayed at the bottom of the page below the card input field. Providing further assurance to the user that the correct amount will be processed.
 - The order summary on the right side provides a list of the items in the basket including their key details such as name, size, quantity and subtotal, along with a small image.
-- When the summary contains multiple items pushing past the checkout form, a scroll bar then appears to keep the page to a sensible scrolling size.
+- When the summary contains multiple items pushing past the check out form, a scroll bar then appears to keep the page to a sensible scrolling size.
 - The costs are presented in the same way as the basket page.
 - Next to the confirm order button is a return to basket formatted in the secondary button theme.
 
-![Checkout](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout.PNG)
+![Check Out](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout.PNG)
 
 ### Order Confirmation (Desktop)
 
-- The order confirmation page is almost identical to the checkout page, but instead of input fields, all the checkout data is written with the user input in bold. This includes all delivery details and final costings.
+- The order confirmation page is almost identical to the check out page, but instead of input fields, all the check out data is written with the user input in bold. This includes all delivery details and final costings.
 - The order number is randomly generated with a string of 32 characters.
 - From the order confirmation, the user is able to link to their profile (assuming the user is registered)
 
@@ -443,7 +443,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ### My Profile
 - The 'My Profile' tab is only available once a user has created an account and logged in.
-- From this page they are able to add and amend default delivery details which are copied through to checkout page to save the user repeating their information.
+- From this page they are able to add and amend default delivery details which are copied through to check out page to save the user repeating their information.
 - Order history provides a list of confirmed orders from the logged-in user.
 - It shows the order number, linked to the order confirmation.
 - The date the order was submitted, items from the order and the subtotal are also on view.
@@ -477,7 +477,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ### Boostrap Alerts (Toasts)
 - Positioned on the right side of the screen underneath the basket total.
-- The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and checkout confirmation amongst others.
+- The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and check out confirmation amongst others.
 
 ![Toast - Sign In](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-sign-in.PNG)
 ![Toast - Log Out](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/toast-log-out.PNG)
@@ -832,29 +832,29 @@ Below are links to all indivdual Pep8 results
 - [x] Grand total
     - To ensure the grand total was correct I added numerous products to the basket multiple times and added them up using a calculator.
     - I also made sure to edit the basket continiously to update the basket total and delivery total.
-- [x] Secure checkout button
-    - The checkout button links successfully.
+- [x] Secure check out button
+    - The check out button links successfully.
 - [x] Empty basket
     - The empty basket page is displayed correctly when nothing is in the basket and when all items have been manually removed from the basket.
 
-#### Checkout
+#### check out
 - [x] All '*' fields are required
     - Only the fields with a '*' in the placeholder are required, not filling these fields in will not submit the order.
     - Every other delivery field can be left blank, and the order will be submitted successfully.
 - [x] Email address is valid
-    - The email address field follows the same checks on the checkout page as when a user registers.
+    - The email address field follows the same checks on the check out page as when a user registers.
 - [x] User details autofill
     - The user's delivery details auto-populate providing the user has created an account and filled in their profile information.
     - They also update when amending from the 'My Profile' page, even when there are items already in the basket.
 - [x] Create and log in links
     - The create and log in links only appear when a user hasn't logged in to their account.
-![Create an account or login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout-create-account-login.PNG)
+![Create an account or login](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/check out-create-account-login.PNG)
     - Both links redirect to the correct pages.
 - [x] Save checkbox is available
     - The save details checkbox is present only when a user has created an account and is signed in.
-![Save to profile](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/checkout-save-to-profile.PNG)
+![Save to profile](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/check out-save-to-profile.PNG)
     - Creating a number of users and clicking the option updated as expected.
-    - Leaving the option unticked leaves the default values as the last saved input credentials, either from the checkout page or 'My Profile'.
+    - Leaving the option unticked leaves the default values as the last saved input credentials, either from the check out page or 'My Profile'.
 - [x] Card details verification
     - The card input field has built in verification from Stripe, this notifies the user if the card number, expiry date or security code is invalid.
     - The error message is displayed underneath the input field.
@@ -880,8 +880,8 @@ Below are links to all indivdual Pep8 results
     - The return to basket sends the user back to the basket with all items intact to amend or add to.
 
 #### Order Confirmation 
-- [x] Email confirmation has been sent to email address from checkout
-    - The email address, highlighted in bold, corresponds to the email input field on the checkout page.
+- [x] Email confirmation has been sent to email address from check out
+    - The email address, highlighted in bold, corresponds to the email input field on the check out page.
     - Checked out using multiple users, with email confirmations successfully received.
 - [x] Order number has been randomly generated
     - The order number randomly generated from a mixture of 32 characters. 
@@ -889,17 +889,17 @@ Below are links to all indivdual Pep8 results
 - [x] Order date is correct
     - The order date shown is correct to the GMT (Greenwich Mean Time)
     - This includes BST (British Summer Time) UTC +1
-- [x] All delivery information matches the checkout fields
-    - The delivery address are the same details as input on the checkout page.
-- [x] order total matches basket total from checkout
+- [x] All delivery information matches the check out fields
+    - The delivery address are the same details as input on the check out page.
+- [x] order total matches basket total from check out
     - For the third page in a row, the basket total is a direct copy and has been manually calculated.
-- [x] Delivery total matches checkout
+- [x] Delivery total matches check out
     - For the third page in a row, the delivery total copies through as expected with only two outcomes £5.00 or £0.00
     - No need for the free delivery icon on this page.
-- [x] Grand total matches checkout
+- [x] Grand total matches check out
     - For the third page in a row, the grand total is a match to all previous two pages and has been manually calculated to ensure the maths are correct.
-- [x] Purchased products matches Order summary from checkout
-    - The purchase summary matches the checkout page with the same product details pulling through.
+- [x] Purchased products matches Order summary from check out
+    - The purchase summary matches the check out page with the same product details pulling through.
 - [x] Return home button
     - The return home button redirects the user to the index page as expected, whether the user is logged in or out.
 - [x] View account button
@@ -913,10 +913,10 @@ Below are links to all indivdual Pep8 results
 - [x] Country dropdown
     - A full list of countries are presented
     - The option of "Country" is used as a placeholder
-    - However, this option will not work for the checkout page, ensuring it can't be missed, and the validation error will appear.
+    - However, this option will not work for the check out page, ensuring it can't be missed, and the validation error will appear.
 - [x] Update details
     - With none of the fields being required, the form saves via the click of the button
-    - Every time the profile is updated the checkout delivery address is changed
+    - Every time the profile is updated the check out delivery address is changed
     - This includes going from an input address to removing it completely.
 - [x] Order history
     - Logging in as various users, the order history is only showing orders relating to that logged-in user.
@@ -929,7 +929,7 @@ Below are links to all indivdual Pep8 results
     - A toast notification is raised when the order confirmation is shown, for example, "This is a past confirmation for order number 29AEDBC9DEDA48659494F13C75564175."
 ![Previous order](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/previous-order.PNG)
 - [x] Order Confirmation
-    - The order confirmation shown from the profile link matches the order confirmation shown to the user from the standard checkout procedure.
+    - The order confirmation shown from the profile link matches the order confirmation shown to the user from the standard check out procedure.
 - [x] Return to profile
     - The return to profile button is present on all order history links and is only displayed to the user via the 'My Profile' page.
 
@@ -1262,19 +1262,30 @@ As a customer/site user ...
 1.  I want to be able to *add a product to my bag* so that I can **purchase the item(s) I have selected.**
 
     - Providing the required fields contain valid data, I am able to add any product to my basket with a click of a button.
-    - Every item adding to the basket, displays a handy notification ensuring me that I have add the product successfully. 
+    
 
 #### Notifications
 
 1.  I want to be able to *be notified of when I have added a product to my bag* so that I can **see that my request to add the item(s) has been successful.**
 
+    - Every item adding to the basket, displays a handy notification ensuring me that I have add the product successfully.
+    
 1.  I want to be able to *be shown an overview of my bag* so that I can **see the product and the important details I have selected to ensure they are correct.**
+
+    - The notification overview displays the name, item size, should the item have a size and quantity
 
 1.  I want to be able to *see the total price of my bag* so that I can **make sure I don't spend more than I want to.**
 
+    - The total price is located at the bottom of the notification pop-up as soon as an item has been added.
+
 1.  I want to be able to *find out how much more I need to spend to receive free delivery* so that I can **see if it is cost-effective adding another product(s) to qualify for free delivery.**
 
-1.  I want to be able to *click a button which takes me to my bag and checkout* so that I can **proceed with payment easily.**
+    - After adding items to the basket, I am able to see the amount needed for free delivery change, providing me with an amount remaining.
+    - When my basket reached the delivery threshold, the paragraph was removed as expected.
+
+1.  I want to be able to *click a button which takes me to my bag and check out* so that I can **proceed with payment easily.**
+
+    - The toast notification provides a handy link to the basket in order for me to check out, with the button standing out from the notification block.
 
 #### Registration
 
@@ -1288,7 +1299,7 @@ As a customer/site user ...
 
 1.  I want to be able to *view previous orders* so that I can **see my purchase history and link to an item I have bought previously.**
 
-1.  I want to be able to *add a default delivery address* so that I can **when I go to checkout, my delivery information is already populated, making the process easier.**
+1.  I want to be able to *add a default delivery address* so that I can **when I go to check out, my delivery information is already populated, making the process easier.**
 
 #### Sorting & Searching
 
@@ -1300,7 +1311,7 @@ As a customer/site user ...
 
 1.  I want to be able to *retrieve all products from a keyword search* so that I can **be shown a reduced list of products using the keyword as a filter.**
 
-#### Checkout
+#### check out
 
 1.  I want to be able to *view all items in my bag* so that I can **check my bag and ensure I have all the items and quantities are correct.**
 
@@ -1308,7 +1319,7 @@ As a customer/site user ...
 
 1.  I want to be able to *pay for my order* so that I can **process my order and eventually receive my item(s).**
 
-1.  I want to be able to *trust the sites' checkout security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
+1.  I want to be able to *trust the sites' check out security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
 
 1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
 
@@ -1317,28 +1328,42 @@ As a customer/site user ...
 #### Company Information
 
 1.  I want to be able to *find out more information about the company* so that I can **look into their background and develop an understanding of the business.**
+    - With all the company information at the bottom of each page, it is very easy to navigate to each section
+    - The about us page provides an easy-to-read overview of the company, separated into two sections.
 
-1.  I want to be able to *review the FAQ's* so that I can **should I have a question, I can see if it has already been answered.**
+1.  I want to be able to *review the FAQ's* so that I can, **should I have a question, I can see if it has already been answered.**
+    - The FAQ's are displayed cleanly with the topics broken down
+    - I agree with the choice of neutral colours being used for this page, as the blocks may have been overpowering in the site grey.
 
 1.  I want to be able to *contact them directly* so that I can **ensure my query/question can be answered.**
+    - The contact form provides a direct way to contact the company, with only a small amount of input.
+    - Through testing, I am aware that I am unable to send a message without filling in the fields first.
+    - The map showing the location is great for someone that is local to the area and able to pop in.
 
 1.  I want to be able to *read through the privacy policy* so that I can **know my personal information is secure.**
+    - The privacy policy is displayed in a similar way to the about page with small sections, which I felt made it easier to read through.
 
 1.  I want to be able to *subscribe to the site's mailing list* so that I can **receive all the latest deals, offers and news.**
+    - After submitting my email address, I can immediately see my request has been successful with the “Thank You” message displayed.
 
 As an administrator/owner ...
 
 #### Admin Rights
 
 1.  I want to be able to *add products to the site* so that I can **add new products to show potential customers.**
+    - Using admin access, adding a new product is very easy using the product management form.
 
 1.  I want to be able to *edit/update products* so that I can **amend product details such as name, description, price etc.**
+    - From any product and/or product detail page, I am shown a link in order to edit the product.
+    - After clicking the link I am presented the product management form with all the details filled in ready to amend and save.
 
 1.  I want to be able to *delete products* so that I can **remove any product that is no longer available.**
+    - Similarly to the edit link, the delete link is shown on the same pages.
+    - As soon as the delete button is clicked, the product is removed.
 
 ### Future Features
 
-TO BE CONFIRMED
+Discount codes
 
 ## References
 

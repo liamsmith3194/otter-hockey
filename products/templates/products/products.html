@@ -18,10 +18,10 @@
         <div class="col text-center mt-4">
             {% for category in current_categories %}
             {% if 'category' in request.build_absolute_uri %}
-            {{ request.build_absolute_uri }}
+            <!-- {{ request.build_absolute_uri }} -->
             <h3 class="subheading text-left">Complete Range of {{ category.name }}</h3>
             {% else %}
-            {{ request.build_absolute_uri }}
+            <!-- {{ request.build_absolute_uri }} -->
             <h3 class="subheading text-left">Complete Range of all products</h3>
             {% endif %}
             {% endfor %}
