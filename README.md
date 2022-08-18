@@ -81,7 +81,7 @@ I have been given full permission to use all my static files and product informa
         - [Products](#products-page-1)
         - [Product Details](#product-details-page)
         - [Basket](#basket)
-        - [Check Out](#check out-1)
+        - [Check Out](#check-out-1)
         - [Order Confirmation](#order-confirmation)
         - [My Profile](#my-profile-1)
         - [Product Management](#product-management)
@@ -144,19 +144,19 @@ As a customer/site user ...
 
 1.  I want to be able to *select a quantity choice* so that I can **order one or more of the same item.**
 
-1.  I want to be able to *add a product to my bag* so that I can **purchase the item(s) I have selected.**
+1.  I want to be able to *add a product to my basket* so that I can **purchase the item(s) I have selected.**
 
 #### Notifications
 
-1.  I want to be able to *be notified of when I have added a product to my bag* so that I can **see that my request to add the item(s) has been successful.**
+1.  I want to be able to *be notified of when I have added a product to my basket* so that I can **see that my request to add the item(s) has been successful.**
 
-1.  I want to be able to *be shown an overview of my bag* so that I can **see the product and the important details I have selected to ensure they are correct.**
+1.  I want to be able to *be shown an overview of my basket* so that I can **see the product and the important details I have selected to ensure they are correct.**
 
-1.  I want to be able to *see the total price of my bag* so that I can **make sure I don't spend more than I want to.**
+1.  I want to be able to *see the total price of my basket* so that I can **make sure I don't spend more than I want to.**
 
 1.  I want to be able to *find out how much more I need to spend to receive free delivery* so that I can **see if it is cost-effective adding another product(s) to qualify for free delivery.**
 
-1.  I want to be able to *click a button which takes me to my bag and check out* so that I can **proceed with payment easily.**
+1.  I want to be able to *click a button which takes me to my basket and check out* so that I can **proceed with payment easily.**
 
 #### Registration
 
@@ -176,7 +176,7 @@ As a customer/site user ...
 
 1.  I want to be able to *sort the products by certain criteria* so that I can **view the products by a common look such as price lowest to highest etc.**
 
-1.  I want to be able to *search by product category* so that I can **navigate through the products by category e.g. sticks, bags or accessories.**
+1.  I want to be able to *search by product category* so that I can **navigate through the products by category e.g. sticks, bags, clothes or accessories.**
 
 1.  I want to be able to *search by keyword* so that I can **find the item I am specifically looking for to purchase.**
 
@@ -184,9 +184,9 @@ As a customer/site user ...
 
 #### check out
 
-1.  I want to be able to *view all items in my bag* so that I can **check my bag and ensure I have all the items and quantities are correct.**
+1.  I want to be able to *view all items in my basket* so that I can **check my basket and ensure I have all the items and quantities are correct.**
 
-1.  I want to be able to *easily amend any product in my bag* so that I can **add to and reduce the quantity per item.**
+1.  I want to be able to *easily amend any product in my basket* so that I can **add to and reduce the quantity per item.**
 
 1.  I want to be able to *pay for my order* so that I can **process my order and eventually receive my item(s).**
 
@@ -837,7 +837,7 @@ Below are links to all indivdual Pep8 results
 - [x] Empty basket
     - The empty basket page is displayed correctly when nothing is in the basket and when all items have been manually removed from the basket.
 
-#### check out
+#### Check Out
 - [x] All '*' fields are required
     - Only the fields with a '*' in the placeholder are required, not filling these fields in will not submit the order.
     - Every other delivery field can be left blank, and the order will be submitted successfully.
@@ -1245,7 +1245,7 @@ As a customer/site user ...
 
 1.  I want to be able to *select a product and view the product details* so that I can **see an overview of the product showing me the important details such as description, price and rating etc.**
 
-    - I am able to see the vast majority of important product details from the products page
+    - I am able to see the vast majority of important product details from the products page.
     - Nicely presented with different typography displaying different pieces of data.
     - The use of the ‘progress bars’ adds something different to the sticks category page, and coloured in the nav grey fits in with the theme.
 
@@ -1259,22 +1259,21 @@ As a customer/site user ...
     - The plus/minus boxes are presented well in order to change the quantity
     - Clicking the buttons changes the quantity value accordingly. Also, the ability to never add anything lower than 1, provides a clever ‘safety net’.
 
-1.  I want to be able to *add a product to my bag* so that I can **purchase the item(s) I have selected.**
+1.  I want to be able to *add a product to my basket* so that I can **purchase the item(s) I have selected.**
 
     - Providing the required fields contain valid data, I am able to add any product to my basket with a click of a button.
     
-
 #### Notifications
 
-1.  I want to be able to *be notified of when I have added a product to my bag* so that I can **see that my request to add the item(s) has been successful.**
+1.  I want to be able to *be notified of when I have added a product to my basket* so that I can **see that my request to add the item(s) has been successful.**
 
     - Every item adding to the basket, displays a handy notification ensuring me that I have add the product successfully.
     
-1.  I want to be able to *be shown an overview of my bag* so that I can **see the product and the important details I have selected to ensure they are correct.**
+1.  I want to be able to *be shown an overview of my basket* so that I can **see the product and the important details I have selected to ensure they are correct.**
 
-    - The notification overview displays the name, item size, should the item have a size and quantity
+    - The notification overview displays the name, item size, should the item have a size and quantity.
 
-1.  I want to be able to *see the total price of my bag* so that I can **make sure I don't spend more than I want to.**
+1.  I want to be able to *see the total price of my basket* so that I can **make sure I don't spend more than I want to.**
 
     - The total price is located at the bottom of the notification pop-up as soon as an item has been added.
 
@@ -1283,7 +1282,7 @@ As a customer/site user ...
     - After adding items to the basket, I am able to see the amount needed for free delivery change, providing me with an amount remaining.
     - When my basket reached the delivery threshold, the paragraph was removed as expected.
 
-1.  I want to be able to *click a button which takes me to my bag and check out* so that I can **proceed with payment easily.**
+1.  I want to be able to *click a button which takes me to my basket and check out* so that I can **proceed with payment easily.**
 
     - The toast notification provides a handy link to the basket in order for me to check out, with the button standing out from the notification block.
 
@@ -1291,39 +1290,80 @@ As a customer/site user ...
 
 1.  I want to be able to *register an account* so that I can **I have all the access I require from the site.**
 
+    - The registration process is very easy with only a couple of fields to fill in, and even some of those are duplicates to confirm.
+
 1.  I want to be able to *receive an email confirmation* so that I can **know my request to register has been received and all I need to do is verify my account.**
+
+    - Almost immediately after signing, up an automated email was sent to my address asking me to confirm my user via the confirm button and then signing in.
 
 1.  I want to be able to *login and out of my account* so that I can **ensure my account is safe should I share a computer.**
 
+    - The login in and out links are found under the 'My Account' dropdown.
+    - Both actions were shown to me by the notifications section.
+
 1.  I want to be able to *reset my password* so that I can **log back in to my account if I have forgotten my password.**
+
+    - Resetting my password was just as easy as registering.
+    - Following the links, I was sent an email which provided me with a 'Change password' page. 
 
 1.  I want to be able to *view previous orders* so that I can **see my purchase history and link to an item I have bought previously.**
 
+    - Following the 'My profile' link, I was able to view my order history listed with all the key details.
+    - With the order number linking to the order confirmation.
+
 1.  I want to be able to *add a default delivery address* so that I can **when I go to check out, my delivery information is already populated, making the process easier.**
+
+    - Staying on the 'My profile' page, I added my delivery address and after saving, when going to make a purchase the fields were pre-filled to make the process easy and quicker.
 
 #### Sorting & Searching
 
 1.  I want to be able to *sort the products by certain criteria* so that I can **view the products by a common look such as price lowest to highest etc.**
 
-1.  I want to be able to *search by product category* so that I can **navigate through the products by category e.g. sticks, bags or accessories.**
+    - Through any of the navigation links, each page contains a dropdown in order to filter.
+    - This includes price and rating, low to high and high to low are both options.
+
+1.  I want to be able to *search by product category* so that I can **navigate through the products by category e.g. sticks, bags, clothes or accessories.**
+
+    - Searching by category is made even easier with the navigation bar links, with a helpful title per category page, for example "Full range of sticks". 
 
 1.  I want to be able to *search by keyword* so that I can **find the item I am specifically looking for to purchase.**
 
+    - Any keyword typed in the search bar was feed back to me, whether there were results found or not.
+
 1.  I want to be able to *retrieve all products from a keyword search* so that I can **be shown a reduced list of products using the keyword as a filter.**
 
-#### check out
+    - As mentioned above, all results were displayed to me and I was able to look through the products that contained my keyword.
+    - The number count from the search word (in quotes) provides a nice summary.
 
-1.  I want to be able to *view all items in my bag* so that I can **check my bag and ensure I have all the items and quantities are correct.**
+#### Check Out
 
-1.  I want to be able to *easily amend any product in my bag* so that I can **add to and reduce the quantity per item.**
+1.  I want to be able to *view all items in my basket* so that I can **check my basket and ensure I have all the items and quantities are correct.**
+
+    - Viewing the basket, I can see all the product details I need along with product images.
+    - The 'list' type display on mobile devices is very easy to scroll through and check.
+
+1.  I want to be able to *easily amend any product in my basket* so that I can **add to and reduce the quantity per item.**
+
+    - TO BE REPLACED WHEN FIXED!
 
 1.  I want to be able to *pay for my order* so that I can **process my order and eventually receive my item(s).**
 
+    - From the checkout page, I was able to pay for my items in my basket, using the fields from the form, including bank details.
+    - I was also able to double-check my basket using the order summary section.
+
 1.  I want to be able to *trust the sites' check out security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
+
+    - The use of a padlock icon along with 'Secure Checkout' made me feel comfortable proceeding to checkout.
+    - Also when entering bank details, which were invalid, I was made aware of that from the site. 
 
 1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
 
+    - After my payment was successful, I was shown my order confirmation, providing me the assurance my order had been received
+    - Similarly, I was able to check the Purchased products section to ensure everything was correct.
+
 1.  I want to be able to *receive an email order confirmation after payment* so that I can **trust my order has been processed, and I have the written confirmation to prove it.**
+
+    - Along with the site order confirmation, I received an email confirmation of my order too, which again made me trust the company more.
 
 #### Company Information
 

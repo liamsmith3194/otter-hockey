@@ -17,7 +17,7 @@ Your order will be shipped to:
 {{ order.postcode }}
 {{ order.country }}
 
-If you have any questions, feel free to contact us at {{ contact_email }}.
+If you have any questions, feel free to contact us at help@otterhockey.com
 
 Thank you for your order! We hope you enjoy our products!
 
