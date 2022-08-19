@@ -7,6 +7,9 @@ from .forms import ProductForm
 
 # Create your views here.
 
+def block_products(request):
+    return render(request, 'errors/404.html')
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -49,6 +52,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'request': request,
     }
 
     return render(request, 'products/products.html', context)

@@ -6,7 +6,7 @@ from products.models import Product
 
 
 def view_bag(request):
-    """ A view to display the bag contents page """
+    """ A view to display the basket page """
 
     return render(request, 'bag/bag.html')
 
@@ -50,22 +50,24 @@ def adjust_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
+    stick_size = None
+    clothes_size = None
+    if 'stick_size' in request.POST:
+        stick_size = request.POST['stick_size']
     bag = request.session.get('bag', {})
 
-    if size:
+    if stick_size:
         if quantity > 0:
-            bag[item_id]['items_by_size'][size] = quantity
+            bag[item_id]['items_by_size'][stick_size] = quantity
             messages.success(
-                request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+                request, f'Updated size {stick_size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][stick_size]}')
         else:
-            del bag[item_id]['items_by_size'][size]
+            del bag[item_id]['items_by_size'][stick_size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
             messages.success(
-                request, f'Removed size {size.upper()} {product.name} from your bag')
+                request, f'Removed size {stick_size.upper()} {product.name} from your bag')
+
     else:
         if quantity > 0:
             bag[item_id] = quantity
@@ -75,12 +77,28 @@ def adjust_bag(request, item_id):
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
 
+    if 'clothes_size' in request.POST:
+        clothes_size = request.POST['clothes_size']
+    bag = request.session.get('bag', {})
+
+    if clothes_size:
+        if quantity > 0:
+            bag[item_id]['items_by_size'][clothes_size] = quantity
+            messages.success(
+                request, f'Updated size {clothes_size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][clothes_size]}')
+        else:
+            del bag[item_id]['items_by_size'][clothes_size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+            messages.success(
+                request, f'Removed size {clothes_size.upper()} {product.name} from your bag')
+
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
 
 def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
+    """Remove any product from the basket"""
 
     try:
         product = get_object_or_404(Product, pk=item_id)

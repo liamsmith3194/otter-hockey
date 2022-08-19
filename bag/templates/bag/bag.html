@@ -99,11 +99,11 @@
                                         </span>
                                     </button>
                                 </div>
-                                {% if item.product.has_clothes_sizes %}
-                                <input type="hidden" name="clothes_size" value="{{ item.clothes_size }}">
+                                {% if item.product.has_clothes_size %}
+                                <input type="hidden" name="clothes_size" value="{{ item.size }}">
                                 {% endif %}
-                                {% if item.product.has_stick_sizes %}
-                                <input type="hidden" name="stick_size" value="{{ item.stick_size }}">
+                                {% if item.product.has_stick_size %}
+                                <input type="hidden" name="stick_size" value="{{ item.size }}">
                                 {% endif %}
                             </div>
                         </div>
