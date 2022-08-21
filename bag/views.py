@@ -79,9 +79,8 @@ def adjust_bag(request, item_id):
                 request, f'Removed size {stick_size.upper()} {product.name} \
                     from your basket')
 
-    else:
-        if 'clothes_size' in request.POST:
-            clothes_size = request.POST['clothes_size']
+    if 'clothes_size' in request.POST:
+        clothes_size = request.POST['clothes_size']
     bag = request.session.get('bag', {})
 
     if clothes_size:

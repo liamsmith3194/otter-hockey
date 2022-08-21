@@ -60,6 +60,7 @@ I have been given full permission to use all my static files and product informa
     -   [FAQ's](#faqs)
     -   [Privacy Policy](#privacy-policy)
     -   [Contact Us](#contact-us)
+    -   [Error 404](#error-404---page-not-found)
     -   [Django Admin Site](#django-admin-site)
         -   [Login](#login)
         -   [Create Order](#create-order)
@@ -460,10 +461,14 @@ but uses a black background and white text, contrasting nicely against the grey 
 - Ensuring the required fields contain valid data you are able to submit the product addding to the database and the site for users to view.
 - Creating a product that doesn't yet have a product image will display the Otter Hockey logo by default.
 
+![Product Management - Add Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/add-product.PNG)
+
 ### Product Management - (Via Products)
 - When an admin user is logged on, they have the permission to edit and/or delete any product on the site.
 - When clicking the edit link, the user is redirected to the product management form, autofilled with the product details from the database in order to amend on save.
 - After the admin user has saved their changes, they are redirected back to the product detail page of that product.
+
+![Product Management - Edit Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/edit-product.PNG)
 
 ### Allauth Pages (Register, Login, Logout etc)
 - The majority of Allauth pages contain a form or form element.
@@ -506,6 +511,12 @@ but uses a black background and white text, contrasting nicely against the grey 
 - When the user submits the form, they are ensured success through the toast notification.
 
 ![Contact Us](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/contact-us.PNG)
+
+### Error 404 - Page not found
+- The error page uses the index page as a template, replacing the welcome message and tag line to page not found and a suggestion.
+- Leaving the stick button intact.
+
+![Error 404](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/error-404.PNG)
 
 ### Django Admin Site
 
@@ -653,7 +664,9 @@ Below are links to all indivdual Pep8 results
 
 #### Otter_Hockey App
 
-- [otter_hockey app - urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/otter_hockey_urls_results.txt)
+- [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/otter_hockey_urls_results.txt)
+
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/otter_hockey_views_results.txt)
 
 #### Home App
 

@@ -18,8 +18,8 @@ class Category(models.Model):
 
 class Product(models.Model):
     name = models.CharField('Product Name', max_length=100)
-    sku = models.CharField(max_length=50, null=True, blank=True)
-    category = models.ForeignKey('Category', null=True, blank=True,
+    sku = models.CharField(max_length=50, null=True, blank=False)
+    category = models.ForeignKey('Category', null=True, blank=False,
                                  on_delete=models.SET_NULL)
     has_stick_size = models.BooleanField(default=False, null=True, blank=True)
     power_score = models.IntegerField(null=True, blank=True)
