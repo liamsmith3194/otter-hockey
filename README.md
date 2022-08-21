@@ -671,6 +671,8 @@ Below are links to all indivdual Pep8 results
 
 - [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/products_urls_results.txt)
 
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/products_views_results.txt)
+
 #### Bag App
 
 - [context.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/bag_context_results.txt)
@@ -683,7 +685,16 @@ Below are links to all indivdual Pep8 results
 
 - [forms.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_forms_results.txt)
 
+- [models.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_models_results.txt)
+
 - [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_urls_results.txt)
+
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_views_results.txt)
+
+- [webhook_handler.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_webhook_handler_results.txt)
+
+- [webhooks.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_webhooks_results.txt)
+
 
 #### Profiles App
 
@@ -820,6 +831,8 @@ Below are links to all indivdual Pep8 results
     - Every product added to the basket produced the correct product price.
 - [x] Correct selected quantity
     - Every product added to the basket produced the quantity input from the product detail page.
+- [x] Adjust basket
+    - When amending any product in the basket, like increasing or decreasing quanity the sub total of each product was recalculated to match along with all the totals.
 - [x] Basket total
     - To ensure the basket total was correct I added numerous products to the basket multiple times and added them up using a calculator.
 - [x] Delivery offer icon
@@ -1234,7 +1247,7 @@ As a customer/site user ...
     - The colour scheme of white on black provides a good contrast to the navigation bar.
 
 1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the Company.**
-    - All the social media links located at the bottom of the page makes positional sense and situated in it’s on section breaks down the footer nicely.
+    - All the social media links located at the bottom of the page makes positional sense and situated in its on section breaks down the footer nicely.
 
 #### Products
 
@@ -1294,7 +1307,7 @@ As a customer/site user ...
 
 1.  I want to be able to *receive an email confirmation* so that I can **know my request to register has been received and all I need to do is verify my account.**
 
-    - Almost immediately after signing, up an automated email was sent to my address asking me to confirm my user via the confirm button and then signing in.
+    - Almost immediately after signing up, an automated email was sent to my address asking me to confirm my user via the confirm button and then signing in.
 
 1.  I want to be able to *login and out of my account* so that I can **ensure my account is safe should I share a computer.**
 
@@ -1332,7 +1345,7 @@ As a customer/site user ...
 
 1.  I want to be able to *retrieve all products from a keyword search* so that I can **be shown a reduced list of products using the keyword as a filter.**
 
-    - As mentioned above, all results were displayed to me and I was able to look through the products that contained my keyword.
+    - As mentioned above, all results were displayed to me, and I was able to look through the products that contained my keyword.
     - The number count from the search word (in quotes) provides a nice summary.
 
 #### Check Out
@@ -1404,24 +1417,31 @@ As an administrator/owner ...
 ### Future Features
 
 Discount codes
+Customer reviews
 
 ## References
 
 ### Code
 
-- Boutique Ado:
-header
-overlay
+The large majority of functionality was replicated from the Boutique Ado walkthrough project.
 
-https://www.benmarshall.me/responsive-iframes/
+Footer position - https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
+- This has been used to ensure the footer is stuck to the bottom of the screen on any device.
 
-https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
+Responsive iframes - https://www.benmarshall.me/responsive-iframes/ 
+- This is enabled me to adjust the map on the contact page to adjust based on screen size.
 
-https://stackoverflow.com/questions/30110455/paragraph-overflow-with-ellipsis
+Cut down description - https://stackoverflow.com/questions/30110455/paragraph-overflow-with-ellipsis
+- Used for the products page, when the description was too long, the paragraph is cut short and the ellipses are used.
 
-Codemy https://www.youtube.com/watch?v=w4ilq6Zk-08
+Return to previous url - https://stackoverflow.com/questions/27325505/how-to-get-the-previous-url-from-a-post-in-django#:~:text=You%20can%20do%20that%20by,get()%20notation%20instead.
+- This is been used inside the product detail template and returns the user to the search results
+
+Contact form - Codemy - https://www.youtube.com/watch?v=w4ilq6Zk-08
+- This video tutorial was used to ensure the contact form was fully functioning. 
 
 Error 404 Page - https://www.youtube.com/watch?v=3SKjPppM_DU
+- This video tutorial was used to ensure the custom 404 page was displayed when an invalid url was input.
 
 ## Conclusion
 
@@ -1431,6 +1451,9 @@ Error 404 Page - https://www.youtube.com/watch?v=3SKjPppM_DU
 -   The product information was taken from [Otter Hockey](https://www.otterhockey.co.uk) but again I was given permission to use this by [Kyle](#permission).
 
 ### Mentions
+
+-   Code Institute tutor assistance
+    - Special mention to John, without him (19/08/22), the ability to adjust the items in the basket wouldn't have worked.
 
 -   My Mentor Narender
     -   Numerous video calls

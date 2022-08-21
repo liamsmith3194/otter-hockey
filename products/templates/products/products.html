@@ -17,7 +17,13 @@
     <div class="row">
         <div class="col text-center mt-4">
             {% for category in current_categories %}
+            {% if 'category' in request.build_absolute_uri %}
+            {{ request.build_absolute_uri }}
             <h3 class="subheading text-left">Complete Range of {{ category.name }}</h3>
+            {% else %}
+            {{ request.build_absolute_uri }}
+            <h3 class="subheading text-left">Complete Range of all products</h3>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -36,6 +42,15 @@
                         Rating (low to high)</option>
                     <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
                         Rating (high to low)</option>
+                    {% for category in current_categories %}
+                    {% if not 'category' in request.build_absolute_uri %}
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category
+                        (A-Z)</option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                        Category (Z-A)</option>
+                    {% endif %}
+                    {% endfor %}
+
                 </select>
             </div>
         </div>
@@ -71,8 +86,8 @@
                         <div class="row">
                             <div class="col">
                                 <p class="product-description mb-3 text-black text-left">{{ product.description }}</p>
-                                {% for category in current_categories %}
-                                {% if category.name == 'sticks' %}
+
+                                {% if product.has_stick_size %}
                                 <div class="progress mb-3" style="height: 25px;">
                                     <div class="progress-bar bg-grey" role="progressbar"
                                         style="width: {{ product.power_score }}%;"
@@ -86,7 +101,7 @@
                                         Control</div>
                                 </div>
                                 {% endif %}
-                                {% endfor %}
+
                                 {% if product.rating %}
                                 <p class="text-left text-black"><i
                                         class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
@@ -94,6 +109,7 @@
                                 {% else %}
                                 <p class="text-left">No Rating</p>
                                 {% endif %}
+                                {{ product.category }}
                                 <p class="lead mb-0 text-left text-black font-weight-bold">£{{ product.price }}</p>
                                 {% if request.user.is_superuser %}
                                 <p class="mt-3">

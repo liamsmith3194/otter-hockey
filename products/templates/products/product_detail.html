@@ -53,7 +53,7 @@
                         {% if request.user.is_superuser %}
                         <p>
                             <small class="mb-3">
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
                                 <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                             </small>
                         </p>
@@ -70,8 +70,8 @@
                             <div class="progress-bar bg-grey" role="progressbar"
                                 style="width: {{ product.control_score }}%;" aria-valuenow={{ product.control_score }}
                                 aria-valuemin="0" aria-valuemax="10">Control</div>
-                        {% endif %}
-                        {% endwith %}
+                            {% endif %}
+                            {% endwith %}
                         </div>
                     </div>
                 </div>
@@ -142,8 +142,8 @@
 
                                     <input type="submit" class="btn-grey-add font-weight-bold py-2 px-4"
                                         value="Add to Basket">
-                                    <a href="{% url 'products' %}" class="btn-white-add font-weight-bold py-2 px-4">Keep
-                                        Shopping
+                                    <a href="{{ request.META.HTTP_REFERER }}"
+                                        class="btn-white-add font-weight-bold py-2 px-4">Keep Shopping
                                     </a>
                                 </div>
                             </div>
