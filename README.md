@@ -514,7 +514,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ### Error 404 - Page not found
 - The error page uses the index page as a template, replacing the welcome message and tag line to page not found and a suggestion.
-- Leaving the stick button intact.
+- Leaving the sticks button intact.
 
 ![Error 404](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/error-404.PNG)
 
@@ -692,6 +692,8 @@ Below are links to all indivdual Pep8 results
 
 - [urls.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/bag_urls_results.txt)
 
+- [views.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/bag_views_results.txt)
+
 #### Checkout App
 
 - [admin.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_admin_results.txt)
@@ -707,7 +709,6 @@ Below are links to all indivdual Pep8 results
 - [webhook_handler.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_webhook_handler_results.txt)
 
 - [webhooks.py](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/pep8/checkout_webhooks_results.txt)
-
 
 #### Profiles App
 
@@ -1370,7 +1371,8 @@ As a customer/site user ...
 
 1.  I want to be able to *easily amend any product in my basket* so that I can **add to and reduce the quantity per item.**
 
-    - TO BE REPLACED WHEN FIXED!
+    - I am able to amend any product in my basket using the quantity buttons and then clicking update
+    - This updated the sub total as expected as well as all of the total in the lower section.
 
 1.  I want to be able to *pay for my order* so that I can **process my order and eventually receive my item(s).**
 
@@ -1429,8 +1431,10 @@ As an administrator/owner ...
 
 ### Future Features
 
-Discount codes
-Customer reviews
+-   Discount codes
+    - I would have liked to be able to set discount codes, an input field that when entered, if it matched a secret discount, reduced the basket total. 
+-   Customer reviews
+    - Another feature I would have liked to implement would have been customers posting their own reviews on products. These reviews would be what generates the rating of each item.
 
 ## References
 

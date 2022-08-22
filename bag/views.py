@@ -56,11 +56,12 @@ def add_to_bag(request, item_id):
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of the products updating the subtotal"""
-
+    print(request.POST)
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     stick_size = None
     clothes_size = None
+
     if 'stick_size' in request.POST:
         stick_size = request.POST['stick_size']
     bag = request.session.get('bag', {})
@@ -97,7 +98,7 @@ def adjust_bag(request, item_id):
                 request, f'Removed size {clothes_size.upper()} {product.name} \
                     from your basket')
 
-    else:
+    if not clothes_size and not stick_size:
         if quantity > 0:
             bag[item_id] = quantity
             messages.success(
