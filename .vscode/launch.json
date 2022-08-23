@@ -8,6 +8,9 @@
       "request": "launch",
       "program": "${workspaceFolder}/manage.py",
       "args": ["runserver"],
+      "env": {
+        
+      },
       "django": true,
       "justMyCode": true
     },

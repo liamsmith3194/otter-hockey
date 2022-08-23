@@ -30,6 +30,19 @@ I have been given full permission to use all my static files and product informa
 ### Repository
 [GitHub Repository](https://github.com/liamsmith3194/otter-hockey)
 
+## Last Minute Addition
+
+### All Products
+- On the 23/08/22 - One week before submission, I decided to implement an all products view.
+- It's been something that I have changed my mind on continuously, however now constructed, I have been able to give it, its own page heading and the sort by dropdown using the 'Category A-Z' & 'Category Z-A'
+
+![Desktop - All Products](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/products-all-products-desktop.PNG)
+
+- The navigation bar has been amended to include an 'All Products' link, both on large screens and smaller devices.
+- You will notice that all the screenshots from the site do not contain the updated navigation bar.
+
+![Mobile - Updated - Navigation Bar](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/updated-mobile-nav.PNG)
+
 # Table of Contents
 
 1.  [Planning & Requirements](#agile-methodology---planning--requirements)
@@ -46,6 +59,7 @@ I have been given full permission to use all my static files and product informa
     -   [Layout - Mobile](#layout-mobile)
     -   [Index Page](#index-page)
     -   [Products Page](#products-page)
+    -   [All Products](#all-products)
     -   [Product Detail Page](#product-detail-page)
     -   [Basket - Desktop](#basket-desktop)
     -   [Basket - Mobile](#basket-mobile)
@@ -105,7 +119,7 @@ I have been given full permission to use all my static files and product informa
 7.  [Evaluation](#agile-methodology---evaluation)
     -   [Site Visitor Goals](#site-visitor-goals-1)
     -   [Admin User/Owner Goals](#admin-userowner-goals-1)
-    -   [Future Features](#future-features)   
+    -   [Future Features](#future-features)
 8.  [References](#references)
     -   [Code](#code)
 9.  [Conclusion](#conclusion)
