@@ -25,7 +25,7 @@
         <div class="product-container col-12">
             {% if bag_items %}
             <div class="desktop-headings row mb-3">
-                <div class="font-weight-bold col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="font-weight-bold col-12 col-md-6 col-lg-6 col-xl-6">
                     Product Info
                 </div>
                 <div class="font-weight-bold text-center col-sm-12 col-md-2 col-lg-2 col-xl-2">
@@ -44,7 +44,7 @@
             {% for item in bag_items %}
 
             <div class="row">
-                <div class="image py-3 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="image py-3 col-12 col-md-3 col-lg-3 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if item.product.image %}
                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
@@ -53,7 +53,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="py-3 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="py-3 col-12 col-md-3 col-lg-3 col-xl-3">
                     <div class="card-body pt-0 pb-0">
                         <h3 class="product-name mb-2">{{ item.product.name }}</h3>
                         <p class="text-left"><i class="fas fa-star text-grey mr-1"></i>{{ item.product.rating }}/10
@@ -137,16 +137,10 @@
                     {% endif %}
                     <p class="">Delivery Total: £{{ delivery|floatformat:2 }}</p>
                     <h4 class="subheading">Grand Total: £{{ grand_total|floatformat:2 }}</h4>
-                </div>
-            </div>
-            <div class="checkout-section">
-                <div class="checkout-buttons row mt-3">
-                    <div class="col-12">
-                        <a href="{% url 'checkout' %}" class="btn-grey-add font-weight-bold py-2 px-4">
-                            <span class="text-white">Secure Checkout</span>
-                            <span class="text-white icon"><i class="fas fa-lock"></i></span>
-                        </a>
-                    </div>
+                    <a href="{% url 'checkout' %}" class="btn-grey-add font-weight-bold py-2 px-4">
+                        <span class="text-white">Secure Checkout</span>
+                        <span class="text-white icon"><i class="fas fa-lock"></i></span>
+                    </a>
                 </div>
             </div>
         </div>

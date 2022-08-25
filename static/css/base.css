@@ -635,6 +635,7 @@ iframe {
 
     .btn-grey-add {
         margin-bottom: 1rem;
+        width: 100%;
     }
 
     .checkout-table {
@@ -667,6 +668,15 @@ iframe {
 
     .banner-offer {
         margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .display-4 {
+        font-size: 2.4rem
+    }
+
+    .welcome-tag {
+        font-size: 1.8rem;
     }
 
 }
@@ -675,7 +685,7 @@ iframe {
 
     .nav-link,
     .nav-item {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .footer-item {
@@ -687,10 +697,10 @@ iframe {
     }
 
     .display-4 {
-        font-size: 2.5rem
+        font-size: 2.2rem
     }
 
-    h2 {
+    .welcome-tag {
         font-size: 1.6rem;
     }
 
@@ -707,8 +717,20 @@ iframe {
     }
 
     .nav-link {
-        font-size: 0.9rem;
+        font-size: 1.0rem;
         padding: 0.5rem;
+    }
+
+    .navigation-bar-items {
+        font-size: 1.0rem;
+    }
+
+    .display-4 {
+        font-size: 2.0rem
+    }
+
+    .welcome-tag {
+        font-size: 1.4rem;
     }
 
 }

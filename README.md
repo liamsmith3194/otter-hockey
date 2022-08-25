@@ -97,6 +97,7 @@ I have been given full permission to use all my static files and product informa
         - [Product Details](#product-details-page)
         - [Basket](#basket)
         - [Check Out](#check-out-1)
+        - [Stripe](#stripe)
         - [Order Confirmation](#order-confirmation)
         - [My Profile](#my-profile-1)
         - [Product Management](#product-management)
@@ -877,6 +878,18 @@ Below are links to all indivdual Pep8 results
     - The check out button links successfully.
 - [x] Empty basket
     - The empty basket page is displayed correctly when nothing is in the basket and when all items have been manually removed from the basket.
+
+#### Stripe
+- [x] All events created successfully
+    - Logging into Stripe, I was able to see all events for checkout were successfully created and processed with HTTP status codes of 200.
+
+![Stripe - Events](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/stripe-events.PNG)
+
+- [x] All webhooks created successfully
+    - Viewing the webhooks section, all three webhooks were created, again all with HTTP status codes of 200. 
+
+![Stripe - Webhooks](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/stripe-webhooks.PNG)
+
 
 #### Check Out
 - [x] All '*' fields are required

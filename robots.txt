@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /accounts/
-Disallow: /bag/
 Sitemap: https://otter-hockey.herokuapp.com/sitemap.xml
