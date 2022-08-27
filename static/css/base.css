@@ -633,7 +633,7 @@ iframe {
 
 @media screen and (max-width: 767px) {
 
-    .btn-grey-add {
+    .btn-grey-add, .btn-white-add {
         margin-bottom: 1rem;
         width: 100%;
     }
@@ -702,6 +702,10 @@ iframe {
 
     .welcome-tag {
         font-size: 1.6rem;
+    }
+
+    .subheading {
+        font-size: 1.5rem;
     }
 
     .btn-grey-add,

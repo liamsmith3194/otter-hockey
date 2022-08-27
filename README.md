@@ -69,7 +69,7 @@ I have been given full permission to use all my static files and product informa
     -   [Product Management Page](#product-management-page)
     -   [Product Management - Via Products](#product-management---via-products)
     -   [Allauth Pages](#allauth-pages-register-login-logout-etc)   
-    -   [Boostrap Alerts(Toasts)](#boostrap-alerts-toasts)
+    -   [Bootstrap Alerts(Toasts)](#bootstrap-alerts-toasts)
     -   [About Us](#about-us)
     -   [FAQ's](#faqs)
     -   [Privacy Policy](#privacy-policy)
@@ -148,7 +148,7 @@ As a customer/site user ...
 
 1.  I want to be able to *be made aware of any deals available* so that I can **make the most of what is on offer, whether it is free delivery or 10% off etc.**
 
-1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the Company.**
+1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the company.**
 
 #### Products
 
@@ -166,7 +166,7 @@ As a customer/site user ...
 
 1.  I want to be able to *be notified of when I have added a product to my basket* so that I can **see that my request to add the item(s) has been successful.**
 
-1.  I want to be able to *be shown an overview of my basket* so that I can **see the product and the important details I have selected to ensure they are correct.**
+1.  I want to be able to *be shown an overview of my basket* so that I can **see the product and the important details I have selected, to ensure they are correct.**
 
 1.  I want to be able to *see the total price of my basket* so that I can **make sure I don't spend more than I want to.**
 
@@ -186,7 +186,7 @@ As a customer/site user ...
 
 1.  I want to be able to *view previous orders* so that I can **see my purchase history and link to an item I have bought previously.**
 
-1.  I want to be able to *add a default delivery address* so that I can **when I go to check out, my delivery information is already populated, making the process easier.**
+1.  I want to be able to *add a default delivery address* so that **when I go to check out, my delivery information is already populated, making the process easier.**
 
 #### Sorting & Searching
 
@@ -198,7 +198,7 @@ As a customer/site user ...
 
 1.  I want to be able to *retrieve all products from a keyword search* so that I can **be shown a reduced list of products using the keyword as a filter.**
 
-#### check out
+#### Check Out
 
 1.  I want to be able to *view all items in my basket* so that I can **check my basket and ensure I have all the items and quantities are correct.**
 
@@ -208,7 +208,7 @@ As a customer/site user ...
 
 1.  I want to be able to *trust the sites' check out security* so that I can **I feel that personal details (especially banking information) are safe, and the site can be trusted.**
 
-1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
+1.  I want to be able to *view my order confirmation after payment* so that **I know my order has been processed and provides a final check should I want to do so.**
 
 1.  I want to be able to *receive an email order confirmation after payment* so that I can **trust my order has been processed, and I have the written confirmation to prove it.**
 
@@ -216,11 +216,11 @@ As a customer/site user ...
 
 1.  I want to be able to *find out more information about the company* so that I can **look into their background and develop an understanding of the business.**
 
-1.  I want to be able to *review the FAQ's* so that I can **should I have a question, I can see if it has already been answered.**
+1.  I want to be able to *review the FAQ's* so that **should I have a question, I can see if it has already been answered.**
 
 1.  I want to be able to *contact them directly* so that I can **ensure my query/question can be answered.**
 
-1.  I want to be able to *read through the privacy policy* so that I can **know my personal information is secure.**
+1.  I want to be able to *read through the privacy policy* so that I **know my personal information is secure.**
 
 1.  I want to be able to *subscribe to the site's mailing list* so that I can **receive all the latest deals, offers and news.**
 
@@ -265,7 +265,7 @@ As an administrator/owner ...
 
 The site is connected to Heroku's Postgres Database.
 
-The Entity-Relationship Diagram below shows how the database models and how they relate to each other.
+The Entity-Relationship Diagram below shows the database models and how they relate to each other.
 
 #### Products
 The Products model is used to add products to the site. Only the site owner/admin can add, edit, and delete products. All other users are able to view the products on the site.
@@ -280,7 +280,7 @@ The Order model is used for the order details (when an order is placed by a user
 Used for the check out details. This is linked to the Order Line Items model, which contains the products (and products model) ordered by the user.
 
 #### User Profile
-The User Profile stores the default delivery details again, assuming the user is registered and chose to save their delivery details.
+The User Profile stores the default delivery details again, assuming the user is registered and has chosen to save their delivery address.
 
 ## Agile Methodology - Design
 
@@ -313,7 +313,7 @@ The User Profile stores the default delivery details again, assuming the user is
 -   Montserrat (light, medium & bold) 
     -   A large majority of text on the site uses Montserrat.
     -   This is a very popular font for web design because of its readability.
-    -   The uses of light, medium and bold varies and highlights certain details. For example, the order confirmation uses the light style for the field names, the medium for the field values and the bold for the subheadings.
+    -   The site uses light, medium and bold font weights in order to highlight certain details. For example, the order confirmation uses the light style for the field names, the medium for the field values and the bold for the subheadings.
     -   This make it more appealing to the user and easier to read or quickly check.
 
 -   Bebas Neue
@@ -335,7 +335,7 @@ Below is an overview showing the main features of the site.
 - A convenient search bar is placed in the centre of the screen.
 - On the right side features ‘My Account’ button containing a dropdown including register and login etc.
 - The shopping trolley icon links to the user's basket, which shows the total amount already added.
-- The navigation bar sits below the search bar on its own row, centred and spanning half the width of the screen.
+- The navigation bar sits below the search bar on its own row, centered and spanning half the width of the screen.
 - The free delivery offer also spans across the width of the page
 but uses a black background and white text, contrasting nicely against the grey on white.
 - The vast majority of pages follow a similar theme in terms of page title and subheading(s) if there is one.
@@ -407,7 +407,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 ![Desktop Basket 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-2-desktop.PNG)
 
 - The free delivery offer uses an icon to display to the user if they have qualified for the deal.
-- When the basket is below £100 hovering off the cross icon, produces a pop with the amount needed to add to the basket for free delivery.
+- When the basket is below £100 hovering off the cross icon, produces a pop-up with the amount needed to add to the basket for free delivery.
 
 ![Delivery pop-over](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/delivery-popover.PNG)
 
@@ -419,11 +419,11 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 - Viewing the basket on a mobile/smaller devices shows a very different layout.
 - All the basket details are spread across the width of the screen.
-- The product image is at the top of the screen and centred followed by product name, rating, size and sku all left aligned.
-- The price is centred and bold
+- The product image is at the top of the screen and centered followed by product name, rating, size and sku all left aligned.
+- The price is centered and bold
 - The quantity selector is on the following row
 - Followed by the subtotal copying the price styling.
-- The bin icon is the last graphic centred below the subtotal.
+- The bin icon is the last graphic centered below the subtotal.
 
 ![Mobile Basket 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/basket-1-mobile.PNG)
 
@@ -473,7 +473,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ### Product Management - (Page)
 - As an admin user, under the product management tab, you are able to add products to the database using the form displayed.
-- Ensuring the required fields contain valid data you are able to submit the product addding to the database and the site for users to view.
+- Ensuring the required fields contain valid data you are able to submit the product adding to the database and the site for users to view.
 - Creating a product that doesn't yet have a product image will display the Otter Hockey logo by default.
 
 ![Product Management - Add Product](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/add-product.PNG)
@@ -495,7 +495,7 @@ but uses a black background and white text, contrasting nicely against the grey 
 
 ![Sign Up](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/sign-up.PNG)
 
-### Boostrap Alerts (Toasts)
+### Bootstrap Alerts (Toasts)
 - Positioned on the right side of the screen underneath the basket total.
 - The toasts are a consistent feature across the site, triggered by various actions such as login, logout, adding an item to the basket and check out confirmation amongst others.
 
@@ -646,7 +646,7 @@ The results were very dissapointing with hockey brands coming back as alternativ
 - Osaka field hockey sticks
 
 Using this feedback I added all 'field' combinations to my metadata keywords.
-It also shows that the target market for hockey products, espically sticks, are aware of the brands and know what type of stick they would like to purchase.
+It also shows that the target market for hockey products, especially sticks, are aware of the brands and know what type of stick they would like to purchase.
 It seems it is all about brand awareness!
 
 ## Agile Methodology - Testing
@@ -749,7 +749,7 @@ Below are links to all indivdual Pep8 results
 ![Hamburger bars](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/hamburger-bars.PNG)
 - All forms are spread across the width of the screen on smaller devices
 - The vast majority of buttons are also spread across the width and stacked above one another.
-- The footer elements are displayed in a singe column on smaller devices, with all content centred.
+- The footer elements are displayed in a singe column on smaller devices, with all content centered.
 
 #### Index Page
 - [x] Otter Hockey logo link 
@@ -873,7 +873,7 @@ Below are links to all indivdual Pep8 results
     - By default the delivery total is £5.00
 - [x] Grand total
     - To ensure the grand total was correct I added numerous products to the basket multiple times and added them up using a calculator.
-    - I also made sure to edit the basket continiously to update the basket total and delivery total.
+    - I also made sure to edit the basket continuously to update the basket total and delivery total.
 - [x] Secure check out button
     - The check out button links successfully.
 - [x] Empty basket
@@ -1036,7 +1036,7 @@ On first testing, the lighthouse performance results were below par at around 70
 -   Eliminate render-blocking resources
 -   Reduce unused JavaScript
 -   Enable text compression
-Although there isn't much I can do about the Stripe and Boostrap components, I can ensure my CSS doesn't contain unused code.
+Although there isn't much I can do about the Stripe and Bootstrap components, I can ensure my CSS doesn't contain unused code.
 - Desktop Results
 
 ![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lighthouse-desktop.PNG)
@@ -1236,7 +1236,7 @@ if 'USE_AWS' in os.environ:
 - AWS_ACCESS_KEY_ID, taken from the new user credentials
 - AWS_SECRET_ACCESS_KEY, taken from the new user credentials
 
-5.  The next step is to tell Django that in production we want to use s3 to store our static files whenever someone runs collectstatic and that we want any uploaded product images to go there also. To do that, I created a file called custom_storages.py.
+5.  The next step is to tell Django that in production we want to use S3 to store our static files whenever someone runs collectstatic and that we want any uploaded product images to go there also. To do that, I created a file called custom_storages.py.
 
 ### Create custom_storages.py
 
@@ -1287,8 +1287,8 @@ As a customer/site user ...
     - The use of the banner is a great way to advertise deals, in this case free delivery over £100.
     - The colour scheme of white on black provides a good contrast to the navigation bar.
 
-1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the Company.**
-    - All the social media links located at the bottom of the page makes positional sense and situated in its on section breaks down the footer nicely.
+1.  I want to be able to *view the social media account(s)* so that I can **keep up to date with news and offers, but also it gives me trust in the company.**
+    - All the social media links are located at the bottom of the page, and broken down into their own sections, which breaks down the footer nicely.
 
 #### Products
 
@@ -1301,7 +1301,7 @@ As a customer/site user ...
 
     - I am able to see the vast majority of important product details from the products page.
     - Nicely presented with different typography displaying different pieces of data.
-    - The use of the ‘progress bars’ adds something different to the sticks category page, and coloured in the nav grey fits in with the theme.
+    - The use of the ‘progress bars’ adds something different to the sticks category page, and coloured in the grey used throughout the site, which fits in with the theme.
 
 1.  I want to be able to *view product size if applicable* so that I can **select the size of product I wish to purchase (stick size or clothing size).**
 
@@ -1321,7 +1321,7 @@ As a customer/site user ...
 
 1.  I want to be able to *be notified of when I have added a product to my basket* so that I can **see that my request to add the item(s) has been successful.**
 
-    - Every item adding to the basket, displays a handy notification ensuring me that I have add the product successfully.
+    - Every item added to the basket, displays a handy notification, ensuring me that the basket has been successfully updated.
     
 1.  I want to be able to *be shown an overview of my basket* so that I can **see the product and the important details I have selected to ensure they are correct.**
 
@@ -1365,7 +1365,7 @@ As a customer/site user ...
     - Following the 'My profile' link, I was able to view my order history listed with all the key details.
     - With the order number linking to the order confirmation.
 
-1.  I want to be able to *add a default delivery address* so that I can **when I go to check out, my delivery information is already populated, making the process easier.**
+1.  I want to be able to *add a default delivery address* so that **when I go to check out, my delivery information is already populated, making the process easier.**
 
     - Staying on the 'My profile' page, I added my delivery address and after saving, when going to make a purchase the fields were pre-filled to make the process easy and quicker.
 
@@ -1411,7 +1411,7 @@ As a customer/site user ...
     - The use of a padlock icon along with 'Secure Checkout' made me feel comfortable proceeding to checkout.
     - Also when entering bank details, which were invalid, I was made aware of that from the site. 
 
-1.  I want to be able to *view my order confirmation after payment* so that I can **I know my order has been processed and provides a final check should I want to do so.**
+1.  I want to be able to *view my order confirmation after payment* so that **I know my order has been processed and provides a final check should I want to do so.**
 
     - After my payment was successful, I was shown my order confirmation, providing me the assurance my order had been received
     - Similarly, I was able to check the Purchased products section to ensure everything was correct.
@@ -1426,7 +1426,7 @@ As a customer/site user ...
     - With all the company information at the bottom of each page, it is very easy to navigate to each section
     - The about us page provides an easy-to-read overview of the company, separated into two sections.
 
-1.  I want to be able to *review the FAQ's* so that I can, **should I have a question, I can see if it has already been answered.**
+1.  I want to be able to *review the FAQ's* so that I can, **should I have a question, see if it has already been answered.**
     - The FAQ's are displayed cleanly with the topics broken down
     - I agree with the choice of neutral colours being used for this page, as the blocks may have been overpowering in the site grey.
 
@@ -1435,7 +1435,7 @@ As a customer/site user ...
     - Through testing, I am aware that I am unable to send a message without filling in the fields first.
     - The map showing the location is great for someone that is local to the area and able to pop in.
 
-1.  I want to be able to *read through the privacy policy* so that I can **know my personal information is secure.**
+1.  I want to be able to *read through the privacy policy* so that I **know my personal information is secure.**
     - The privacy policy is displayed in a similar way to the about page with small sections, which I felt made it easier to read through.
 
 1.  I want to be able to *subscribe to the site's mailing list* so that I can **receive all the latest deals, offers and news.**
@@ -1461,7 +1461,7 @@ As an administrator/owner ...
 -   Discount codes
     - I would have liked to be able to set discount codes, an input field that when entered, if it matched a secret discount, reduced the basket total. 
 -   Customer reviews
-    - Another feature I would have liked to implement would have been customers posting their own reviews on products. These reviews would be what generates the rating of each item.
+    - Another feature I would have liked to implement would have been customers posting their own reviews on products. These reviews would generate the rating shown for each item.
 
 ## References
 

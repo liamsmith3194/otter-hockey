@@ -79,7 +79,7 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag \
+                        "One of the products in your basket \
                             wasn't found in our database. "
                         "Please call us for assistance!")
                     )
@@ -95,7 +95,7 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag \
+            messages.error(request, "There's nothing in your basket \
                 at the moment")
             return redirect(reverse('products'))
 
@@ -149,11 +149,9 @@ def checkout_success(request, order_number):
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
         if save_info:
             profile_data = {
                 'default_street_address1': order.street_address1,

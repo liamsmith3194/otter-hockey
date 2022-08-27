@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
 
-# Create your views here.
-
 
 def about(request):
     """ A view to return the about page"""
