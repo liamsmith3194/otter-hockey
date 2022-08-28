@@ -196,42 +196,27 @@
             <h4 class="subheading">Customer Reviews ({{total_reviews}})</h4>
 
             {% for review in reviews %}
-            <article class="box mb-3">
-                    <div class="icontext w-100">
-                        <div class="text">
-                            <span class="date text-muted">{{review.created_on}}</span>
-                            <h6 class="mb-1">{{ review.user }}</h6>
-                            <div class="rating-star">
+                    <div class="w-100">
+                        <div>
+                            <i class="fa-solid fa-circle-user fa-lg text-grey mb-2"></i>
+                                {{ review.user }}
+                                |
+                            <span class="text-black">{{review.created_on}}</span>
+                            <br>
+                            <div class="stars mt-2">
                                 <span>
-                                    <i class="fa fa-star{% if review.rating == 0.5 %}-half-o{% elif review.rating < 1 %}-o {% endif %}" aria-hidden="true"></i>
-                                    <i class="fa fa-star{% if review.rating == 1.5 %}-half-o{% elif review.rating < 2 %}-o {% endif %}" aria-hidden="true"></i>
-                                    <i class="fa fa-star{% if review.rating == 2.5 %}-half-o{% elif review.rating < 3 %}-o {% endif %}" aria-hidden="true"></i>
-                                    <i class="fa fa-star{% if review.rating == 3.5 %}-half-o{% elif review.rating < 4 %}-o {% endif %}" aria-hidden="true"></i>
-                                    <i class="fa fa-star{% if review.rating == 4.5 %}-half-o{% elif review.rating < 5 %}-o {% endif %}" aria-hidden="true"></i>
+                                    <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ review.stars }} /
+                                        10</p>
                                 </span>
+                            </div>
+                            <div class="mb-3">
+                                {{ review.review }}
+                            <hr>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-2">
-                        <p>
-                            {{review.review}}
-                        </p>
-                    </div>
-                    {% if request.user == review.user or request.user.is_superuser %}
-                    <div class="col text-right del-product">
-                        <a class="text-info" href="{% url 'edit_review' review.id %}">
-                            <i class="fa-solid fa-pencil"></i>
-                        </a>
-                        <a class="text-danger" href="{% url 'delete_review' review.id %}">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </a>
-                    </div>
-                    {% endif %}
-                {% empty %}
-                    <div>
-                        There are currently no reviews to display for this product.
-                    </div>
-            </article>
+                    
+                    
             {% endfor %}
         </div>
     </div>

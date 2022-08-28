@@ -363,6 +363,9 @@ a .social-media-icons {
     float: right;
 }
 
+.fa-star {
+    color: #d4af37;
+}
 
 .subheading {
     font-family: 'Bebas Neue', sans-serif;
