@@ -143,7 +143,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def leave_review(request, product_id):
+def review_product(request, product_id):
     """A view to allow customer to leave product reviews"""  
 
     template = 'products/product_details.html'
