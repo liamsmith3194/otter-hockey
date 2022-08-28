@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Review
 from .forms import ProductForm
 
 
@@ -141,3 +141,11 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product was successfully deleted.')
     return redirect(reverse('products'))
+
+
+def leave_review(request, product_id):
+    """A view to allow customer to leave product reviews"""  
+
+    template = 'products/product_details.html'
+
+    return render(request, template)

@@ -10,5 +10,7 @@ urlpatterns = [
          name='edit_product'),
     path('delete/<int:product_id>/', views.delete_product,
          name='delete_product'),
+    path('leave_review/<int:product_id>/',
+         views.leave_review, name='leave_review'),
 
 ]

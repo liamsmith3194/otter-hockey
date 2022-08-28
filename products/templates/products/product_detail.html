@@ -153,6 +153,37 @@
             </div>
         </div>
     </div>
+    <div class="row mt-3 review-section">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h3 class="subheading">Review this product </h3>
+            {% if user.is_authenticated %}
+            <form action="{% url 'leave_review' product.id %}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="rate">How do you rate this product?</label>
+                    <br>
+                    <div class="rate">
+                        <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
+                            10</p>
+                        
+                    </div>
+                </div>
+                <div>
+                    <textarea name="review" id="review" class="form-control-form text-black" cols="10" rows="5" placeholder="Tell us what you thought"
+                        required></textarea>
+                </div>
+                <input type="submit" value="Submit Review" class="btn-grey-add font-weight-bold py-2 px-4">
+            </form>
+            {% else %}
+            <div>
+                We would love to hear what you think about this product, but you must be logged in to post a review.
+                <a href="{% url 'account_login' %}" class="icon">Login Here.</a>
+            </div>
+            {% endif %}
+        </div>
+
+        
+    </div>
 </div>
 {% endblock %}
 

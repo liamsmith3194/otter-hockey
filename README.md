@@ -618,6 +618,8 @@ but uses a black background and white text, contrasting nicely against the grey 
 ![Facebook Page 1](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/facebook-page-1.PNG)
 ![Facebook Page 2](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/facebook-page-2.PNG)
 
+-   The Facebook page has now been removed (28/08/22), therefore the footer link, reddirects the user to the Facebook login page. 
+
 -   Another use of web marketing is the use of MailChimp, this has set up to connect the user to a fictional monthly newsletter.
 
 ### Search Engine Optimisation (SEO)
