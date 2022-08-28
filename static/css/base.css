@@ -372,22 +372,22 @@ a .social-media-icons {
 /* Star Rating CSS from Rathan Kumar's YouTube Tutorial and amended slightly to suit my project.
 Link in README */
 /* Hide Radio button */
-.star_rating > input {
+.stars > input {
     display: none;
 }
 
-.star_rating {
+.stars {
     display: inline-block;
     border: 0;
     color: #aaa;
 }
 
-.star_rating > label {
+.stars > label {
     float: right;
 }
 
 /* Showing the stars */
-.star_rating > label:before {
+.stars > label:before {
     display: inline-block;
     font-size: 20px;
     font-family: FontAwesome;

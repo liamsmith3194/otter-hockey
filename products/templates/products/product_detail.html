@@ -155,32 +155,32 @@
     </div>
     <div class="row mt-3 review-section">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <h3 class="subheading">Review this product </h3>
+            <h4 class="subheading">Review this product </h4>
             {% if user.is_authenticated %}
-            <form action="{% url 'review_product' product.id %}" method="POST">
+            <form action="{% url 'submit_review' product.id %}" method="POST">
                 {% csrf_token %}
                 <div>
-                    <label for="rate">Rate this product out of 10</label>
+                    <label for="stars">Rate this product out of 10</label>
                     <br>
           
-                    <div class="star_rating">
-                        <input type="radio" name="star_rating" id="rating10" value="10" required checked="checked"><label for="rating10"></label>
-                        <input type="radio" name="star_rating" id="rating9" value="9" required><label for="rating9"></label>
-                        <input type="radio" name="star_rating" id="rating8" value="8" required><label for="rating8"></label>
-                        <input type="radio" name="star_rating" id="rating7" value="7" required><label for="rating7"></label>
-                        <input type="radio" name="star_rating" id="rating6" value="6" required><label for="rating6"></label>
-                        <input type="radio" name="star_rating" id="rating5" value="5" required><label for="rating5"></label>
-                        <input type="radio" name="star_rating" id="rating4" value="4" required><label for="rating4"></label> 
-                        <input type="radio" name="star_rating" id="rating3" value="3" required><label for="rating3"></label>
-                        <input type="radio" name="star_rating" id="rating2" value="2" required><label for="rating2"></label>
-                        <input type="radio" name="star_rating" id="rating1" value="1" required><label for="rating1"></label>
+                    <div class="stars">
+                        <input type="radio" name="stars" id="rating10" value="10" required><label for="rating10" title="10"></label>
+                        <input type="radio" name="stars" id="rating9" value="9" required><label for="rating9" title="9"></label>
+                        <input type="radio" name="stars" id="rating8" value="8" required><label for="rating8" title="8"></label>
+                        <input type="radio" name="stars" id="rating7" value="7" required><label for="rating7" title="7"></label>
+                        <input type="radio" name="stars" id="rating6" value="6" required><label for="rating6" title="6"></label>
+                        <input type="radio" name="stars" id="rating5" value="5" required><label for="rating5" title="5"></label>
+                        <input type="radio" name="stars" id="rating4" value="4" required><label for="rating4" title="4"></label> 
+                        <input type="radio" name="stars" id="rating3" value="3" required><label for="rating3" title="3"></label>
+                        <input type="radio" name="stars" id="rating2" value="2" required><label for="rating2" title="2"></label>
+                        <input type="radio" name="stars" id="rating1" value="1" required><label for="rating1" title="1"></label>
                     </div>
 
                     
                 </div>
                 <div>
                     <textarea name="review" id="review" class="form-control-form" cols="10" rows="5"
-                        placeholder="Tell us what you think" required></textarea>
+                        placeholder="Tell us what you think"></textarea>
                 </div>
                 <input type="submit" value="Submit Review" class="btn-grey-add font-weight-bold py-2 px-4">
             </form>
@@ -193,24 +193,44 @@
         </div>
 
         <div class="col-md-6 mt-2">
-            <h3 class="subheading">Customer Reviews ({{total_reviews}})</h3>
+            <h4 class="subheading">Customer Reviews ({{total_reviews}})</h4>
+
             {% for review in reviews %}
             <article class="box mb-3">
-                <div class="icontext w-100">
-                    <div class="text">
-                        <span class="date text-muted">{{review.created_on}}</span>
-                        <h6 class="mb-1">{{ review.user }}</h6>
+                    <div class="icontext w-100">
+                        <div class="text">
+                            <span class="date text-muted">{{review.created_on}}</span>
+                            <h6 class="mb-1">{{ review.user }}</h6>
+                            <div class="rating-star">
+                                <span>
+                                    <i class="fa fa-star{% if review.rating == 0.5 %}-half-o{% elif review.rating < 1 %}-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if review.rating == 1.5 %}-half-o{% elif review.rating < 2 %}-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if review.rating == 2.5 %}-half-o{% elif review.rating < 3 %}-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if review.rating == 3.5 %}-half-o{% elif review.rating < 4 %}-o {% endif %}" aria-hidden="true"></i>
+                                    <i class="fa fa-star{% if review.rating == 4.5 %}-half-o{% elif review.rating < 5 %}-o {% endif %}" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-2">
-                    <p>
-                        {{review.review}}
-                    </p>
-                </div>
+                    <div class="mt-2">
+                        <p>
+                            {{review.review}}
+                        </p>
+                    </div>
+                    {% if request.user == review.user or request.user.is_superuser %}
+                    <div class="col text-right del-product">
+                        <a class="text-info" href="{% url 'edit_review' review.id %}">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a class="text-danger" href="{% url 'delete_review' review.id %}">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </div>
+                    {% endif %}
                 {% empty %}
-                <div>
-                    There are currently no reviews to display for this product.
-                </div>
+                    <div>
+                        There are currently no reviews to display for this product.
+                    </div>
             </article>
             {% endfor %}
         </div>

@@ -143,14 +143,14 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def review_product(request, product_id):
-    """A view to allow customer to leave product reviews"""
-
+def submit_review(request, product_id):
+    """Sumbit a product review"""
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             data = Review()
+            data.stars = form.cleaned_data['stars']
             data.review = form.cleaned_data['review']
             data.product = product
             data.user_id = request.user.id
