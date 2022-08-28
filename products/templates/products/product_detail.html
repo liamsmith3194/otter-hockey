@@ -160,16 +160,27 @@
             <form action="{% url 'review_product' product.id %}" method="POST">
                 {% csrf_token %}
                 <div>
-                    <label for="rate">How do you rate this product?</label>
+                    <label for="rate">Rate this product out of 10</label>
                     <br>
-                    <div class="rate">
-                        <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
-                            10</p>
+          
+                    <div class="star_rating">
+                        <input type="radio" name="star_rating" id="rating10" value="10" required checked="checked"><label for="rating10"></label>
+                        <input type="radio" name="star_rating" id="rating9" value="9" required><label for="rating9"></label>
+                        <input type="radio" name="star_rating" id="rating8" value="8" required><label for="rating8"></label>
+                        <input type="radio" name="star_rating" id="rating7" value="7" required><label for="rating7"></label>
+                        <input type="radio" name="star_rating" id="rating6" value="6" required><label for="rating6"></label>
+                        <input type="radio" name="star_rating" id="rating5" value="5" required><label for="rating5"></label>
+                        <input type="radio" name="star_rating" id="rating4" value="4" required><label for="rating4"></label> 
+                        <input type="radio" name="star_rating" id="rating3" value="3" required><label for="rating3"></label>
+                        <input type="radio" name="star_rating" id="rating2" value="2" required><label for="rating2"></label>
+                        <input type="radio" name="star_rating" id="rating1" value="1" required><label for="rating1"></label>
                     </div>
+
+                    
                 </div>
                 <div>
-                    <textarea name="review" id="review" class="form-control-form" cols="10" rows="5" placeholder="Tell us what you think"
-                        required></textarea>
+                    <textarea name="review" id="review" class="form-control-form" cols="10" rows="5"
+                        placeholder="Tell us what you think" required></textarea>
                 </div>
                 <input type="submit" value="Submit Review" class="btn-grey-add font-weight-bold py-2 px-4">
             </form>
@@ -196,16 +207,6 @@
                         {{review.review}}
                     </p>
                 </div>
-                {% if request.user == review.user or request.user.is_superuser %}
-                <div class="col text-right del-product">
-                    <a class="text-info" href="{% url 'edit_review' review.id %}">
-                        <i class="fa-solid fa-pencil"></i>
-                    </a>
-                    <a class="text-danger" href="{% url 'delete_review' review.id %}">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                </div>
-                {% endif %}
                 {% empty %}
                 <div>
                     There are currently no reviews to display for this product.
