@@ -170,6 +170,6 @@ def submit_review(request, product_id):
     else:
         form = ReviewForm()
 
-    template = 'products/product_detail.html'
+    template = 'products/product.html'
 
     return render(request, template)

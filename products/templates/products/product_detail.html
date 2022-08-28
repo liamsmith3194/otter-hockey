@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col">
                         {% if product.rating %}
-                        <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ product.rating }} /
+                        <p class="text-left text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
                             10</p>
                         {% else %}
                         <p class="text-left">No Rating</p>
@@ -152,73 +152,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row mt-3 review-section">
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <h4 class="subheading">Review this product </h4>
-            {% if user.is_authenticated %}
-            <form action="{% url 'submit_review' product.id %}" method="POST">
-                {% csrf_token %}
-                <div>
-                    <label for="stars">Rate this product out of 10</label>
-                    <br>
-          
-                    <div class="stars">
-                        <input type="radio" name="stars" id="rating10" value="10" required><label for="rating10" title="10"></label>
-                        <input type="radio" name="stars" id="rating9" value="9" required><label for="rating9" title="9"></label>
-                        <input type="radio" name="stars" id="rating8" value="8" required><label for="rating8" title="8"></label>
-                        <input type="radio" name="stars" id="rating7" value="7" required><label for="rating7" title="7"></label>
-                        <input type="radio" name="stars" id="rating6" value="6" required><label for="rating6" title="6"></label>
-                        <input type="radio" name="stars" id="rating5" value="5" required><label for="rating5" title="5"></label>
-                        <input type="radio" name="stars" id="rating4" value="4" required><label for="rating4" title="4"></label> 
-                        <input type="radio" name="stars" id="rating3" value="3" required><label for="rating3" title="3"></label>
-                        <input type="radio" name="stars" id="rating2" value="2" required><label for="rating2" title="2"></label>
-                        <input type="radio" name="stars" id="rating1" value="1" required><label for="rating1" title="1"></label>
-                    </div>
-
-                    
-                </div>
-                <div>
-                    <textarea name="review" id="review" class="form-control-form" cols="10" rows="5"
-                        placeholder="Tell us what you think"></textarea>
-                </div>
-                <input type="submit" value="Submit Review" class="btn-grey-add font-weight-bold py-2 px-4">
-            </form>
-            {% else %}
-            <div>
-                We would love to hear what you think about this product, but you must be logged in to post a review.
-                <a href="{% url 'account_login' %}" class="icon">Login Here.</a>
-            </div>
-            {% endif %}
-        </div>
-
-        <div class="col-md-6 mt-2">
-            <h4 class="subheading">Customer Reviews ({{total_reviews}})</h4>
-
-            {% for review in reviews %}
-                    <div class="w-100">
-                        <div>
-                            <i class="fa-solid fa-circle-user fa-lg text-grey mb-2"></i>
-                                {{ review.user }}
-                                |
-                            <span class="text-black">{{review.created_on}}</span>
-                            <br>
-                            <div class="stars mt-2">
-                                <span>
-                                    <p class="text-left text-black"><i class="fas fa-star text-grey mr-1"></i>{{ review.stars }} /
-                                        10</p>
-                                </span>
-                            </div>
-                            <div class="mb-3">
-                                {{ review.review }}
-                            <hr>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-            {% endfor %}
-        </div>
+        {% include 'products/includes/reviews.html' %}
     </div>
 </div>
 {% endblock %}

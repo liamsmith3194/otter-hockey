@@ -1489,6 +1489,9 @@ Contact form - Codemy - https://www.youtube.com/watch?v=w4ilq6Zk-08
 Error 404 Page - https://www.youtube.com/watch?v=3SKjPppM_DU
 - This video tutorial was used to ensure the custom 404 page was displayed when an invalid url was input.
 
+Product reviews - Rathan Kumar - https://www.youtube.com/channel/UCYesptHRU1QZ2pHZkAqdQTw
+- This video tutorial was used for the review functionality as well as star rating CSS.
+
 ## Conclusion
 
 ### Content

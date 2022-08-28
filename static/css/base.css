@@ -372,9 +372,6 @@ a .social-media-icons {
     letter-spacing: 2.5px;
 }
 
-/* Star Rating CSS from Rathan Kumar's YouTube Tutorial and amended slightly to suit my project.
-Link in README */
-/* Hide Radio button */
 .stars > input {
     display: none;
 }
@@ -389,7 +386,6 @@ Link in README */
     float: right;
 }
 
-/* Showing the stars */
 .stars > label:before {
     display: inline-block;
     font-size: 20px;
@@ -400,14 +396,11 @@ Link in README */
     cursor: pointer;
 }
 
-
-/* Click and hover */
 input:checked ~ label,
 label:hover ~ label {
     color: #d4af37;
 }
 
-/* hover highlight */
 input:checked+label:hover,
 input:checked ~ label:hover,
 input:checked ~ label:hover ~ label,
