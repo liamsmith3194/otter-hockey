@@ -30,7 +30,7 @@ I have been given full permission to use all my static files and product informa
 ### Repository
 [GitHub Repository](https://github.com/liamsmith3194/otter-hockey)
 
-## Last Minute Addition
+## Last Minute Additions
 
 ### All Products
 - On the 23/08/22 - One week before submission, I decided to implement an all products view.
@@ -42,6 +42,19 @@ I have been given full permission to use all my static files and product informa
 - You will notice that all the screenshots from the site do not contain the updated navigation bar.
 
 ![Mobile - Updated - Navigation Bar](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/updated-mobile-nav.PNG)
+
+### Reviews
+- On the 28/08/22 - 3 days before submission, I discovered I was missing an original custom model.
+- I decided to create a reviews section within the product details, where customers were able to rate the items.
+- Following some of the styling from the reviews, I decided to change the star icons to gold instead of the site grey as shown in the screenshots.
+- The star rating is required and with a hover pseudo class highlights in gold as the mouse moves over them. On click the stars selected stay gold.
+- Both the star rating and comments box are required fields, in order to submit, they must be filled in.
+
+![Desktop - Reviews](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-reviews.PNG)
+
+![Reviews - No Review](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/reviews-no-review.PNG)
+
+![Mobile - Reviews](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-reviews.PNG)
 
 # Table of Contents
 
@@ -1049,8 +1062,6 @@ Although there isn't much I can do about the Stripe and Bootstrap components, I 
 
 ### Continued Testing
 
-TO BE REPLACED 
-
 - The Website was tested on Google Chrome and Microsoft Edge.
 - The website has been displayed on various devices such as Desktop PC, iMac, Laptop, iPhone X & iPad Pro
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
@@ -1062,7 +1073,11 @@ TO BE REPLACED
 
 ## Issues
 
-Adjust bag - Size is removed.
+- Viewing the reviews section, looking at a stick displays correctly, however on all other product categories, it appears to be outside the main container. 
+![Reviews - Viewing Issue](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/issue-reviews.PNG)
+
+- This was logged with Tutor Support (see link below), but we were unable to find a solution. Amending the code again and again, I was able to fix it for all categories except the sticks, but with the sticks being the main category for the site, I made a conscious choice to have the stick details page viewing correctly.
+- [Reviews - Tutor Support Log](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/tutor-support-log/reviews-viewing-issue.txt)
 
 ## Deployment
 
