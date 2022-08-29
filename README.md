@@ -45,16 +45,20 @@ I have been given full permission to use all my static files and product informa
 
 ### Reviews
 - On the 28/08/22 - 3 days before submission, I discovered I was missing an original custom model.
-- I decided to create a reviews section within the product details, where customers were able to rate the items.
-- Following some of the styling from the reviews, I decided to change the star icons to gold instead of the site grey as shown in the screenshots.
-- The star rating is required and with a hover pseudo class highlights in gold as the mouse moves over them. On click the stars selected stay gold.
+- I decided to create a reviews section within the product details, where customers were able to rate the products.
+- Following some of the styling from the reviews, I decided to change the star icons to gold instead of the site grey as shown in the screenshots at the features section.
+- The stars are set up with a hover pseudo class, which highlights in gold as the mouse moves over them. On click the stars selected stay gold.
 - Both the star rating and comments box are required fields, in order to submit, they must be filled in.
+- On a successful submit of a review, a toast notification is sent to the user, "Thank you! Your review has been submitted."
 
 ![Desktop - Reviews](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/desktop-reviews.PNG)
 
-![Reviews - No Review](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/reviews-no-review.PNG)
-
 ![Mobile - Reviews](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/mobile-reviews.PNG)
+
+- In order to post a review, the user must be registered and logged on. Without being logged on provides this message; "We would love to hear what you think about this product, but you must be logged in to post a review." The words 'logged on' carry the underline theme, linking it to the login page.
+- If no review has yet been posted regarding this product, the following message is shown; "There are currently no reviews for this product, why not be the first!"
+
+![Reviews - No Review](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/reviews-no-reviews.PNG)
 
 # Table of Contents
 
@@ -1046,20 +1050,6 @@ Below are links to all indivdual Pep8 results
 - [x] Success message displayed
     - Assuming a valid email address has been entered, after clicking the subscribe button the user receives a success message "Thank you for subscribing!"
 
-### Lighthouse Testing
-On first testing, the lighthouse performance results were below par at around 70-75 (url dependent). Pointing to various oppertunities such as:
--   Eliminate render-blocking resources
--   Reduce unused JavaScript
--   Enable text compression
-Although there isn't much I can do about the Stripe and Bootstrap components, I can ensure my CSS doesn't contain unused code.
-- Desktop Results
-
-![Lighthouse Desktop Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lighthouse-desktop.PNG)
-
-- Mobile Results
-
-![Lighthouse Mobile Results](https://raw.githubusercontent.com/liamsmith3194/otter-hockey/main/static/readme-images/lighthouse-mobile.PNG)
-
 ### Continued Testing
 
 - The Website was tested on Google Chrome and Microsoft Edge.
@@ -1070,6 +1060,7 @@ Although there isn't much I can do about the Stripe and Bootstrap components, I 
 
 - Viewing the site on my mobile, the navigation bar appears to be transparent and therefore on a scroll the content container is viewable over the nav.
     - This doesn't occur using the Google Chrome developer tool.
+- When viewing the site on Heroku the products are displayed in a different order to development.
 
 ## Issues
 
@@ -1477,8 +1468,8 @@ As an administrator/owner ...
 
 -   Discount codes
     - I would have liked to be able to set discount codes, an input field that when entered, if it matched a secret discount, reduced the basket total. 
--   Customer reviews
-    - Another feature I would have liked to implement would have been customers posting their own reviews on products. These reviews would generate the rating shown for each item.
+-   Wish list
+    - Another feature I would have liked to implement, would have a been a customer wish list. Users could add the product to the list instead of the basket and come back later to add or remove it. 
 
 ## References
 
